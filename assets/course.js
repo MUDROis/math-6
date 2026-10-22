@@ -300,6 +300,7 @@
   }
 
   function initToc() {
+    if (document.querySelector('details.chapter')) return;
     var headings = Array.prototype.slice.call(document.querySelectorAll('.card h2'));
     if (headings.length < 2) return;
     var toc = document.createElement('div');
@@ -346,6 +347,42 @@
     }
   }
 
+  function initContentsSidebar() {
+    var chapters = document.querySelectorAll('details.chapter');
+    if (!chapters.length) return;
+    var toc = document.createElement('div');
+    toc.className = 'toc-sidebar';
+    var h3 = document.createElement('h3');
+    h3.textContent = 'Содержание';
+    toc.appendChild(h3);
+    var seen = {};
+    chapters.forEach(function (ch) {
+      var t = ch.querySelector('summary .ch-title');
+      if (!t) return;
+      var det = document.createElement('details');
+      det.open = true;
+      var sum = document.createElement('summary');
+      sum.textContent = t.textContent;
+      det.appendChild(sum);
+      var body = document.createElement('div');
+      ch.querySelectorAll('.lesson-row').forEach(function (row) {
+        var a = row.querySelector('a.go-btn[href]');
+        if (!a) return;
+        var href = a.getAttribute('href');
+        if (seen[href]) return;
+        seen[href] = true;
+        var h4 = row.querySelector('.info h4');
+        var link = document.createElement('a');
+        link.href = href;
+        link.textContent = h4 ? h4.textContent.replace(/\s+/g, ' ').trim() : href;
+        body.appendChild(link);
+      });
+      det.appendChild(body);
+      toc.appendChild(det);
+    });
+    document.body.appendChild(toc);
+  }
+
   window.Course = {
     init: function () {
       renderKatexIfPresent();
@@ -353,6 +390,7 @@
       initWidgets();
       initSearch();
       initToc();
+      initContentsSidebar();
     }
   };
 
