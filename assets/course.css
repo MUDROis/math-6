@@ -67,7 +67,7 @@
 
 /* ===== Печать ===== */
 @media print{
-  .toggle-btn,.check-row,.widget,.lesson-nav,.toc-sidebar,.go-btn{display:none !important;}
+  .toggle-btn,.check-row,.widget,.lesson-nav,.toc-sidebar,.go-btn,#course-search{display:none !important;}
   .answer{display:block !important;}
   .card{box-shadow:none !important;border:1px solid #ccc !important;page-break-inside:avoid;}
   body{background:#fff !important;}
