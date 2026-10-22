@@ -21,5 +21,11 @@
     return start + Math.round((v - start) / step) * step;
   }
 
-  return { linearMap: linearMap, clamp: clamp, snapInterval: snapInterval };
+  // Положение (в px) деления оси координатной плоскости.
+  // Ось x: правее центра — значение растёт; ось y: выше центра — значение растёт.
+  function planeTickPos(value, center, scale, axis) {
+    return axis === 'y' ? center - value * scale : center + value * scale;
+  }
+
+  return { linearMap: linearMap, clamp: clamp, snapInterval: snapInterval, planeTickPos: planeTickPos };
 });

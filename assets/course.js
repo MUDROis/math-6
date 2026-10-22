@@ -75,6 +75,10 @@
       '" fill="' + color + '" stroke="#2d3436" stroke-width="2"/>';
   }
 
+  function fmtCoord(v) {
+    return Number.isInteger(v) ? String(v) : String(v).replace('.', ',');
+  }
+
   function buildNumberLineWidget(el, cfg) {
     var W = 480, H = 100, PAD = 40;
     var am = window.AxisMath;
@@ -182,13 +186,13 @@
     g += '<text x="' + (CX - 6) + '" y="' + (CY + 16) + '" font-size="12" fill="#2d3436">O</text>';
     for (var xv = -6; xv <= 6; xv++) {
       if (xv === 0) continue;
-      var xp = am.linearMap(xv, -6, 6, 0, W);
+      var xp = am.planeTickPos(xv, CX, SCALE, 'x');
       g += '<text x="' + xp + '" y="' + (CY + 18) + '" font-size="11" text-anchor="middle" fill="#636e72">' + xv + '</text>';
       g += '<line x1="' + xp + '" y1="' + (CY - 3) + '" x2="' + xp + '" y2="' + (CY + 3) + '" stroke="#2d3436" stroke-width="1"/>';
     }
     for (var yv = -10; yv <= 10; yv++) {
       if (yv === 0) continue;
-      var yp = am.linearMap(yv, -10, 10, H, 0);
+      var yp = am.planeTickPos(yv, CY, SCALE, 'y');
       g += '<text x="' + (CX - 10) + '" y="' + (yp + 4) + '" font-size="11" text-anchor="end" fill="#636e72">' + yv + '</text>';
       g += '<line x1="' + (CX - 3) + '" y1="' + yp + '" x2="' + (CX + 3) + '" y2="' + yp + '" stroke="#2d3436" stroke-width="1"/>';
     }
@@ -207,7 +211,7 @@
       if (placed) {
         var p = worldToPx(placed.x, placed.y);
         gPts.innerHTML = svgPoint(p.x, p.y, 7, '#f39c12') +
-          '<text x="' + (p.x + 10) + '" y="' + (p.y - 8) + '" font-size="13" font-weight="bold" fill="#b9770e">(' + placed.x + '; ' + placed.y + ')</text>';
+          '<text x="' + (p.x + 10) + '" y="' + (p.y - 8) + '" font-size="13" font-weight="bold" fill="#b9770e">(' + fmtCoord(placed.x) + '; ' + fmtCoord(placed.y) + ')</text>';
       }
       fb.textContent = '';
       fb.className = 'w-feedback';
@@ -227,7 +231,7 @@
       if (!placed) { fb.textContent = 'Сначала построй точку кликом.'; fb.className = 'w-feedback bad'; return; }
       var c = ex[i].correct;
       var ok = Math.abs(placed.x - c[0]) <= 0.5 && Math.abs(placed.y - c[1]) <= 0.5;
-      fb.textContent = ok ? '✅ Верно!' : '❌ Попробуй ещё (нужна точка ' + c[0] + '; ' + c[1] + ')';
+      fb.textContent = ok ? '✅ Верно!' : '❌ Попробуй ещё (нужна точка ' + fmtCoord(c[0]) + '; ' + fmtCoord(c[1]) + ')';
       fb.className = 'w-feedback ' + (ok ? 'ok' : 'bad');
     });
 
