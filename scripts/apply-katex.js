@@ -30,6 +30,11 @@ for (const f of files) {
       wrapped++;
       return m;
     }
+    if (/[а-яА-ЯёЁ]/.test(inner)) {
+      // кириллица/проза — оставляем обычным текстом (не математикой KaTeX)
+      wrapped++;
+      return m;
+    }
     const converted = convertMathText(inner);
     wrapped++;
     return '<span class="math' + cls + '"' + attrs + '>\\(' + converted + '\\)</span>';
