@@ -3,15 +3,21 @@
   'use strict';
 
   function renderKatexIfPresent() {
-    // KaTeX auto-render: обрабатывает элементы вида \( ... \) внутри .math
+    // KaTeX auto-render: обрабатывает элементы вида \( ... \) внутри .math.
+    // Обёрнуто в try/catch, чтобы ошибка рендеринга одной формулы
+    // не отключала остальной интерактив страницы.
     if (window.renderMathInElement && document.querySelector('.math')) {
-      window.renderMathInElement(document.body, {
-        delimiters: [
-          { left: '\\(', right: '\\)', display: false }
-        ],
-        throwOnError: false,
-        strict: 'ignore'
-      });
+      try {
+        window.renderMathInElement(document.body, {
+          delimiters: [
+            { left: '\\(', right: '\\)', display: false }
+          ],
+          throwOnError: false,
+          strict: 'ignore'
+        });
+      } catch (e) {
+        if (window.console && console.error) console.error('KaTeX render error:', e);
+      }
     }
   }
 
@@ -331,8 +337,12 @@
       var el = nodes[idx];
       var cfg = WIDGET_DATA[el.id];
       if (!cfg) continue;
-      if (cfg.kind === 'coordinate') buildCoordinatePlaneWidget(el, cfg);
-      else buildNumberLineWidget(el, cfg);
+      try {
+        if (cfg.kind === 'coordinate') buildCoordinatePlaneWidget(el, cfg);
+        else buildNumberLineWidget(el, cfg);
+      } catch (e) {
+        if (window.console && console.error) console.error('Widget build error [' + el.id + ']:', e);
+      }
     }
   }
 
