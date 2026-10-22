@@ -67,6 +67,41 @@
       { prompt: 'Построй точку X(3; 9).', correct: [3, 9] },
       { prompt: 'Построй точку Y(5; −2).', correct: [5, -2] },
       { prompt: 'Построй точку Q(−2; −9).', correct: [-2, -9] }
+    ] },
+    'widget-num-8': { kind: 'numberline', min: 0, max: 360, step: 45, exercises: [
+      { prompt: 'Отметь наименьшее общее кратное чисел 45 и 60.', correct: 180 },
+      { prompt: 'Отметь число 90 (кратное числа 45).', correct: 90 },
+      { prompt: 'Отметь число 270 (кратное числа 45).', correct: 270 }
+    ] },
+    'widget-num-25': { kind: 'numberline', min: -10, max: 10, step: 1, exercises: [
+      { prompt: 'Отметь число, противоположное числу 3.', correct: -3 },
+      { prompt: 'Отметь число, противоположное числу −5.', correct: 5 },
+      { prompt: 'Отметь число 0.', correct: 0 }
+    ] },
+    'widget-num-26': { kind: 'numberline', min: -10, max: 10, step: 1, exercises: [
+      { prompt: 'Отметь положительное число с модулем 6.', correct: 6 },
+      { prompt: 'Отметь отрицательное число с модулем 2.', correct: -2 },
+      { prompt: 'Отметь число, отстоящее от нуля на 4 вправо.', correct: 4 }
+    ] },
+    'widget-num-27': { kind: 'numberline', min: -15, max: 15, step: 1, exercises: [
+      { prompt: 'Отметь число −13.', correct: -13 },
+      { prompt: 'Отметь число −7.', correct: -7 },
+      { prompt: 'Отметь число 8.', correct: 8 }
+    ] },
+    'widget-coord-41': { kind: 'coordinate', exercises: [
+      { prompt: 'Построй точку пересечения прямых x = 2 и y = 3.', correct: [2, 3] },
+      { prompt: 'Построй точку A(2; 3).', correct: [2, 3] },
+      { prompt: 'Построй точку B(−1; 4).', correct: [-1, 4] }
+    ] },
+    'widget-coord-42': { kind: 'coordinate', exercises: [
+      { prompt: 'Построй точку на прямой x = 2 (например P(2; 1)).', correct: [2, 1] },
+      { prompt: 'Построй точку на прямой x = 5 (Q(5; −2)).', correct: [5, -2] },
+      { prompt: 'Построй точку R(−3; 4).', correct: [-3, 4] }
+    ] },
+    'widget-coord-44': { kind: 'coordinate', exercises: [
+      { prompt: 'Отметь точку C(1; 5).', correct: [1, 5] },
+      { prompt: 'Отметь точку F(0; −4).', correct: [0, -4] },
+      { prompt: 'Отметь точку Z(6; 0).', correct: [6, 0] }
     ] }
   };
 

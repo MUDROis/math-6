@@ -7,10 +7,17 @@ const DIR = 'C:/Users/Lenovo/Downloads/matematika-6-klass-vilenkin-2024/matemati
 
 const PLAN = {
   1:  { id: 'widget-num-1', kind: 'numberline' },
+  8:  { id: 'widget-num-8', kind: 'numberline' },
   24: { id: 'widget-num-24', kind: 'numberline' },
+  25: { id: 'widget-num-25', kind: 'numberline' },
+  26: { id: 'widget-num-26', kind: 'numberline' },
+  27: { id: 'widget-num-27', kind: 'numberline' },
   28: { id: 'widget-num-28', kind: 'numberline' },
   29: { id: 'widget-num-29', kind: 'numberline' },
-  43: { id: 'widget-coord-43', kind: 'coordinate' }
+  41: { id: 'widget-coord-41', kind: 'coordinate' },
+  42: { id: 'widget-coord-42', kind: 'coordinate' },
+  43: { id: 'widget-coord-43', kind: 'coordinate' },
+  44: { id: 'widget-coord-44', kind: 'coordinate' }
 };
 
 function widgetHtml(num) {
