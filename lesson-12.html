@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 12. Действие умножения смешанных чисел — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-11.html">← Урок 11</a> <span class="here">Урок 12</span> <a href="lesson-13.html">Урок 13 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 2, п. 12</span></div>
+<h1>П. 12. Действие умножения смешанных чисел</h1>
+<p class="subtitle">Сначала — в неправильные дроби, потом — умножай и сокращай крест-накрест</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Турист идёт со скоростью <span class="math">5 1/5 км/ч</span>. Какое расстояние он пройдёт за <span class="math">1 7/8 ч</span>? Правило то же, что для натуральных чисел: путь = скорость · время. Значит, надо перемножить два смешанных числа. Сегодня освоим <span class="highlight">умножение смешанных чисел</span> — и научимся считать его быстро.</p>
+</section>
+
+<section class="card theory">
+<h2>Правило умножения смешанных чисел</h2>
+
+<div class="rule-box"><b>Чтобы найти произведение смешанных чисел, надо:</b> 1) представить их в виде неправильных дробей; 2) применить правило умножения дробей: <span class="math">a/b · c/d = (a·c)/(b·d)</span>; 3) выделить целую часть, если получится неправильная дробь.</div><p>Так в задаче из учебника: путь = скорость · время, а чтобы перемножить <span class="math">5 1/5</span> и <span class="math">1 7/8</span>, оба числа сначала записывают неправильными дробями.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим произведение 5 1/5 · 1 7/8 (задача из учебника про туриста).</p>
+<ol class="steps">
+<li>В неправильные дроби: <span class="math">5 1/5 = 26/5</span>, <span class="math">1 7/8 = 15/8</span></li>
+<li>Умножаем: <span class="math">26/5 · 15/8 = (26 · 15)/(5 · 8)</span></li>
+<li>Сокращаем крест-накрест: 26 с 8 (на 2), 15 с 5 (на 5) → <span class="math">(13 · 3)/(1 · 4)</span></li>
+<li>Выделяем целую часть: <span class="math">39/4 = 9 3/4 (км)</span> — столько пройдёт турист</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">9 3/4 км</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Сокращай ДО умножения — экономь силы</h2>
+
+<p>В произведении дробей можно сократить множители крест-накрест: числитель первой с знаменателем второй и наоборот. Так числа становятся маленькими ещё до умножения: <span class="math">5/6 · 3/10 = 1/2 · 1/2 = 1/4</span> (сократили 5 и 10, 6 и 3).</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Умножим 3/7 · 2/3 и 7/10 · 4/15 (упр. 2.265).</p>
+<ol class="steps">
+<li><span class="math">3/7 · 2/3</span>: сокращаем тройки → <span class="math">2/7</span></li>
+<li><span class="math">7/10 · 4/15</span>: сокращаем 4 и 10 на 2 → <span class="math">7/5 · 2/15</span></li>
+<li>Перемножаем: <span class="math">(7 · 2)/(5 · 15) = 14/75</span> — уже несократимо</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">2/7 и 14/75</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Обыкновенные и десятичные дроби вместе</h2>
+
+<p>Если множители разного «типа», приведи их к одному: <span class="math">0,25 · 4/5 = 1/4 · 4/5 = 1/5 = 0,2</span>; <span class="math">0,9 · 5/9 = 9/10 · 5/9 = 1/2 = 0,5</span>. Умение переключаться между записями — половина успеха.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 12: Целые отдельно не умножай!</p>
+<p><b>Устройство.</b> Смешанное число — это СУММА целого и дроби, а сумма на множитель распределяется целиком. Быстрый путь — перевести всё в неправильные дроби.</p><p><b>Правило-шаги.</b> 1) Оба числа → неправильные дроби (целое · знаменатель + числитель). 2) Сократи крест-накрест. 3) Умножь числители и знаменатели. 4) Выдели целую часть.</p><p><b>Проверь на контрасте:</b> <span class="math">1 1/2 · 2 2/3 = 3/2 · 8/3 = 4</span> ✅. А перемножить «целые с целыми, дроби с дробями» (<span class="math">1·2 и 1/2·2/3</span>) 🚫 — получится 2 1/3, неверно.</p><p><b>Мостик:</b> в заданиях 4–6 первый шаг всегда один: в неправильные дроби.</p>
+</section>
+
+<section class="card visual">
+<h2>Из смешанного числа — в неправильную дробь</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;font-size:16px"><span class="math" style="background:#eaf6fd;padding:8px 12px">2 2/3</span><span>→</span><span class="math" style="background:#fffaf0;padding:8px 12px">(2 · 3 + 2)/3 = 8/3</span><span>→</span><span class="math" style="background:#f0fbf9;padding:8px 12px">8/3</span></div></div>
+<figcaption>Схема перехода: целую часть умножаем на знаменатель и прибавляем числитель — 2·3 + 2 = 8</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.265 (а, б)</span></div>
+<p>Выполните умножение: а) <span class="math">3/7 · 2/3</span>; б) <span class="math">7/10 · 4/15</span>.</p>
+<button class="toggle-btn" data-target="a12_1" onclick="toggleAnswer('a12_1')">🔍 Проверить</button>
+<div class="answer" id="a12_1">
+<ol>
+<li>а) Сокращаем тройки: <span class="math">3/7 · 2/3 = 1/7 · 2/1 = 2/7</span></li>
+<li>б) <span class="math">7/10 · 4/15 = (7 · 4)/(10 · 15) = 28/150</span></li>
+<li>Сокращаем на 2: <span class="math">28/150 = 14/75</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 2/7; б) 14/75</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.266 (а, б)</span></div>
+<p>Выполните действие: а) <span class="math">(2/4)²</span>; б) <span class="math">(3/5)³</span>.</p>
+<button class="toggle-btn" data-target="a12_2" onclick="toggleAnswer('a12_2')">🔍 Проверить</button>
+<div class="answer" id="a12_2">
+<ol>
+<li>а) <span class="math">(2/4)² = 2/4 · 2/4 = 4/16 = 1/4</span></li>
+<li>б) <span class="math">(3/5)³ = 3/5 · 3/5 · 3/5 = 27/125</span></li>
+<li>Проверка: <span class="math">1/4 = 0,25</span> — четверть; <span class="math">27/125 = 0,216</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 1/4; б) 27/125</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.271 (а, б)</span></div>
+<p>Представьте десятичную дробь в виде обыкновенной и выполните умножение: а) <span class="math">0,25 · 4/5</span>; б) <span class="math">0,9 · 5/9</span>.</p>
+<button class="toggle-btn" data-target="a12_3" onclick="toggleAnswer('a12_3')">🔍 Проверить</button>
+<div class="answer" id="a12_3">
+<ol>
+<li>а) <span class="math">0,25 = 1/4</span>: <span class="math">1/4 · 4/5</span> — сокращаем четвёрки → <span class="math">1/5 = 0,2</span></li>
+<li>б) <span class="math">0,9 = 9/10</span>: <span class="math">9/10 · 5/9</span> — сокращаем девятки и 10 с 5 → <span class="math">1/2</span></li>
+<li>Ответ в десятичной записи: <span class="math">0,5</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 0,2; б) 0,5</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.279 (а)</span></div>
+<p>Выполните умножение <span class="math">1 1/3 · 1 2/5</span>.</p>
+<button class="toggle-btn" data-target="a12_4" onclick="toggleAnswer('a12_4')">🔍 Проверить</button>
+<div class="answer" id="a12_4">
+<ol>
+<li><span class="math">1 1/3 = 4/3</span>; <span class="math">1 2/5 = 7/5</span></li>
+<li><span class="math">4/3 · 7/5 = 28/15</span></li>
+<li>Выделяем целую часть: <span class="math">28/15 = 1 13/15</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">1 13/15</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.283</span></div>
+<p>Из двух городов одновременно навстречу друг другу вышли два поезда и встретились через <span class="math">3 3/5 ч</span>. Найдите расстояние между городами, если скорость одного поезда равна 75 км/ч, а скорость другого составляет <span class="math">9/10</span> от скорости первого.</p>
+<button class="toggle-btn" data-target="a12_5" onclick="toggleAnswer('a12_5')">🔍 Проверить</button>
+<div class="answer" id="a12_5">
+<ol>
+<li>Скорость второго: <span class="math">75 · 9/10 = 67,5 (км/ч)</span></li>
+<li>Скорость сближения: <span class="math">75 + 67,5 = 142,5 (км/ч)</span></li>
+<li>Расстояние: <span class="math">142,5 · 3,6 = 513 (км)</span>. Проверка: <span class="math">142,5 · 3 = 427,5</span>; <span class="math">142,5 · 0,6 = 85,5</span>; сумма 513 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">513 км</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.306</span></div>
+<p>Масса 1 см³ алюминия равна <span class="math">2 7/9 г</span>. Найдите массу алюминиевой пластины, измерения которой равны <span class="math">1 1/4 см</span>, <span class="math">2 2/3 см</span> и <span class="math">1 4/5 см</span>. Ответ округлите до сотых долей килограмма.</p>
+<button class="toggle-btn" data-target="a12_6" onclick="toggleAnswer('a12_6')">🔍 Проверить</button>
+<div class="answer" id="a12_6">
+<ol>
+<li>Объём: <span class="math">5/4 · 8/3 · 9/5</span> — сокращаем 5 и 5, 8 с 4, 9 с 3 → <span class="math">2 · 3 = 6 (см³)</span></li>
+<li>Масса: <span class="math">25/9 · 6 = 150/9 = 16 2/3 (г)</span></li>
+<li>Переводим: <span class="math">16,(6) г ≈ 0,02 кг</span> (округление до сотых) ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">≈ 0,02 кг</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Смешанные числа умножают через неправильные дроби.</li>
+<li>Правило дробей: числитель на числитель, знаменатель на знаменатель.</li>
+<li>Сокращай крест-накрест ДО умножения — числа останутся маленькими.</li>
+<li>Целые и дробные части умножать «по отдельности» нельзя.</li>
+<li>Степень дроби — произведение нескольких равных множителей.</li>
+<li>Десятичные и обыкновенные дроби приводят к одному виду.</li>
+<li>Проверка прикидкой: произведение близко к произведению округлённых чисел.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-11.html">← Урок 11</a> <span class="here">Урок 12</span> <a href="lesson-13.html">Урок 13 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 2 «Действия со смешанными числами», п. 12 «Действие умножения смешанных чисел» • Страницы 80–86</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

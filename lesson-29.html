@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 29. Сложение чисел с помощью координатной прямой — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-28.html">← Урок 28</a> <span class="here">Урок 29</span> <a href="lesson-30.html">Урок 30 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 4, п. 29</span></div>
+<h1>П. 29. Сложение чисел с помощью координатной прямой</h1>
+<p class="subtitle">Прибавить — значит сдвинуть: вправо с плюсом, влево с минусом</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Температура была 13°, а потом изменилась на −5° — стала 8°. Запишем: <span class="math">13 + (−5) = 8</span>. Прибавить число — значит <span class="highlight">переместить точку</span> по координатной прямой. Сегодня учимся складывать любые числа с помощью стрелок.</p>
+</section>
+
+<section class="card theory">
+<h2>Сложение перемещением</h2>
+
+<div class="def-box">Прибавить к числу m число n — значит изменить число m на n единиц: при n &gt; 0 точка сдвигается <b class="term">вправо</b>, при n &lt; 0 — <b class="term">влево</b>.</div><p>Любое число от прибавления положительного числа увеличивается, а от прибавления отрицательного — уменьшается.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Сложим числа −8 и 6 (пример из учебника).</p>
+<ol class="steps">
+<li>Ставим точку M(−8)</li>
+<li>Прибавляем 6 — перемещаемся на 6 единиц ВПРАВО</li>
+<li>Попадаем в N(−2): <span class="math">(−8) + 6 = −2</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−2</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Сумма противоположных чисел</h2>
+
+<div class="rule-box">Сумма двух противоположных чисел равна нулю: <span class="math">n + (−n) = 0</span>. От прибавления нуля число не изменяется: <span class="math">n + 0 = n</span>.</div><p>Например: <span class="math">9 + (−9) = 0</span>; <span class="math">10,5 + (−10,5) = 0</span>; <span class="math">−13 + 0 = −13</span>. Точка возвращается в начало отсчёта — «домой».</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Найдём с помощью прямой значение −6 + 4 + (−9) (упр. 4.150).</p>
+<ol class="steps">
+<li>Из −6 на 4 вправо → <span class="math">−2</span></li>
+<li>Из −2 на 9 влево → <span class="math">−11</span></li>
+<li>Проверка по группам: отрицательные −6 −9 = −15; 15 − 4? нет: −15 + 4 = −11 ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−11</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Уравнения на прямой</h2>
+
+<p>Уравнение <span class="math">−5 + x = −1</span> читается так: «из точки −5 куда нужно сдвинуться, чтобы попасть в −1?» Ответ: вправо на 4, значит <span class="math">x = 4</span>. Так координатная прямая помогает решать уравнения до изучения правил.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 29: Первое число — точка, второе — команда</p>
+<p><b>Устройство.</b> В сумме a + b число a — «где стоим», b — «куда идём»: плюс — вправо, минус — влево.</p><p><b>Правило-шаги.</b> 1) Найди на прямой первое число. 2) Сдвинься на |b| в сторону знака b. 3) Читай координату, где остановился.</p><p><b>Проверь на контрасте:</b> <span class="math">−2 + 5 = 3</span> ✅ (вправо от −2). А пойти от −2 влево 🚫 — команда «+5» перепутана с «−5».</p><p><b>Мостик:</b> в заданиях 1–3 рисуй стрелку для КАЖДОГО слагаемого по очереди.</p>
+</section>
+
+<section class="card visual">
+<h2>Сложение стрелками</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><svg width="560" height="120" viewBox="0 0 560 120" role="img"><line x1="20" y1="82" x2="540" y2="82" stroke="#2d3436" stroke-width="2"/><polygon points="540,82 528,77 528,87" fill="#2d3436"/><line x1="-40" y1="77" x2="-40" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="-40" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-10</text><line x1="24" y1="77" x2="24" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="24" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-8</text><line x1="88" y1="77" x2="88" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="88" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-6</text><line x1="152" y1="77" x2="152" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="152" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-4</text><line x1="216" y1="77" x2="216" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="216" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-2</text><line x1="280" y1="77" x2="280" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="280" y="104" font-size="12" text-anchor="middle" fill="#2d3436">0</text><line x1="344" y1="77" x2="344" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="344" y="104" font-size="12" text-anchor="middle" fill="#2d3436">2</text><line x1="408" y1="77" x2="408" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="408" y="104" font-size="12" text-anchor="middle" fill="#2d3436">4</text><line x1="472" y1="77" x2="472" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="472" y="104" font-size="12" text-anchor="middle" fill="#2d3436">6</text><circle cx="24" cy="82" r="7" fill="#3498db" stroke="#2d3436" stroke-width="1.5"/><text x="24" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#3498db">M(−8)</text><circle cx="216" cy="82" r="7" fill="#c0392b" stroke="#2d3436" stroke-width="1.5"/><text x="216" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#c0392b">N(−2)</text><line x1="104" y1="62" x2="264" y2="62" stroke="#1abc9c" stroke-width="3"/><polygon points="264,62 252,56 252,68" fill="#1abc9c"/><text x="184" y="50" font-size="14" text-anchor="middle" fill="#148f77">+6 (вправо)</text></svg></div>
+<figcaption>Схема из учебника: точка M(−8) при прибавлении 6 перемещается на 6 единиц вправо в N(−2)</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.144 (а, б, г)</span></div>
+<p>Используя координатную прямую, найдите сумму: а) <span class="math">−3 и 3</span>; б) <span class="math">5 и −7</span>; г) <span class="math">2 и −6</span>.</p>
+<button class="toggle-btn" data-target="a29_1" onclick="toggleAnswer('a29_1')">🔍 Проверить</button>
+<div class="answer" id="a29_1">
+<ol>
+<li>а) Из −3 на 3 вправо — попадаем в 0: <span class="math">−3 + 3 = 0</span></li>
+<li>б) Из 5 на 7 влево: <span class="math">5 − 7 = −2</span></li>
+<li>г) Из 2 на 6 влево: <span class="math">2 − 6 = −4</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">0; −2; −4</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.145 (д, ж)</span></div>
+<p>Сложите числа: д) <span class="math">10,5 и −10,5</span>; ж) <span class="math">3 1/4 и −3 1/4</span>.</p>
+<button class="toggle-btn" data-target="a29_2" onclick="toggleAnswer('a29_2')">🔍 Проверить</button>
+<div class="answer" id="a29_2">
+<ol>
+<li>Слагаемые противоположные → сумма равна нулю</li>
+<li><span class="math">10,5 + (−10,5) = 0</span></li>
+<li><span class="math">3 1/4 + (−3 1/4) = 0</span>. Проверка: точка возвращается в начало отсчёта ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">0; 0</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.150 (д, е)</span></div>
+<p>С помощью координатной прямой найдите значение выражения: д) <span class="math">−3 + 7 + (−8)</span>; е) <span class="math">1 + (−6) + 10</span>.</p>
+<button class="toggle-btn" data-target="a29_3" onclick="toggleAnswer('a29_3')">🔍 Проверить</button>
+<div class="answer" id="a29_3">
+<ol>
+<li>д) −3 → на 7 вправо → 4 → на 8 влево → <span class="math">−4</span></li>
+<li>е) 1 → на 6 влево → −5 → на 10 вправо → <span class="math">5</span></li>
+<li>Проверка группами: д) −3−8 = −11, −11+7 = −4 ✓; е) 1+10 = 11, 11−6 = 5 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">д) −4; е) 5</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.149 (частично)</span></div>
+<p>Какой станет температура, равная −13 °С, при изменении: на 4 °С; на −7 °С; на +15 °С?</p>
+<button class="toggle-btn" data-target="a29_4" onclick="toggleAnswer('a29_4')">🔍 Проверить</button>
+<div class="answer" id="a29_4">
+<ol>
+<li><span class="math">−13 + 4 = −9 °С</span></li>
+<li><span class="math">−13 + (−7) = −20 °С</span></li>
+<li><span class="math">−13 + 15 = 2 °С</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">−9 °С; −20 °С; 2 °С</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.152 (а, г)</span></div>
+<p>С помощью координатной прямой решите уравнение: а) <span class="math">−5 + x = −1</span>; г) <span class="math">x + 2 = −2</span>.</p>
+<button class="toggle-btn" data-target="a29_5" onclick="toggleAnswer('a29_5')">🔍 Проверить</button>
+<div class="answer" id="a29_5">
+<ol>
+<li>а) Из −5 нужно попасть в −1: сдвиг вправо на 4 → <span class="math">x = 4</span></li>
+<li>г) Из x нужно попасть в −2 сдвигом на 2 вправо? нет: x + 2 = −2 значит от x сдвиг ВПРАВО на 2 → x левее −2 на 2 единицы</li>
+<li><span class="math">x = −2 − 2 = −4</span>. Проверка: <span class="math">−4 + 2 = −2</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) x = 4; г) x = −4</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.148</span></div>
+<p>Точке N соответствует число n + (−6), а точке M — число n + 6. Найдите число, соответствующее середине отрезка MN.</p>
+<button class="toggle-btn" data-target="a29_6" onclick="toggleAnswer('a29_6')">🔍 Проверить</button>
+<div class="answer" id="a29_6">
+<ol>
+<li>Точки N и M симметричны относительно точки с координатой n (сдвиги ±6)</li>
+<li>Середина симметричных точек — центр симметрии: <span class="math">n</span></li>
+<li>Проверка при n = 1: N(−5), M(7), середина <span class="math">(−5 + 7) : 2 = 1</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">n</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Прибавить число — значит переместиться по координатной прямой.</li>
+<li>Плюс — вправо, минус — влево.</li>
+<li>От прибавления положительного числа число увеличивается, отрицательного — уменьшается.</li>
+<li>Сумма противоположных чисел равна нулю: n + (−n) = 0.</li>
+<li>Прибавление нуля не изменяет число.</li>
+<li>Слагаемые обрабатывают по очереди — стрелка за стрелкой.</li>
+<li>Уравнение a + x = b решается поиском сдвига от a к b.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-28.html">← Урок 28</a> <span class="here">Урок 29</span> <a href="lesson-30.html">Урок 30 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 4 «Действия с рациональными числами», п. 29 «Сложение чисел с помощью координатной прямой» • Страницы 33–36</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

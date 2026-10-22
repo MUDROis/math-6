@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 10. Сравнение, сложение и вычитание обыкновенных дробей — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-09.html">← Урок 9</a> <span class="here">Урок 10</span> <a href="lesson-11.html">Урок 11 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 2, п. 10</span></div>
+<h1>П. 10. Сравнение, сложение и вычитание обыкновенных дробей</h1>
+<p class="subtitle">Один знаменатель — и дроби наконец заговорят на одном языке</p>
+</header>
+
+<section class="card intro">
+<p>Привет! С дробями с одинаковыми знаменателями мы работали ещё в 5 классе. А как сравнить <span class="math">3/4</span> и <span class="math">7/12</span> или найти их сумму? Секрет простой: <span class="highlight">приведи к общему знаменателю</span> — и дальше действуй по старым правилам. В конце урока — правило-«хитрушка» для дробей с одинаковыми числителями.</p>
+</section>
+
+<section class="card theory">
+<h2>Сравнение дробей</h2>
+
+<div class="rule-box"><b>Чтобы сравнить дроби с разными знаменателями:</b> приведи их к НОЗ и сравни числители — больше та дробь, у которой числитель больше.</div><p>Правило из 5 класса тоже работает: из двух дробей с <span class="highlight">одинаковыми знаменателями</span> больше та, у которой числитель больше; с <span class="highlight">одинаковыми числителями</span> больше та, у которой знаменатель меньше.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Сравним дроби 3/4 и 7/12.</p>
+<ol class="steps">
+<li>НОЗ (4, 12) = 12; <span class="math">3/4 = 9/12</span>, а <span class="math">7/12</span> уже готова</li>
+<li>Сравниваем числители: <span class="math">9 &gt; 7</span></li>
+<li>Значит <span class="math">3/4 &gt; 7/12</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">3/4 &gt; 7/12</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Сложение и вычитание дробей с разными знаменателями</h2>
+
+<div class="rule-box"><b>Чтобы сложить (вычесть) дроби с разными знаменателями:</b> 1) приведи их к НОЗ; 2) сложи (вычти) числители, а знаменатель оставь тот же.</div><p>Например: <span class="math">7/8 + 3/5 = 35/40 + 24/40 = 59/40</span>; <span class="math">5/8 − 1/6 = 15/24 − 4/24 = 11/24</span>. При сложении можно использовать переместительное и сочетательное свойства.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим сумму 1/2 + 1/5.</p>
+<ol class="steps">
+<li>НОЗ (2, 5) = 10; дополнительные множители 5 и 2</li>
+<li><span class="math">1/2 + 1/5 = 5/10 + 2/10</span></li>
+<li>Складываем числители: <span class="math">5 + 2 = 7</span> → <span class="math">7/10</span></li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">7/10</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Проверка результата</h2>
+
+<p>После сложения полезно оценить прикидку: результат должен лежать между слагаемыми или немного превышать большее. При вычитании результат меньше уменьшаемого. Если вышло иначе — ищи ошибку в знаках или знаменателях.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 10: Общий знаменатель — потом старые правила</p>
+<p><b>Устройство.</b> Сравнивать и складывать можно только «одинаковые куски»; приведение к НОЗ делает куски одинаковыми.</p><p><b>Правило-шаги.</b> 1) НОЗ. 2) Дополнительные множители. 3) Работай с числителями, знаменатель не трогай.</p><p><b>Проверь на контрасте:</b> <span class="math">1/2 + 1/3 = 3/6 + 2/6 = 5/6</span> ✅. А сложить «в лоб» <span class="math">1/2 + 1/3 = 2/5</span> 🚫 — сложил и числители, и знаменатели.</p><p><b>Мостик:</b> в заданиях 2 и 4 сначала НОЗ, дальше — просто счёт числителей.</p>
+</section>
+
+<section class="card visual">
+<h2>Почему 3/4 больше 7/12</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-direction:column;gap:10px;align-items:center"><svg width="216" height="30" viewBox="0 0 216 30" role="img"><rect x="0" y="0" width="216" height="30" fill="#f7f9f9"/><rect x="0" y="0" width="16.5" height="30" fill="#3498db"/><rect x="18" y="0" width="16.5" height="30" fill="#3498db"/><rect x="36" y="0" width="16.5" height="30" fill="#3498db"/><rect x="54" y="0" width="16.5" height="30" fill="#3498db"/><rect x="72" y="0" width="16.5" height="30" fill="#3498db"/><rect x="90" y="0" width="16.5" height="30" fill="#3498db"/><rect x="108" y="0" width="16.5" height="30" fill="#3498db"/><rect x="126" y="0" width="16.5" height="30" fill="#3498db"/><rect x="144" y="0" width="16.5" height="30" fill="#3498db"/><rect x="0" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="18" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="36" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="54" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="72" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="90" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="108" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="126" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="144" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="162" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="180" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="198" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/></svg><div style="font-size:14px;color:#21618c">3/4 = 9/12 — закрашено 9 долей</div><svg width="216" height="30" viewBox="0 0 216 30" role="img"><rect x="0" y="0" width="216" height="30" fill="#f7f9f9"/><rect x="0" y="0" width="16.5" height="30" fill="#c0392b"/><rect x="18" y="0" width="16.5" height="30" fill="#c0392b"/><rect x="36" y="0" width="16.5" height="30" fill="#c0392b"/><rect x="54" y="0" width="16.5" height="30" fill="#c0392b"/><rect x="72" y="0" width="16.5" height="30" fill="#c0392b"/><rect x="90" y="0" width="16.5" height="30" fill="#c0392b"/><rect x="108" y="0" width="16.5" height="30" fill="#c0392b"/><rect x="0" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="18" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="36" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="54" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="72" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="90" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="108" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="126" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="144" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="162" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="180" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/><rect x="198" y="0" width="16.5" height="30" fill="none" stroke="#9aa5ab" stroke-width="1"/></svg><div style="font-size:14px;color:#c0392b">7/12 — закрашено 7 долей</div></div></div>
+<figcaption>К упр. 2.151 (а): при одном знаменателе 12 сравниваем числители: 9 &gt; 7</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.151 (а, б)</span></div>
+<p>Сравните дроби: а) <span class="math">3/4</span> и <span class="math">7/12</span>; б) <span class="math">4/9</span> и <span class="math">5/11</span>.</p>
+<button class="toggle-btn" data-target="a10_1" onclick="toggleAnswer('a10_1')">🔍 Проверить</button>
+<div class="answer" id="a10_1">
+<ol>
+<li>а) НОЗ = 12: <span class="math">3/4 = 9/12 &gt; 7/12</span> → <span class="math">3/4 &gt; 7/12</span></li>
+<li>б) НОЗ (9, 11) = 99: <span class="math">4/9 = 44/99</span>, <span class="math">5/11 = 45/99</span></li>
+<li><span class="math">44 &lt; 45</span> → <span class="math">4/9 &lt; 5/11</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 3/4 &gt; 7/12; б) 4/9 &lt; 5/11</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.162 (а, е)</span></div>
+<p>Вычислите: а) <span class="math">1/2 + 1/5</span>; е) <span class="math">2/3 − 2/5</span>.</p>
+<button class="toggle-btn" data-target="a10_2" onclick="toggleAnswer('a10_2')">🔍 Проверить</button>
+<div class="answer" id="a10_2">
+<ol>
+<li>а) НОЗ = 10: <span class="math">5/10 + 2/10 = 7/10</span></li>
+<li>е) НОЗ = 15: <span class="math">10/15 − 6/15 = 4/15</span></li>
+<li>Проверка прикидкой: 7/10 больше 1/2 и меньше 1 ✓; 4/15 меньше 2/3 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 7/10; е) 4/15</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.151 (г)</span></div>
+<p>Сравните дроби <span class="math">19/42</span> и <span class="math">23/77</span>.</p>
+<button class="toggle-btn" data-target="a10_3" onclick="toggleAnswer('a10_3')">🔍 Проверить</button>
+<div class="answer" id="a10_3">
+<ol>
+<li><span class="math">42 = 2 · 3 · 7</span>, <span class="math">77 = 7 · 11</span> → НОЗ = <span class="math">2 · 3 · 7 · 11 = 462</span></li>
+<li>Дополнительные множители: <span class="math">462 : 42 = 11</span>, <span class="math">462 : 77 = 6</span></li>
+<li><span class="math">19/42 = 209/462</span>, <span class="math">23/77 = 138/462</span>; <span class="math">209 &gt; 138</span> → <span class="math">19/42 &gt; 23/77</span></li>
+</ol>
+<p><b>Ответ:</b> <span class="math">19/42 &gt; 23/77</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.162 (л, з)</span></div>
+<p>Вычислите: л) <span class="math">4/7 + 4/5</span>; з) <span class="math">3/5 − 4/7</span>.</p>
+<button class="toggle-btn" data-target="a10_4" onclick="toggleAnswer('a10_4')">🔍 Проверить</button>
+<div class="answer" id="a10_4">
+<ol>
+<li>л) НОЗ = 35: <span class="math">20/35 + 28/35 = 48/35</span> — неправильная дробь, <span class="math">48/35 = 1 13/35</span></li>
+<li>з) НОЗ = 35: <span class="math">21/35 − 20/35 = 1/35</span></li>
+<li>Проверка: разность 3/5 − 4/7 должна быть маленькой — 1/35 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">л) 48/35 = 1 13/35; з) 1/35</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.154</span></div>
+<p>Не приводя дроби к общему знаменателю, объясните, почему <span class="math">1/7 &gt; 1/9</span>. Сформулируйте правило сравнения двух дробей с одинаковыми числителями и сравните по нему: а) <span class="math">7/81</span> и <span class="math">7/82</span>; б) <span class="math">15/181</span> и <span class="math">15/182</span>; в) <span class="math">14/343</span> и <span class="math">14/345</span>.</p>
+<button class="toggle-btn" data-target="a10_5" onclick="toggleAnswer('a10_5')">🔍 Проверить</button>
+<div class="answer" id="a10_5">
+<ol>
+<li>Целое, разрезанное на 7 частей, даёт более крупные доли, чем разрезанное на 9 → <span class="math">1/7 &gt; 1/9</span></li>
+<li>Правило: из двух дробей с одинаковыми числителями больше та, у которой знаменатель МЕНЬШЕ</li>
+<li>а) <span class="math">7/81 &gt; 7/82</span>; б) <span class="math">15/181 &gt; 15/182</span>; в) <span class="math">14/343 &gt; 14/345</span> — всюду знаменатель слева меньше ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">7/81 &gt; 7/82; 15/181 &gt; 15/182; 14/343 &gt; 14/345</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.158</span></div>
+<p>В новом парке <span class="math">11/35</span> всех деревьев занимают саженцы берёзы, а <span class="math">13/20</span> — ясеня. Каких саженцев в парке больше: берёзы или ясеня?</p>
+<button class="toggle-btn" data-target="a10_6" onclick="toggleAnswer('a10_6')">🔍 Проверить</button>
+<div class="answer" id="a10_6">
+<ol>
+<li>НОЗ (35, 20) = 140</li>
+<li>Берёзы: <span class="math">11/35 = 44/140</span>; ясени: <span class="math">13/20 = 91/140</span></li>
+<li><span class="math">91 &gt; 44</span> → саженцев ясеня больше ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">саженцев ясеня больше</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Сравнение, сложение и вычитание дробей начинают с НОЗ.</li>
+<li>Из двух дробей с равными знаменателями больше та, у которой числитель больше.</li>
+<li>Из двух дробей с равными числителями больше та, у которой знаменатель меньше.</li>
+<li>Складывай и вычитай числители; знаменатель оставляй общим.</li>
+<li>Неправильную дробь в ответе выделяй целую часть.</li>
+<li>Прикидка спасает: сумма чуть больше большего слагаемого, разность меньше уменьшаемого.</li>
+<li>Свойства сложения (переместительное, сочетательное) работают и для дробей.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-09.html">← Урок 9</a> <span class="here">Урок 10</span> <a href="lesson-11.html">Урок 11 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 2 «Действия со смешанными числами», п. 10 «Сравнение, сложение и вычитание обыкновенных дробей» • Страницы 64–70</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

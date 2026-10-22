@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 23. Длина окружности и площадь круга. Шар — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-22.html">← Урок 22</a> <span class="here">Урок 23</span> <a href="lesson-24.html">Урок 24 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 3, п. 23</span></div>
+<h1>П. 23. Длина окружности и площадь круга. Шар</h1>
+<p class="subtitle">Число π: вечное отношение, которое измерили ещё стаканом и ниткой</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Обведи дно стакана и обогни его ниткой — длина нитки примерно в 3 раза больше диаметра. Причём для ЛЮБОГО стакана! Это отношение назвали греческой буквой <span class="highlight">π</span> (пи): <span class="math">π ≈ 3,14</span>. Сегодня освоим формулы длины окружности и площади круга — и посчитаем колесо велосипеда, куранты и пол беседки.</p>
+</section>
+
+<section class="card theory">
+<h2>Длина окружности</h2>
+
+<div class="def-box">Длина окружности <b class="term">прямо пропорциональна</b> её диаметру, и отношение <span class="math">C : d = π</span> одно и то же для всех окружностей: <span class="math">C = πd</span>, а так как <span class="math">d = 2r</span>, то <span class="math">C = 2πr</span>.</div><p>С точностью до миллионных <span class="math">π ≈ 3,141593</span>; при округлении до сотых <span class="math">π ≈ 3,14</span>. В задачах иногда удобно брать <span class="math">π = 22/7</span>.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Найдём длину окружности, если её диаметр равен 21 см; 3,5 см (упр. 3.162, π = 22/7).</p>
+<ol class="steps">
+<li><span class="math">C = πd = 22/7 · 21 = 66 (см)</span></li>
+<li><span class="math">C = 22/7 · 3,5 = 11 (см)</span></li>
+<li>Проверка: 21 : 3,5 = 6, и 66 : 11 = 6 — длина пропорциональна диаметру ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">66 см и 11 см</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Площадь круга</h2>
+
+<div class="def-box">Если круг разрезать на секторы и составить из них фигуру, похожую на прямоугольник, одна его сторона будет равна <span class="math">r</span>, а другая — половине длины окружности, то есть <span class="math">πr</span>. Поэтому <b class="term">площадь круга</b>: <span class="math">S = πr²</span>.</div><p>Внимание к «начинке» формулы: в длину окружности входит <span class="highlight">d или r</span>, а в площадь — <span class="highlight">квадрат радиуса</span>.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. В круглой беседке диаметром 4 м нужно покрасить пол. Расход краски — 0,16 кг на 1 м². Сколько нужно краски? (упр. 3.174)</p>
+<ol class="steps">
+<li>Радиус: <span class="math">r = 4 : 2 = 2 (м)</span></li>
+<li>Площадь: <span class="math">S = πr² = 3,14 · 2² = 3,14 · 4 = 12,56 (м²)</span></li>
+<li>Краска: <span class="math">12,56 · 0,16 = 2,0096 ≈ 2,01 (кг)</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">≈ 2,01 кг</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Шар и сфера</h2>
+
+<div class="def-box">Поверхность шара называют <b class="term">сферой</b>. Все точки сферы одинаково удалены от центра шара. Отрезок от центра до точки сферы — <b class="term">радиус</b> шара; отрезок через центр между двумя точками сферы — <b class="term">диаметр</b> (он равен двум радиусам).</div><p>Любое сечение шара плоскостью — круг. Представления о шаре дают арбуз, глобус, мяч.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 23: Смотри, что в формуле: d, r или r²</p>
+<p><b>Устройство.</b> Все три формулы — одно семейство: <span class="math">C = πd = 2πr</span>, <span class="math">S = πr²</span>.</p><p><b>Правило-шаги.</b> 1) Определи, что дано: d или r. 2) Для длины умножай π на d (или 2r). 3) Для площади сначала ВОЗВЕДИ радиус в квадрат, потом умножай на π. 4) Диаметр вырос на Δ — длина выросла на π·Δ.</p><p><b>Проверь на контрасте:</b> r = 5 → <span class="math">C = 3,14 · 10 = 31,4</span> ✅. А написать <span class="math">S = 3,14 · 10 = 31,4</span> 🚫 — это длина; площадь: <span class="math">3,14 · 25 = 78,5</span>.</p><p><b>Мостик:</b> в заданиях 3 и 5 сначала вытащи из формулы нужную величину: <span class="math">d = C : π</span>.</p>
+</section>
+
+<section class="card visual">
+<h2>Окружность: r, d и формула</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:center"><svg width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Окружность с радиусом и диаметром"><circle cx="90" cy="90" r="70" fill="#eaf6fd" stroke="#3498db" stroke-width="3"/><circle cx="90" cy="90" r="3.5" fill="#2d3436"/><line x1="90" y1="90" x2="160" y2="90" stroke="#c0392b" stroke-width="2"/><text x="125" y="80" font-size="15" text-anchor="middle" fill="#c0392b">r</text><line x1="20" y1="90" x2="160" y2="90" stroke="#1abc9c" stroke-width="2"/><text x="90" y="112" font-size="15" text-anchor="middle" fill="#148f77">d = 2r</text><text x="90" y="172" font-size="14" text-anchor="middle" fill="#636e72">C = πd ≈ 3,14d</text></svg><div style="font-size:16px;line-height:2.1"><span class="math">C = πd</span> — длина окружности<br><span class="math">C = 2πr</span> — то же через радиус<br><span class="math">S = πr²</span> — площадь круга</div></div></div>
+<figcaption>Схема: диаметр — «двухрадиусник»; C ≈ 3,14 · d; площадь требует квадрата радиуса</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.162</span></div>
+<p>Найдите длину окружности, если её диаметр равен 21 см; 3,5 см; 10,5 дм. Число π считайте равным <span class="math">22/7</span>.</p>
+<button class="toggle-btn" data-target="a23_1" onclick="toggleAnswer('a23_1')">🔍 Проверить</button>
+<div class="answer" id="a23_1">
+<ol>
+<li><span class="math">C = 22/7 · 21 = 66 (см)</span></li>
+<li><span class="math">C = 22/7 · 3,5 = 11 (см)</span>; <span class="math">C = 22/7 · 10,5 = 33 (дм)</span></li>
+<li>Проверка: 66 : 21 = 11 : 3,5 = 33 : 10,5 ≈ 3,14 = π ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">66 см; 11 см; 33 дм</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.165</span></div>
+<p>Чему равна длина C окружности, радиус которой равен 1,68 см; 4,76 дм? Число π считайте равным <span class="math">22/7</span>.</p>
+<button class="toggle-btn" data-target="a23_2" onclick="toggleAnswer('a23_2')">🔍 Проверить</button>
+<div class="answer" id="a23_2">
+<ol>
+<li><span class="math">C = 2 · 22/7 · 1,68 = 44/7 · 1,68</span>; <span class="math">1,68 : 7 = 0,24</span> → <span class="math">44 · 0,24 = 10,56 (см)</span></li>
+<li><span class="math">4,76 : 7 = 0,68</span> → <span class="math">44 · 0,68 = 29,92 (дм)</span></li>
+<li>Проверка: <span class="math">C : d</span> ≈ 3,14 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">10,56 см; 29,92 дм</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.166</span></div>
+<p>Найдите диаметры окружностей, если их длины равны 59,66 м и 40,82 дм. Принять π = 3,14.</p>
+<button class="toggle-btn" data-target="a23_3" onclick="toggleAnswer('a23_3')">🔍 Проверить</button>
+<div class="answer" id="a23_3">
+<ol>
+<li><span class="math">d = C : π</span></li>
+<li><span class="math">59,66 : 3,14 = 5966 : 314 = 19 (м)</span></li>
+<li><span class="math">40,82 : 3,14 = 4082 : 314 = 13 (дм)</span>. Проверка: <span class="math">3,14 · 19 = 59,66</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">19 м; 13 дм</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.174</span></div>
+<p>В круглой беседке диаметром 4 м необходимо покрасить пол. Сколько краски потребуется, если на 1 м² расходуется 0,16 кг краски?</p>
+<button class="toggle-btn" data-target="a23_4" onclick="toggleAnswer('a23_4')">🔍 Проверить</button>
+<div class="answer" id="a23_4">
+<ol>
+<li><span class="math">r = 4 : 2 = 2 (м)</span></li>
+<li><span class="math">S = 3,14 · 2² = 12,56 (м²)</span></li>
+<li><span class="math">12,56 · 0,16 = 2,0096 ≈ 2,01 (кг)</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">≈ 2,01 кг</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 3.167</span></div>
+<p>Велосипедист проехал 439,6 м, при этом переднее колесо сделало 200 оборотов. Найдите диаметр колеса. Результат округлите до сотых метра. Принять π = 3,14.</p>
+<button class="toggle-btn" data-target="a23_5" onclick="toggleAnswer('a23_5')">🔍 Проверить</button>
+<div class="answer" id="a23_5">
+<ol>
+<li>За один оборот колесо проходит одну длину окружности: <span class="math">C = 439,6 : 200 = 2,198 (м)</span></li>
+<li><span class="math">d = C : π = 2,198 : 3,14 = 0,7 (м)</span></li>
+<li>Проверка: <span class="math">3,14 · 0,7 · 200 = 439,6</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">0,7 м</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 3.169</span></div>
+<p>Диаметр окружности увеличили на 4 дм. На сколько увеличилась длина окружности?</p>
+<button class="toggle-btn" data-target="a23_6" onclick="toggleAnswer('a23_6')">🔍 Проверить</button>
+<div class="answer" id="a23_6">
+<ol>
+<li>Было: <span class="math">C = πd</span>; стало: <span class="math">C' = π(d + 4) = πd + 4π</span></li>
+<li>Увеличение: <span class="math">C' − C = 4π = 4 · 3,14 = 12,56 (дм)</span></li>
+<li>Проверка: d = 10 → C = 31,4; d = 14 → C = 43,96; разность 12,56 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">на 12,56 дм</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Длина окружности: C = πd = 2πr; π ≈ 3,14.</li>
+<li>Длина окружности прямо пропорциональна диаметру.</li>
+<li>Площадь круга: S = πr² — радиус возводится в квадрат.</li>
+<li>d = 2r; из C диаметр находят делением: d = C : π.</li>
+<li>Один оборот колеса = одна длина окружности.</li>
+<li>Увеличение диаметра на Δ увеличивает длину на π·Δ.</li>
+<li>Шар — тело; сфера — его поверхность; сечение шара — круг.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-22.html">← Урок 22</a> <span class="here">Урок 23</span> <a href="lesson-24.html">Урок 24 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 3 «Отношения и пропорции», п. 23 «Длина окружности и площадь круга. Шар» • Страницы 149–154</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

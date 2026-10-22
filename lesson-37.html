@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 37. Раскрытие скобок — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-36.html">← Урок 36</a> <span class="here">Урок 37</span> <a href="lesson-38.html">Урок 38 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 5, п. 37</span></div>
+<h1>П. 37. Раскрытие скобок</h1>
+<p class="subtitle">Плюс перед скобкой сохраняет знаки, минус переворачивает все</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Выражение <span class="math">5 + (a − 6)</span> можно записать без скобок: <span class="math">5 + a − 6</span>. А вот с <span class="math">5 − (a − 6)</span> спешить нельзя: минус перед скобкой меняет <span class="highlight">ВСЕ</span> знаки внутри. Сегодня — правило раскрытия скобок, на котором держится вся глава «Решение уравнений».</p>
+</section>
+
+<section class="card theory">
+<h2>Если перед скобками «+»</h2>
+
+<div class="rule-box"><b>Если перед скобками стоит знак «плюс», скобки и знак опускают, сохраняя знаки слагаемых:</b> <span class="math">a + (b + c) = a + b + c</span>; <span class="math">a + (−b + c) = a − b + c</span>.</div>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим −17,45 + (17,45 − 8,126) (пример из учебника).</p>
+<ol class="steps">
+<li>Раскрываем скобки: <span class="math">−17,45 + 17,45 − 8,126</span></li>
+<li>Противоположные числа дают нуль: <span class="math">0 − 8,126</span></li>
+<li><span class="math">= −8,126</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−8,126</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Если перед скобками «−»</h2>
+
+<div class="rule-box"><b>Если перед скобками стоит знак «минус», скобки опускают, меняя знак каждого слагаемого на противоположный:</b> <span class="math">a − (b − c) = a − b + c</span>.</div><p>Смысл: вычесть скобку — значит прибавить противоположное каждого слагаемого (правило урока 32). Проверим: <span class="math">−(−8 + 3) = −(−5) = 5</span> и по правилу <span class="math">−(−8 + 3) = 8 − 3 = 5</span> — совпало ✓.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Раскроем скобки и вычислим: −4,2 − (5,45 − 20,2) (упр. 5.6).</p>
+<ol class="steps">
+<li><span class="math">−4,2 − 5,45 + 20,2</span></li>
+<li>Группируем: <span class="math">(20,2 − 4,2) − 5,45 = 16 − 5,45</span></li>
+<li><span class="math">= 10,55</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">10,55</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Скобка после скобки</h2>
+
+<p>Если скобок несколько, раскрывают по очереди, следя за знаком перед каждой: <span class="math">(1,3 + 3,86) − (1,3 − 4,36) = 1,3 + 3,86 − 1,3 + 4,36 = 8,22</span>. Первая скобка «плюсовая» — знаки сохранены; вторая «минусовая» — оба слагаемых сменили знак.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 37: Минус перед скобкой — смена ВСЕХ знаков</p>
+<p><b>Устройство.</b> Скобка — «упаковка»; знак перед ней — инструкция: «+» — открыть и оставить всё как есть, «−» — открыть и перевернуть каждый знак.</p><p><b>Правило-шаги.</b> 1) Посмотри на знак ПЕРЕД скобкой. 2) «+»: просто убери скобки. 3) «−»: убери скобки и поменяй все знаки внутри (и у первого слагаемого тоже, даже если знака не видно!).</p><p><b>Проверь на контрасте:</b> <span class="math">7 − (4 − 2) = 7 − 4 + 2 = 5</span> ✅ (и прямо: 7 − 2 = 5). А раскрыть как <span class="math">7 − 4 − 2</span> 🚫 — перевернули только первое слагаемое.</p><p><b>Мостик:</b> в заданиях 3 и 4 после раскрытия скобок ищи пары противоположных чисел.</p>
+</section>
+
+<section class="card visual">
+<h2>Две инструкции раскрытия</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-direction:column;gap:10px;align-items:center;font-size:15px"><div><span class="math" style="background:#f0fbf9;padding:8px 14px">a + (b − c) → a + b − c</span> <span style="color:#148f77">«+»: знаки как были</span></div><div><span class="math" style="background:#fdf3f2;padding:8px 14px">a − (b − c) → a − b + c</span> <span style="color:#c0392b">«−»: все знаки наоборот</span></div></div></div>
+<figcaption>Схема: знак перед скобкой — инструкция к раскрытию. Минус переворачивает каждое слагаемое</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 5.1 (а, г)</span></div>
+<p>Раскройте скобки и вычислите: а) <span class="math">46 + (51 + 34)</span>; г) <span class="math">4,8 − (11,3 + 2,5)</span>.</p>
+<button class="toggle-btn" data-target="a37_1" onclick="toggleAnswer('a37_1')">🔍 Проверить</button>
+<div class="answer" id="a37_1">
+<ol>
+<li>а) Знак «+»: <span class="math">46 + 51 + 34 = 131</span></li>
+<li>г) Знак «−»: <span class="math">4,8 − 11,3 − 2,5 = −6,5 − 2,5 = −9</span></li>
+<li>Проверка прямо: 4,8 − 13,8 = −9 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">131; −9</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 5.2 (а, б)</span></div>
+<p>Раскройте скобки: а) <span class="math">a + (b − c)</span>; б) <span class="math">a − (b + c)</span>.</p>
+<button class="toggle-btn" data-target="a37_2" onclick="toggleAnswer('a37_2')">🔍 Проверить</button>
+<div class="answer" id="a37_2">
+<ol>
+<li>а) Знак «+»: <span class="math">a + b − c</span></li>
+<li>б) Знак «−»: <span class="math">a − b − c</span></li>
+<li>У буквенных слагаемых знаки меняются по тем же правилам ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) a + b − c; б) a − b − c</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 5.4 (б, г)</span></div>
+<p>Раскройте скобки и вычислите: б) <span class="math">(3,8 − 18) + 9,4</span>; г) <span class="math">−(90 − 23) + 77</span>.</p>
+<button class="toggle-btn" data-target="a37_3" onclick="toggleAnswer('a37_3')">🔍 Проверить</button>
+<div class="answer" id="a37_3">
+<ol>
+<li>б) <span class="math">3,8 − 18 + 9,4 = 13,2 − 18 = −4,8</span></li>
+<li>г) <span class="math">−90 + 23 + 77 = −90 + 100 = 10</span></li>
+<li>Проверка: −(67) + 77 = 10 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">б) −4,8; г) 10</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 5.6 (в, е)</span></div>
+<p>Раскройте скобки и вычислите: в) <span class="math">8,9 − (5,9 − 7,2)</span>; е) <span class="math">4,12 − (4,51 + 4,12 − 5,51)</span>.</p>
+<button class="toggle-btn" data-target="a37_4" onclick="toggleAnswer('a37_4')">🔍 Проверить</button>
+<div class="answer" id="a37_4">
+<ol>
+<li>в) <span class="math">8,9 − 5,9 + 7,2 = 3 + 7,2 = 10,2</span></li>
+<li>е) <span class="math">4,12 − 4,51 − 4,12 + 5,51 = (−4,51 + 5,51) + (4,12 − 4,12) = 1</span></li>
+<li>В пункте е) противоположные числа взаимно уничтожились ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">в) 10,2; е) 1</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 5.3 (а, в)</span></div>
+<p>Вычислите значение выражения: а) <span class="math">−(−3,48 + 2,13)</span>; в) <span class="math">−(−5/9 − 1/3)</span>.</p>
+<button class="toggle-btn" data-target="a37_5" onclick="toggleAnswer('a37_5')">🔍 Проверить</button>
+<div class="answer" id="a37_5">
+<ol>
+<li>а) <span class="math">−(−1,35) = 1,35</span></li>
+<li>в) <span class="math">−(−5/9 − 3/9) = −(−8/9) = 8/9</span></li>
+<li>Двойной минус дал плюс в обоих случаях ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 1,35; в) 8/9</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 5.6 (ж, з)</span></div>
+<p>Раскройте скобки и вычислите: ж) <span class="math">(1,3 + 3,86) − (1,3 − 4,36)</span>; з) <span class="math">(8,81 − 4,36) − (5,64 + 8,31)</span>.</p>
+<button class="toggle-btn" data-target="a37_6" onclick="toggleAnswer('a37_6')">🔍 Проверить</button>
+<div class="answer" id="a37_6">
+<ol>
+<li>ж) <span class="math">1,3 + 3,86 − 1,3 + 4,36 = (1,3 − 1,3) + (3,86 + 4,36) = 8,22</span></li>
+<li>з) <span class="math">8,81 − 4,36 − 5,64 − 8,31 = 4,45 − 5,64 − 8,31 = −1,19 − 8,31 = −9,5</span></li>
+<li>Проверка з): (4,45) − (13,95) = −9,5 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">ж) 8,22; з) −9,5</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>«+» перед скобкой: скобки опускают, знаки сохраняются.</li>
+<li>«−» перед скобкой: скобки опускают, знаки ВСЕХ слагаемых меняются.</li>
+<li>Первое слагаемое в скобках тоже меняет знак — даже без видимого знака.</li>
+<li>Раскрытие скобок = переход к алгебраической сумме.</li>
+<li>После раскрытия ищи противоположные пары — они дают нуль.</li>
+<li>Несколько скобок раскрывают по очереди.</li>
+<li>Проверка: посчитай выражение прямо, до раскрытия скобок.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-36.html">← Урок 36</a> <span class="here">Урок 37</span> <a href="lesson-38.html">Урок 38 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 5 «Решение уравнений», п. 37 «Раскрытие скобок» • Страницы 76–80</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

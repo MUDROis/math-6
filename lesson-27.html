@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 27. Сравнение положительных и отрицательных чисел — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-26.html">← Урок 26</a> <span class="here">Урок 27</span> <a href="lesson-28.html">Урок 28 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 4, п. 27</span></div>
+<h1>П. 27. Сравнение положительных и отрицательных чисел</h1>
+<p class="subtitle">Кто теплее: −3° или −15°? Сравниваем числа по прямой и по модулям</p>
+</header>
+
+<section class="card intro">
+<p>Привет! 5 ноября термометр показал <span class="math">−3°</span>, а 5 января — <span class="math">−15°</span>. В ноябре было теплее, значит, <span class="math">−3 &gt; −15</span>. Сегодня выучим <span class="highlight">правила сравнения</span> любых чисел — и научимся записывать двойные неравенства.</p>
+</section>
+
+<section class="card theory">
+<h2>Правила сравнения</h2>
+
+<div class="rule-box"><b>Любое положительное число больше любого отрицательного.</b> <b>Из двух отрицательных чисел больше то, модуль которого меньше.</b> <b>Любое отрицательное число меньше нуля, любое положительное — больше нуля.</b></div><p>Пример: <span class="math">−7 &gt; −27</span>, так как <span class="math">|−7| &lt; |−27|</span>. На координатной прямой точка с меньшей координатой лежит левее: чем правее точка — тем больше число.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Сравним числа −4,5 и −5 (упр. 4.98).</p>
+<ol class="steps">
+<li>Оба числа отрицательные — сравниваем модули: <span class="math">|−4,5| = 4,5</span>, <span class="math">|−5| = 5</span></li>
+<li><span class="math">4,5 &lt; 5</span> → больше то число, чей модуль меньше</li>
+<li><span class="math">−4,5 &gt; −5</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−4,5 &gt; −5</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Двойные неравенства</h2>
+
+<p>Число −5,249 лежит между соседними целыми −6 и −5: <span class="math">−6 &lt; −5,249 &lt; −5</span>. Так получается <span class="highlight">двойное неравенство</span>: смотрим на ближайшие целые слева и справа на координатной прямой.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Между какими соседними целыми числами лежит 0,34? (упр. 4.101)</p>
+<ol class="steps">
+<li>На прямой число 0,34 находится правее 0 и левее 1</li>
+<li><span class="math">0 &lt; 0,34 &lt; 1</span></li>
+<li>Проверка: 0 и 1 — соседние целые числа ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">0 &lt; 0,34 &lt; 1</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Неравенства про знаки</h2>
+
+<p>Факты «число m — отрицательное» записывают неравенством <span class="math">m &lt; 0</span>, «число n — положительное» — <span class="math">n &gt; 0</span>, «неотрицательное» — <span class="math">n ≥ 0</span>. Неравенства с отрицательными числами читают: «минус двенадцать меньше минус двух».</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 27: Правее — больше; у минусов — меньший модуль сильнее</p>
+<p><b>Устройство.</b> На координатной прямой «больше» значит «правее». Для минусов правее — тот, кто ближе к нулю.</p><p><b>Правило-шаги.</b> 1) Есть «плюс» и «минус» — плюс больше. 2) Оба минуса: сравни модули — больший модуль даёт МЕНЬШЕЕ число. 3) С нулём: минус меньше, плюс больше.</p><p><b>Проверь на контрасте:</b> <span class="math">−3 &gt; −15</span> ✅ (3 &lt; 15). А сказать «−15 больше, ведь 15 больше 3» 🚫 — перепутал направление для минусов.</p><p><b>Мостик:</b> в заданиях 1–4 для двух минусов всегда сначала считай модули.</p>
+</section>
+
+<section class="card visual">
+<h2>Чем правее — тем больше</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><svg width="560" height="130" viewBox="0 0 560 130" role="img"><line x1="20" y1="92" x2="540" y2="92" stroke="#2d3436" stroke-width="2"/><polygon points="540,92 528,87 528,97" fill="#2d3436"/><line x1="-168" y1="87" x2="-168" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="-168" y="114" font-size="12" text-anchor="middle" fill="#2d3436">-14</text><line x1="-72" y1="87" x2="-72" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="-72" y="114" font-size="12" text-anchor="middle" fill="#2d3436">-11</text><line x1="24" y1="87" x2="24" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="24" y="114" font-size="12" text-anchor="middle" fill="#2d3436">-8</text><line x1="120" y1="87" x2="120" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="120" y="114" font-size="12" text-anchor="middle" fill="#2d3436">-5</text><line x1="216" y1="87" x2="216" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="216" y="114" font-size="12" text-anchor="middle" fill="#2d3436">-2</text><line x1="312" y1="87" x2="312" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="312" y="114" font-size="12" text-anchor="middle" fill="#2d3436">1</text><line x1="408" y1="87" x2="408" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="408" y="114" font-size="12" text-anchor="middle" fill="#2d3436">4</text><line x1="504" y1="87" x2="504" y2="97" stroke="#2d3436" stroke-width="1.5"/><text x="504" y="114" font-size="12" text-anchor="middle" fill="#2d3436">7</text><circle cx="-136" cy="92" r="7" fill="#c0392b" stroke="#2d3436" stroke-width="1.5"/><text x="-136" y="78" font-size="14" font-weight="bold" text-anchor="middle" fill="#c0392b">−13</text><circle cx="56" cy="92" r="7" fill="#f39c12" stroke="#2d3436" stroke-width="1.5"/><text x="56" y="78" font-size="14" font-weight="bold" text-anchor="middle" fill="#f39c12">−7</text><circle cx="536" cy="92" r="7" fill="#1abc9c" stroke="#2d3436" stroke-width="1.5"/><text x="536" y="78" font-size="14" font-weight="bold" text-anchor="middle" fill="#1abc9c">8</text></svg></div>
+<figcaption>Схема из учебника: N(−13) лежит левее M(−7), а M(−7) — левее P(8): −13 &lt; −7 &lt; 8</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.94</span></div>
+<p>Какое из чисел больше: а) <span class="math">−5</span> и <span class="math">0</span>; б) <span class="math">7</span> и <span class="math">0</span>; в) <span class="math">0</span> и <span class="math">−3,2</span>; г) <span class="math">1/10</span> и <span class="math">0</span>?</p>
+<button class="toggle-btn" data-target="a27_1" onclick="toggleAnswer('a27_1')">🔍 Проверить</button>
+<div class="answer" id="a27_1">
+<ol>
+<li>а) Любое отрицательное меньше нуля: <span class="math">0 &gt; −5</span></li>
+<li>б) <span class="math">7 &gt; 0</span> — положительное больше нуля</li>
+<li>в) <span class="math">0 &gt; −3,2</span>; г) <span class="math">1/10 &gt; 0</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 0; б) 7; в) 0; г) 1/10</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.95</span></div>
+<p>Сравните числа и запишите результат в виде неравенства: а) <span class="math">3</span> и <span class="math">−4</span>; б) <span class="math">−10</span> и <span class="math">10</span>; в) <span class="math">8,9</span> и <span class="math">−9,8</span>; г) <span class="math">−240</span> и <span class="math">3,2</span>.</p>
+<button class="toggle-btn" data-target="a27_2" onclick="toggleAnswer('a27_2')">🔍 Проверить</button>
+<div class="answer" id="a27_2">
+<ol>
+<li>а) Положительное больше отрицательного: <span class="math">3 &gt; −4</span></li>
+<li>б) <span class="math">10 &gt; −10</span>, то есть <span class="math">−10 &lt; 10</span></li>
+<li>в) <span class="math">8,9 &gt; −9,8</span>; г) <span class="math">3,2 &gt; −240</span>, то есть <span class="math">−240 &lt; 3,2</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">3 &gt; −4; −10 &lt; 10; 8,9 &gt; −9,8; −240 &lt; 3,2</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.97 (а, б)</span></div>
+<p>Сравните числа, записав результат со знаком &gt;: а) <span class="math">−12</span> и <span class="math">−13</span>; б) <span class="math">−46</span> и <span class="math">−41</span>.</p>
+<button class="toggle-btn" data-target="a27_3" onclick="toggleAnswer('a27_3')">🔍 Проверить</button>
+<div class="answer" id="a27_3">
+<ol>
+<li>а) Модули: 12 &lt; 13 → <span class="math">−12 &gt; −13</span></li>
+<li>б) Модули: 46 &gt; 41 → <span class="math">−46 &lt; −41</span>, то есть <span class="math">−41 &gt; −46</span></li>
+<li>Со знаком «&gt;»: −12 &gt; −13 и −41 &gt; −46 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">−12 &gt; −13; −41 &gt; −46</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.98 (б, г)</span></div>
+<p>Сравните числа, записав результат со знаком &lt;: б) <span class="math">−6,56</span> и <span class="math">−6,506</span>; г) <span class="math">−0,009</span> и <span class="math">−0,01</span>.</p>
+<button class="toggle-btn" data-target="a27_4" onclick="toggleAnswer('a27_4')">🔍 Проверить</button>
+<div class="answer" id="a27_4">
+<ol>
+<li>б) Модули: 6,56 &gt; 6,506 → <span class="math">−6,56 &lt; −6,506</span></li>
+<li>г) Модули: 0,009 &lt; 0,01 → <span class="math">−0,009 &gt; −0,01</span>, то есть <span class="math">−0,01 &lt; −0,009</span></li>
+<li>Со знаком «&lt;»: −6,56 &lt; −6,506 и −0,01 &lt; −0,009 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">−6,56 &lt; −6,506; −0,01 &lt; −0,009</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.101 (а, б, г)</span></div>
+<p>Запишите в виде двойного неравенства, между какими соседними целыми числами лежит число: а) <span class="math">−5,249</span>; б) <span class="math">−11,7</span>; г) <span class="math">0,34</span>.</p>
+<button class="toggle-btn" data-target="a27_5" onclick="toggleAnswer('a27_5')">🔍 Проверить</button>
+<div class="answer" id="a27_5">
+<ol>
+<li>а) Соседние целые: −6 и −5 → <span class="math">−6 &lt; −5,249 &lt; −5</span></li>
+<li>б) <span class="math">−12 &lt; −11,7 &lt; −11</span></li>
+<li>г) <span class="math">0 &lt; 0,34 &lt; 1</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">−6 &lt; −5,249 &lt; −5; −12 &lt; −11,7 &lt; −11; 0 &lt; 0,34 &lt; 1</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.102 (а, б, к)</span></div>
+<p>Числа a и b — отрицательные, d и c — положительные. Сравните: а) <span class="math">0</span> и <span class="math">c</span>; б) <span class="math">b</span> и <span class="math">0</span>; к) <span class="math">−|d|</span> и <span class="math">d</span>.</p>
+<button class="toggle-btn" data-target="a27_6" onclick="toggleAnswer('a27_6')">🔍 Проверить</button>
+<div class="answer" id="a27_6">
+<ol>
+<li>а) c положительное → <span class="math">0 &lt; c</span></li>
+<li>б) b отрицательное → <span class="math">b &lt; 0</span></li>
+<li>к) <span class="math">|d| = d</span> (d положительное), значит <span class="math">−|d| = −d</span> — отрицательное → <span class="math">−|d| &lt; d</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">0 &lt; c; b &lt; 0; −|d| &lt; d</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Любое положительное число больше любого отрицательного.</li>
+<li>Из двух отрицательных больше то, чей модуль меньше.</li>
+<li>Все отрицательные числа меньше нуля, положительные — больше.</li>
+<li>На координатной прямой большее число лежит правее.</li>
+<li>Двойное неравенство записывает «между соседними целыми».</li>
+<li>«Число отрицательное» — это m &lt; 0; «неотрицательное» — m ≥ 0.</li>
+<li>Для двух минусов сначала сравни модули.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-26.html">← Урок 26</a> <span class="here">Урок 27</span> <a href="lesson-28.html">Урок 28 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 4 «Действия с рациональными числами», п. 27 «Сравнение положительных и отрицательных чисел» • Страницы 23–27</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

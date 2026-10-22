@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 15. Действие деления смешанных чисел — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-14.html">← Урок 14</a> <span class="here">Урок 15</span> <a href="lesson-16.html">Урок 16 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 2, п. 15</span></div>
+<h1>П. 15. Действие деления смешанных чисел</h1>
+<p class="subtitle">Переверни делитель — и деление станет умножением</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Ширина прямоугольника <span class="math">1 4/21 дм</span>, площадь <span class="math">2 6/7 дм²</span>. Как найти длину? Площадь разделить на ширину. Сегодня научимся <span class="highlight">делить смешанные числа</span> — через взаимно обратные числа, которые «в произведении дают единицу».</p>
+</section>
+
+<section class="card theory">
+<h2>Взаимно обратные числа</h2>
+
+<div class="def-box">Числа, произведение которых равно 1, называют <b class="term">взаимно обратными</b>. Для дроби <span class="math">a/b</span> обратным является дробь <span class="math">b/a</span>.</div><p>Например, <span class="math">5/9 и 9/5</span> взаимно обратные: <span class="math">5/9 · 9/5 = 1</span>. Обратным к натуральному числу <span class="math">7</span> будет <span class="math">1/7</span>, к <span class="math">0,2</span> — число <span class="math">5</span>. А вот у нуля обратного числа нет.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим произведение 6/13 · 5/11 · 2 1/5 (пример из учебника).</p>
+<ol class="steps">
+<li><span class="math">2 1/5 = 11/5</span></li>
+<li><span class="math">5/11 · 11/5 = 1</span> — взаимно обратные!</li>
+<li><span class="math">6/13 · 1 = 6/13</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">6/13</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Правило деления дробей</h2>
+
+<div class="rule-box"><b>Чтобы разделить одну дробь на другую, надо делимое умножить на число, обратное делителю:</b> <span class="math">a/b : c/d = a/b · d/c</span>.</div><p>Смешанные числа сначала представляют неправильными дробями. Целое число — это дробь со знаменателем 1: <span class="math">7 = 7/1</span>.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим 4/7 : 16/49.</p>
+<ol class="steps">
+<li>Переворачиваем делитель: <span class="math">4/7 · 49/16</span></li>
+<li>Сокращаем: <span class="math">4 и 16</span> → <span class="math">1 и 4</span>; <span class="math">7 и 49</span> → <span class="math">1 и 7</span></li>
+<li><span class="math">= 7/4 = 1 3/4</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">1 3/4</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Смотри, что на что делится</h2>
+
+<p>Полезные ориентиры: деление на правильную дробь УВЕЛИЧИВАЕТ число (<span class="math">1 : 1/2 = 2</span>), деление на неправильную — уменьшает, деление на 1 не меняет, а <span class="math">0 : a = 0</span> при любом <span class="math">a ≠ 0</span>. На нуль делить нельзя.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 15: Переворачивай только делитель</p>
+<p><b>Устройство.</b> Деление — «спрятанное умножение»: разделить на дробь значит умножить на её «отражение».</p><p><b>Правило-шаги.</b> 1) Делимое и делитель — в неправильные дроби. 2) Делитель переверни. 3) Умножай и сокращай крест-накрест.</p><p><b>Проверь на контрасте:</b> <span class="math">2/3 : 4/5 = 2/3 · 5/4 = 10/12 = 5/6</span> ✅. А перевернуть ОБЕ дроби (<span class="math">3/2 · 5/4</span>) 🚫 — ответ получится больше единицы без причины.</p><p><b>Мостик:</b> в заданиях 1–4 после переворота сразу ищи пары для сокращения.</p>
+</section>
+
+<section class="card visual">
+<h2>Карточка-делитель переворачивается</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;font-size:17px"><span class="math" style="background:#eaf6fd;padding:10px 14px">4/7</span><span>:</span><span class="math" style="background:#fdf3f2;padding:10px 14px">16/49</span><span style="font-size:22px">⟳</span><span class="math" style="background:#fffaf0;padding:10px 14px">4/7 · 49/16</span><span>=</span><span class="math" style="background:#f0fbf9;padding:10px 14px;font-weight:700">1 3/4</span></div></div>
+<figcaption>Схема к упр. 2.417 (а): делитель 16/49 перевёрнут в 49/16, дальше — умножение с сокращением</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.417 (а, б)</span></div>
+<p>Найдите частное: а) <span class="math">4/7 : 16/49</span>; б) <span class="math">5/9 : 1/2</span>.</p>
+<button class="toggle-btn" data-target="a15_1" onclick="toggleAnswer('a15_1')">🔍 Проверить</button>
+<div class="answer" id="a15_1">
+<ol>
+<li>а) <span class="math">4/7 · 49/16 = (4 · 49)/(7 · 16) = 7/4 = 1 3/4</span></li>
+<li>б) <span class="math">5/9 · 2/1 = 10/9 = 1 1/9</span></li>
+<li>Проверка: <span class="math">1 3/4 · 16/49 = 7/4 · 16/49 = 4/7</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 1 3/4; б) 1 1/9</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.418 (в, г)</span></div>
+<p>Выполните деление: в) <span class="math">1 : 5/13</span>; г) <span class="math">7 : 4/7</span>.</p>
+<button class="toggle-btn" data-target="a15_2" onclick="toggleAnswer('a15_2')">🔍 Проверить</button>
+<div class="answer" id="a15_2">
+<ol>
+<li>в) <span class="math">1 · 13/5 = 13/5 = 2 3/5</span></li>
+<li>г) <span class="math">7/1 · 7/4 = 49/4 = 12 1/4</span></li>
+<li>Проверка: деление на правильную дробь увеличило числа ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">в) 2 3/5; г) 12 1/4</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.419 (в, ж)</span></div>
+<p>Вычислите значение частного: в) <span class="math">2 2/13 : 2 2/13</span>; ж) <span class="math">0 : 10 7/15</span>.</p>
+<button class="toggle-btn" data-target="a15_3" onclick="toggleAnswer('a15_3')">🔍 Проверить</button>
+<div class="answer" id="a15_3">
+<ol>
+<li>в) Число делят само на себя → <span class="math">1</span></li>
+<li>ж) Нуль, делённый на любое число (не равное нулю), равен нулю</li>
+<li>Проверка: <span class="math">2 2/13 · 1 = 2 2/13</span>; <span class="math">10 7/15 · 0 = 0</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">в) 1; ж) 0</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.419 (а, д)</span></div>
+<p>Вычислите значение частного: а) <span class="math">5 1/4 : 1 4/5</span>; д) <span class="math">5 1/4 : 1 3/4</span>.</p>
+<button class="toggle-btn" data-target="a15_4" onclick="toggleAnswer('a15_4')">🔍 Проверить</button>
+<div class="answer" id="a15_4">
+<ol>
+<li>а) <span class="math">21/4 : 9/5 = 21/4 · 5/9 = 105/36</span> — сокращаем на 3: <span class="math">35/12 = 2 11/12</span></li>
+<li>д) <span class="math">21/4 : 7/4 = 21/4 · 4/7 = 3</span></li>
+<li>Проверка: <span class="math">3 · 1 3/4 = 5 1/4</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 2 11/12; д) 3</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.421</span></div>
+<p>Найдите скорость комбайна, который убирает полосу длиной 6 км за <span class="math">3/4 ч</span>; за <span class="math">1 1/2 ч</span>.</p>
+<button class="toggle-btn" data-target="a15_5" onclick="toggleAnswer('a15_5')">🔍 Проверить</button>
+<div class="answer" id="a15_5">
+<ol>
+<li>Скорость = путь : время</li>
+<li><span class="math">6 : 3/4 = 6 · 4/3 = 8 (км/ч)</span></li>
+<li><span class="math">6 : 1 1/2 = 6 : 3/2 = 6 · 2/3 = 4 (км/ч)</span>. Проверка: <span class="math">8 · 3/4 = 6</span>, <span class="math">4 · 1 1/2 = 6</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">8 км/ч; 4 км/ч</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.411 (ж, з)</span></div>
+<p>Найдите частное: ж) <span class="math">1 : 1,2</span>; з) <span class="math">1 : 1,5</span>.</p>
+<button class="toggle-btn" data-target="a15_6" onclick="toggleAnswer('a15_6')">🔍 Проверить</button>
+<div class="answer" id="a15_6">
+<ol>
+<li>ж) <span class="math">1 : 1,2 = 10 : 12 = 5/6</span></li>
+<li>з) <span class="math">1 : 1,5 = 10 : 15 = 2/3</span></li>
+<li>Проверка: <span class="math">5/6 · 1,2 = 1</span>; <span class="math">2/3 · 1,5 = 1</span> — множители взаимно обратные ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">ж) 5/6; з) 2/3</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Взаимно обратные числа дают в произведении 1.</li>
+<li>Деление дробей заменяют умножением на обратную дробь.</li>
+<li>Переворачивают ТОЛЬКО делитель, не делимое.</li>
+<li>Смешанные числа и целые числа сначала записывают неправильными дробями.</li>
+<li>Деление на правильную дробь увеличивает число, на неправильную — уменьшает.</li>
+<li>0 : a = 0 (при a ≠ 0); на нуль делить нельзя.</li>
+<li>Проверка: частное · делитель = делимое.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-14.html">← Урок 14</a> <span class="here">Урок 15</span> <a href="lesson-16.html">Урок 16 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 2 «Действия со смешанными числами», п. 15 «Действие деления смешанных чисел» • Страницы 99–105</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

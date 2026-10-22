@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 21. Масштаб — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-20.html">← Урок 20</a> <span class="here">Урок 21</span> <a href="lesson-22.html">Урок 22 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 3, п. 21</span></div>
+<h1>П. 21. Масштаб</h1>
+<p class="subtitle">Как уместить Россию на тетрадном листе и божью коровку — во весь учебник</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Протяжённость России с запада на восток — около 10 000 км. Тем не менее вся страна помещается на одном листе атласа. Чудо совершает <span class="highlight">масштаб</span> — отношение длины отрезка на карте к длине соответствующего отрезка на местности. Сегодня потренируем оба направления: карта → местность и местность → карта.</p>
+</section>
+
+<section class="card theory">
+<h2>Что такое масштаб</h2>
+
+<div class="def-box"><b class="term">Масштаб карты</b> — отношение длины отрезка на карте к длине соответствующего отрезка на местности. Масштаб <span class="math">1 : 100 000</span> означает: 1 см на карте соответствует 100 000 см = 1 км на местности.</div><p>Масштаб — отношение величин, поэтому обе длины берут в одинаковых единицах (обычно в сантиметрах). Масштаб бывает не только уменьшающим: в биологии мелких насекомых и клеток изображают в масштабе <span class="math">7 : 1</span> — увеличивающим.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Длина отрезка на карте 4 см, масштаб 1 : 10 000 000. Чему равно расстояние на местности? (задача 1 из учебника)</p>
+<ol class="steps">
+<li>Пропорция: <span class="math">4 : x = 1 : 10 000 000</span></li>
+<li><span class="math">x = 4 · 10 000 000 = 40 000 000 (см)</span></li>
+<li>Переводим: 40 000 000 см = 400 000 м = 400 км ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">400 км</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Местность → карта</h2>
+
+<p>Обратный ход: делим на число масштаба. Расстояние 5,2 км при масштабе 1 : 1 000 000: <span class="math">5,2 км = 520 000 см</span>, делим на 1 000 000 → <span class="math">0,52 см</span>. Удобный приём: сначала переведи всё в сантиметры, потом применяй масштаб.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Расстояние между населёнными пунктами на карте 6,5 см, масштаб 1 : 100 000. Найдите расстояние на местности. (упр. 3.103)</p>
+<ol class="steps">
+<li><span class="math">6,5 · 100 000 = 650 000 (см)</span></li>
+<li>Переводим: 650 000 см = 6 500 м = 6,5 км</li>
+<li>Проверка: 1 см ↔ 1 км, значит 6,5 см ↔ 6,5 км ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">6,5 км</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Масштаб ищут и подбирают</h2>
+
+<p>Иногда известны обе длины — тогда масштаб = отношение: 180 км = 18 000 000 см изображены отрезком 4,5 см → масштаб <span class="math">4,5 : 18 000 000 = 1 : 4 000 000</span>. А чтобы расстояние поместилось на листе, масштаб подбирают: 10 000 км при масштабе 1 : 10 000 000 превратятся в 100 см — на тетрадную страницу не уместятся.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 21: Сначала — в сантиметры, потом — масштаб</p>
+<p><b>Устройство.</b> Масштаб — дробь-«переводчик»: во сколько раз карта меньше местности (или больше, если масштаб типа 7 : 1).</p><p><b>Правило-шаги.</b> 1) Переведи обе длины в одни единицы (см). 2) Карта → местность: умножай на второе число масштаба. 3) Местность → карта: дели. 4) Верни ответу удобные единицы.</p><p><b>Проверь на контрасте:</b> 5 см на карте 1 : 1000 → <span class="math">5 · 1000 = 5000 см = 50 м</span> ✅. А написать «5000 м» 🚫 — забыл, что множил сантиметры.</p><p><b>Мостик:</b> в заданиях 1–4 держи цепочку: см → действие масштаба → км/м.</p>
+</section>
+
+<section class="card visual">
+<h2>Шкала масштаба 1 : 100 000</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><svg width="520" height="90" viewBox="0 0 520 90" role="img" aria-label="Шкала масштаба"><rect x="30" y="40" width="460" height="14" fill="#eaf6fd" stroke="#2d3436"/><rect x="30" y="40" width="115" height="14" fill="#3498db"/><line x1="30" y1="36" x2="30" y2="58" stroke="#2d3436" stroke-width="2"/><line x1="145" y1="36" x2="145" y2="58" stroke="#2d3436" stroke-width="2"/><line x1="260" y1="36" x2="260" y2="58" stroke="#2d3436" stroke-width="2"/><line x1="375" y1="36" x2="375" y2="58" stroke="#2d3436" stroke-width="2"/><line x1="490" y1="36" x2="490" y2="58" stroke="#2d3436" stroke-width="2"/><text x="87" y="76" font-size="13" text-anchor="middle" fill="#21618c">1 см = 1 км</text><text x="260" y="76" font-size="13" text-anchor="middle" fill="#2d3436">2 км</text><text x="375" y="76" font-size="13" text-anchor="middle" fill="#2d3436">3 км</text><text x="490" y="76" font-size="13" text-anchor="middle" fill="#2d3436">4 км</text><text x="30" y="24" font-size="13" fill="#636e72">0</text></svg></div>
+<figcaption>Линейный масштаб: один сантиметр линейки равен километру местности (масштаб 1 : 100 000). Деления равномерные</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.103</span></div>
+<p>Расстояние между населёнными пунктами на карте 6,5 см. Найдите расстояние на местности, если масштаб карты <span class="math">1 : 100 000</span>.</p>
+<button class="toggle-btn" data-target="a21_1" onclick="toggleAnswer('a21_1')">🔍 Проверить</button>
+<div class="answer" id="a21_1">
+<ol>
+<li><span class="math">6,5 · 100 000 = 650 000 (см)</span></li>
+<li>650 000 см = 6 500 м = 6,5 км</li>
+<li>Проверка: 1 см ↔ 1 км → 6,5 см ↔ 6,5 км ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">6,5 км</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.101 (а, б)</span></div>
+<p>Расстояние между Москвой и Владимиром 180 км. Найдите масштаб карты, если на ней это расстояние равно: а) 72 мм; б) 4,5 см.</p>
+<button class="toggle-btn" data-target="a21_2" onclick="toggleAnswer('a21_2')">🔍 Проверить</button>
+<div class="answer" id="a21_2">
+<ol>
+<li>180 км = 18 000 000 см</li>
+<li>а) 72 мм = 7,2 см → <span class="math">7,2 : 18 000 000 = 1 : 2 500 000</span></li>
+<li>б) <span class="math">4,5 : 18 000 000 = 1 : 4 000 000</span>. Проверка: <span class="math">2 500 000 · 7,2 = 18 000 000</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 1 : 2 500 000; б) 1 : 4 000 000</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.107</span></div>
+<p>Длина Байкало-Амурской магистрали 4324 км. Какой длины получится линия на карте в масштабе: 1) <span class="math">1 : 20 000 000</span>; 2) <span class="math">1 : 25 000 000</span>?</p>
+<button class="toggle-btn" data-target="a21_3" onclick="toggleAnswer('a21_3')">🔍 Проверить</button>
+<div class="answer" id="a21_3">
+<ol>
+<li>4324 км = 432 400 000 см</li>
+<li>1) <span class="math">432 400 000 : 20 000 000 = 21,62 (см)</span></li>
+<li>2) <span class="math">432 400 000 : 25 000 000 = 17,296 ≈ 17,3 (см)</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">1) 21,62 см; 2) ≈ 17,3 см</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.109</span></div>
+<p>Ребро куба на развёртке, сделанной в масштабе <span class="math">1 : 4</span>, равно 11,25 см. Чему будет равно ребро этого же куба на развёртках в масштабах <span class="math">1 : 3</span> и <span class="math">1 : 5</span>?</p>
+<button class="toggle-btn" data-target="a21_4" onclick="toggleAnswer('a21_4')">🔍 Проверить</button>
+<div class="answer" id="a21_4">
+<ol>
+<li>Истинное ребро: <span class="math">11,25 · 4 = 45 (см)</span></li>
+<li>Масштаб 1 : 3: <span class="math">45 : 3 = 15 (см)</span></li>
+<li>Масштаб 1 : 5: <span class="math">45 : 5 = 9 (см)</span>. Проверка: <span class="math">15 · 3 = 45</span>, <span class="math">9 · 5 = 45</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">15 см и 9 см</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 3.108</span></div>
+<p>Расстояние между Солнцем и Землёй 149,6 млн км изображено отрезком 6 см. Чему равно на этой схеме расстояние между Солнцем и Марсом (227,9 млн км)? Каково расстояние от Солнца до Юпитера, если на схеме оно равно 31 см? Результаты округлите до десятых.</p>
+<button class="toggle-btn" data-target="a21_5" onclick="toggleAnswer('a21_5')">🔍 Проверить</button>
+<div class="answer" id="a21_5">
+<ol>
+<li>Прямая пропорциональность: <span class="math">6 : 149,6 = x : 227,9</span></li>
+<li><span class="math">x = 227,9 · 6 : 149,6 = 1367,4 : 149,6 ≈ 9,1 (см)</span></li>
+<li>Обратный ход: <span class="math">31 · 149,6 : 6 = 4637,6 : 6 ≈ 772,9 (млн км)</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">≈ 9,1 см; ≈ 772,9 млн км</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 3.104</span></div>
+<p>Протяжённость территории России с запада на восток ≈ 10 000 км. Уместится ли это расстояние на странице тетради в масштабе одна десятимиллионная?</p>
+<button class="toggle-btn" data-target="a21_6" onclick="toggleAnswer('a21_6')">🔍 Проверить</button>
+<div class="answer" id="a21_6">
+<ol>
+<li><span class="math">10 000 км = 1 000 000 000 см</span></li>
+<li>Масштаб 1 : 10 000 000 → <span class="math">1 000 000 000 : 10 000 000 = 100 (см)</span></li>
+<li>100 см = 1 м — это больше длины страницы тетради (≈ 20 см): НЕ уместится. Для страницы нужен масштаб ≈ 1 : 50 000 000 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">нет: получится 100 см</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Масштаб — отношение длины на карте к длине на местности в одинаковых единицах.</li>
+<li>1 : n — карта меньше местности в n раз; n : 1 — увеличение.</li>
+<li>Карта → местность: умножай на n; местность → карта: дели на n.</li>
+<li>Перед действием переводи длины в сантиметры.</li>
+<li>Масштаб находят и как отношение известных двух длин.</li>
+<li>Не всякое расстояние влезает на лист — масштаб подбирают.</li>
+<li>Проверка: длина на карте × n = длина на местности.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-20.html">← Урок 20</a> <span class="here">Урок 21</span> <a href="lesson-22.html">Урок 22 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 3 «Отношения и пропорции», п. 21 «Масштаб» • Страницы 136–141</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

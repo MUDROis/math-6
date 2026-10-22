@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 20. Прямая и обратная пропорциональные зависимости — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-19.html">← Урок 19</a> <span class="here">Урок 20</span> <a href="lesson-21.html">Урок 21 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 3, п. 20</span></div>
+<h1>П. 20. Прямая и обратная пропорциональные зависимости</h1>
+<p class="subtitle">Больше-больше или больше-меньше: две стрелки, которые решают задачи за тебя</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Купил в 2 раза больше тетрадей — заплатил в 2 раза больше. Едет в 2 раза быстрее — приедет в 2 раза быстрее... или в 2 раза быстрее приедет в 2 раза РАНЬШЕ? Обе истории — про пропорциональность, но одну называют <span class="highlight">прямой</span>, а другую <span class="highlight">обратной</span>. Сегодня научимся их различать и решать задачи пропорцией.</p>
+</section>
+
+<section class="card theory">
+<h2>Прямо пропорциональные величины</h2>
+
+<div class="def-box"><b class="term">Прямо пропорциональные</b> величины — те, что при увеличении одной в несколько раз увеличивают другую во столько же раз. Отношения соответствующих значений таких величин равны.</div><p>Периметр квадрата <span class="math">P = 4a</span>: при a = 1, 2, 4, 8 периметр равен 4, 8, 16, 32 — отношение <span class="math">P : a</span> всегда 4. Примеры: путь и время при постоянной скорости, количество товара и стоимость, работа и производительность.</p>
+</section>
+
+<section class="card theory">
+<h2>Обратно пропорциональные величины</h2>
+
+<div class="def-box"><b class="term">Обратно пропорциональные</b> величины — те, что при увеличении одной в несколько раз уменьшают другую во столько же раз. Произведения соответствующих значений таких величин равны.</div><p>Прямоугольники площадью 12 м²: стороны 1 и 12, 2 и 6, 3 и 4, 4 и 3 — произведение всегда 12. Примеры: скорость и время при одном пути, цена и количество при одной сумме, число рабочих и время работы.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Из 3,5 кг семян подсолнечника получили 1,4 кг масла. Сколько масла получится из 9,5 кг семян? (задача 1 из учебника)</p>
+<ol class="steps">
+<li>Семян больше — масла больше: зависимость ПРЯМАЯ (стрелки в одну сторону)</li>
+<li>Пропорция: <span class="math">3,5/9,5 = 1,4/x</span></li>
+<li><span class="math">x = 9,5 · 1,4 : 3,5 = 13,3 : 3,5 = 3,8</span></li>
+<li>Ответ: 3,8 кг. Проверка: <span class="math">3,5 : 1,4 = 2,5</span> и <span class="math">9,5 : 3,8 = 2,5</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">3,8 кг</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Обратная задача: скорость и время</h2>
+
+<p>Если путь один и тот же, то больше скорость — меньше время: зависимость обратная, и одно из отношений в пропорции <span class="highlight">переворачивают</span>. Поезд со скоростью 60 км/ч проходит город за 4 ч; поезд со скоростью 80 км/ч пройдёт то же расстояние за <span class="math">x</span> ч: <span class="math">4/x = 80/60</span>, отсюда <span class="math">x = 4 · 60 : 80 = 3 ч</span>.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 20: Стрелки: в одну сторону — прямая, навстречу — обратная</p>
+<p><b>Устройство.</b> Тип зависимости подсказывает вопрос: «если первой величины станет больше, второй тоже станет больше?»</p><p><b>Правило-шаги.</b> 1) Нарисуй стрелки над величинами. 2) Прямая — стрелки в одну сторону, пропорция «как есть». 3) Обратная — стрелки навстречу, одно отношение переверни.</p><p><b>Проверь на контрасте:</b> «больше станков — быстрее job» — обратная ✅. А «больше станков — больше деталей за час» — прямая ✅. Назвать обе прямой 🚫 нельзя: вопрос всегда про ОДНУ и ту же работу/путь.</p><p><b>Мостик:</b> в заданиях 1, 4 и 5 сначала расставь стрелки — и станет ясно, переворачивать ли отношение.</p>
+</section>
+
+<section class="card visual">
+<h2>Две задачи — две стрелки</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;gap:22px;flex-wrap:wrap;justify-content:center"><div style="border:2px solid #3498db;border-radius:12px;padding:12px 18px;text-align:center"><div style="font-size:14px;color:#21618c">Семена ⟶ Масло (прямая)</div><table class="plain"><tr><th></th><th>I</th><th>II</th></tr><tr><td>семена</td><td>3,5 кг</td><td>9,5 кг</td></tr><tr><td>масло</td><td>1,4 кг</td><td>x кг</td></tr></table><div style="font-size:13px;color:#21618c">стрелки в одну сторону</div></div><div style="border:2px solid #1abc9c;border-radius:12px;padding:12px 18px;text-align:center"><div style="font-size:14px;color:#148f77">Скорость ⟵ Время (обратная)</div><table class="plain"><tr><th></th><th>I</th><th>II</th></tr><tr><td>скорость</td><td>60 км/ч</td><td>80 км/ч</td></tr><tr><td>время</td><td>4 ч</td><td>x ч</td></tr></table><div style="font-size:13px;color:#148f77">стрелки навстречу: 4/x = 80/60</div></div></div></div>
+<figcaption>Схемы к задачам из учебника: у прямой зависимости стрелки сонаправлены, у обратной — навстречу</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.63 (а, б, в)</span></div>
+<p>Определите зависимость: а) время движения поезда и пройденный путь при постоянной скорости; б) количество одинакового товара и его стоимость; в) число рабочих одинаковой квалификации и время выполнения определённой работы.</p>
+<button class="toggle-btn" data-target="a20_1" onclick="toggleAnswer('a20_1')">🔍 Проверить</button>
+<div class="answer" id="a20_1">
+<ol>
+<li>а) Больше время — больше путь: ПРЯМАЯ пропорциональность</li>
+<li>б) Больше товара — больше стоимость: ПРЯМАЯ</li>
+<li>в) Больше рабочих — меньше время: ОБРАТНАЯ ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) прямая; б) прямая; в) обратная</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.65</span></div>
+<p>Из 25,5 м шерстяной ткани пошили 15 юбок. Сколько ткани нужно для 5 таких юбок?</p>
+<button class="toggle-btn" data-target="a20_2" onclick="toggleAnswer('a20_2')">🔍 Проверить</button>
+<div class="answer" id="a20_2">
+<ol>
+<li>Юбок меньше — ткани меньше: прямая зависимость</li>
+<li><span class="math">25,5 : 15 = x : 5</span> → <span class="math">x = 25,5 · 5 : 15</span></li>
+<li><span class="math">x = 8,5 (м)</span>. Проверка: на одну юбку <span class="math">25,5 : 15 = 1,7 м</span>, на пять — <span class="math">1,7 · 5 = 8,5</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">8,5 м</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.64</span></div>
+<p>Труба длиной 2,5 м имеет массу 11,8 кг. Найдите массу такой же трубы длиной 4 м.</p>
+<button class="toggle-btn" data-target="a20_3" onclick="toggleAnswer('a20_3')">🔍 Проверить</button>
+<div class="answer" id="a20_3">
+<ol>
+<li>Чем длиннее труба, тем больше масса: прямая зависимость</li>
+<li><span class="math">2,5 : 4 = 11,8 : x</span> → <span class="math">x = 4 · 11,8 : 2,5</span></li>
+<li><span class="math">x = 47,2 : 2,5 = 18,88 (кг)</span>. Проверка: масса 1 м равна <span class="math">11,8 : 2,5 = 4,72 кг</span>; <span class="math">4 · 4,72 = 18,88</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">18,88 кг</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.66</span></div>
+<p>Шесть станков штампуют нужное количество деталей за 9 ч. За сколько часов штампуют такое же количество деталей 9 таких же станков?</p>
+<button class="toggle-btn" data-target="a20_4" onclick="toggleAnswer('a20_4')">🔍 Проверить</button>
+<div class="answer" id="a20_4">
+<ol>
+<li>Больше станков — меньше время: обратная зависимость, отношение переворачиваем</li>
+<li><span class="math">6 : 9 = x : 9</span> → <span class="math">x = 6 · 9 : 9</span></li>
+<li><span class="math">x = 6 (ч)</span>. Проверка: работа в 9 раз больше → 9 станков справятся за <span class="math">54 : 9 = 6 ч</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">6 ч</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 3.67</span></div>
+<p>Из города А в город В турист ехал на машине 6,5 ч со скоростью 56 км/ч. Сколько времени потратил бы турист, двигаясь со скоростью 65 км/ч?</p>
+<button class="toggle-btn" data-target="a20_5" onclick="toggleAnswer('a20_5')">🔍 Проверить</button>
+<div class="answer" id="a20_5">
+<ol>
+<li>Путь один и тот же: больше скорость — меньше время (обратная зависимость)</li>
+<li><span class="math">6,5 : x = 65 : 56</span> → <span class="math">x = 6,5 · 56 : 65</span></li>
+<li><span class="math">x = 6,5 : 65 · 56 = 0,1 · 56 = 5,6 (ч)</span>. Проверка: <span class="math">56 · 6,5 = 364 км</span> и <span class="math">65 · 5,6 = 364 км</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">5,6 ч</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 3.72</span></div>
+<p>За 3 месяца шахтёры отправили 72 % запланированного угля. Сколько процентов запланированного угля они отправят за 5 месяцев, если будут работать с той же производительностью?</p>
+<button class="toggle-btn" data-target="a20_6" onclick="toggleAnswer('a20_6')">🔍 Проверить</button>
+<div class="answer" id="a20_6">
+<ol>
+<li>Времени больше — угля больше: прямая зависимость</li>
+<li><span class="math">3 : 5 = 72 : x</span> → <span class="math">x = 5 · 72 : 3</span></li>
+<li><span class="math">x = 120 (%)</span>. Проверка: за месяц <span class="math">72 : 3 = 24 %</span>, за пять — <span class="math">24 · 5 = 120 %</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">120 %</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Прямая пропорциональность: больше — больше во столько же раз (отношения равны).</li>
+<li>Обратная пропорциональность: больше — меньше во столько же раз (произведения равны).</li>
+<li>Прямая: путь и время при постоянной скорости, товар и стоимость.</li>
+<li>Обратная: скорость и время при одном пути, рабочие и время работы.</li>
+<li>В задаче рисуют стрелки: в одну сторону — прямая, навстречу — обратная.</li>
+<li>При обратной зависимости одно из отношений переворачивают.</li>
+<li>Не всякие величины пропорциональны: рост и возраст — нет.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-19.html">← Урок 19</a> <span class="here">Урок 20</span> <a href="lesson-21.html">Урок 21 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 3 «Отношения и пропорции», п. 20 «Прямая и обратная пропорциональные зависимости» • Страницы 130–135</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

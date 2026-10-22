@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 13. Нахождение дроби от числа — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-12.html">← Урок 12</a> <span class="here">Урок 13</span> <a href="lesson-14.html">Урок 14 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 2, п. 13</span></div>
+<h1>П. 13. Нахождение дроби от числа</h1>
+<p class="subtitle">Сигнальное слово «от»: умножай — и часть найдена</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Катя за год взяла в библиотеке 35 книг, и <span class="math">0,8</span> из них показались ей интересными. Сколько это книг? Такие вопросы — «дробь ОТ числа» — решаются <span class="highlight">одним действием: умножением</span>. Сегодня научимся находить части, выраженные обыкновенной дробью, десятичной дробью и даже процентами.</p>
+</section>
+
+<section class="card theory">
+<h2>Главное правило</h2>
+
+<div class="rule-box"><span class="highlight">Чтобы найти дробь от числа, нужно умножить число на эту дробь.</span></div><p>Дробь может быть обыкновенной (<span class="math">2/7 от 14</span>), десятичной (<span class="math">0,7 от 40</span>) или процентами (24 % от 120 — это <span class="math">0,24 · 120</span>). Правило одно.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Найдём 2/7 от 14.</p>
+<ol class="steps">
+<li><span class="math">14 · 2/7</span></li>
+<li>Удобнее сократить сразу: <span class="math">14/7 · 2 = 2 · 2 = 4</span></li>
+<li>Проверка: 14 : 7 = 2 — это 1/7, а 2/7 — вдвое больше ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">4</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Часть может быть и «больше целого»</h2>
+
+<p>Если дробь неправильная (<span class="math">1 4/5 от 200</span>), результат больше самого числа: <span class="math">200 · 1 4/5 = 200 · 9/5 = 360</span>. Если проценты больше 100 (<span class="math">102 %</span>) — тоже. Всегда прикидывай: результат должен быть больше или меньше числа в зависимости от дроби.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Оклад рабочего 60 000 р., за месяц он получил <span class="math">1 1/4</span> оклада. Сколько он получил? (пример из учебника)</p>
+<ol class="steps">
+<li><span class="math">60 000 · 1 1/4 = 60 000 · 5/4</span></li>
+<li>Сокращаем: <span class="math">60 000 : 4 · 5 = 15 000 · 5</span></li>
+<li><span class="math">= 75 000 (р.)</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">75 000 р.</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Задачи «на остаток» и «на вторую часть»</h2>
+
+<p>Часто нужно найти не всю часть сразу, а остаток. Действуй по шагам: сначала найди указанную часть, потом вычти её из целого (или найди долю остатка от целого). Читай условие медленно: «от того, что было продано в первую неделю» — значит, дробь берём от ПЕРВОЙ части, а не от целого.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 13: «От» — это знак умножения</p>
+<p><b>Устройство.</b> Фраза «p/q от A» всегда означает «доля p/q величины A».</p><p><b>Правило-шаги.</b> 1) Найди сигнальное слово «от». 2) A · p/q — сокращай до умножения. 3) Прикидка: правильная дробь даёт МЕНЬШЕ A, неправильная — больше.</p><p><b>Проверь на контрасте:</b> 3/4 от 80 → <span class="math">80 · 3/4 = 60</span> ✅. А если «3/4 числа равны 60» и спрашивают само число — это уже ДЕЛЕНИЕ (60 : 3/4 = 80), перепутать 🚫 легко.</p><p><b>Мостик:</b> в заданиях 1–4 ищи «от» и умножай; в заданиях 5–6 сначала вычисли первую часть, потом действуй с остатком.</p>
+</section>
+
+<section class="card visual">
+<h2>Два слоя «части от части»</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="max-width:620px;margin:0 auto"><div style="position:relative;width:100%;height:34px;border:2px solid #2d3436;border-radius:8px;background:linear-gradient(90deg,#3498db 0 27.8%,#f4f4f4 27.8% 100%)"><span style="position:absolute;left:8px;top:5px;color:#fff;font-weight:700">графика: 40 работ</span></div><div style="position:relative;width:100%;height:34px;border:2px solid #2d3436;border-radius:8px;margin-top:8px;background:linear-gradient(90deg,#f4f4f4 0 27.8%,#f39c12 27.8% 82%,#f4f4f4 82% 100%)"><span style="position:absolute;left:31%;top:5px;color:#fff;font-weight:700">акварель: 78 работ (75 % остальных)</span></div></div></div>
+<figcaption>Схема к упр. 2.325: из 144 работ 40 — графика (5/18), из оставшихся 104 — 78 акварелью. Полосы не наезжают: доли 27,8 %, 54,2 %, 18 %</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.316 (а, б)</span></div>
+<p>Вычислите: а) <span class="math">2/7 от 14</span>; б) <span class="math">5/9 от 48</span>.</p>
+<button class="toggle-btn" data-target="a13_1" onclick="toggleAnswer('a13_1')">🔍 Проверить</button>
+<div class="answer" id="a13_1">
+<ol>
+<li>а) <span class="math">14 · 2/7 = 14 : 7 · 2 = 4</span></li>
+<li>б) <span class="math">48 · 5/9 = 240/9 = 26 6/9</span> — сокращаем на 3: <span class="math">26 2/3</span></li>
+<li>Проверка: 48 : 9 · 5 = 26,(6) ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 4; б) 26 2/3</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.317 (а, б)</span></div>
+<p>Вычислите: а) <span class="math">0,7 от 40</span>; б) <span class="math">0,35 от 60</span>.</p>
+<button class="toggle-btn" data-target="a13_2" onclick="toggleAnswer('a13_2')">🔍 Проверить</button>
+<div class="answer" id="a13_2">
+<ol>
+<li>а) <span class="math">40 · 0,7 = 28</span></li>
+<li>б) <span class="math">60 · 0,35 = 21</span></li>
+<li>Проверка дробями: <span class="math">0,35 = 7/20</span>, <span class="math">60 : 20 · 7 = 21</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 28; б) 21</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.318 (а, б)</span></div>
+<p>Найдите: а) <span class="math">1 1/7 от 7/8</span>; б) <span class="math">1 4/5 от 200</span>.</p>
+<button class="toggle-btn" data-target="a13_3" onclick="toggleAnswer('a13_3')">🔍 Проверить</button>
+<div class="answer" id="a13_3">
+<ol>
+<li>а) <span class="math">8/7 · 7/8 = 1</span> — взаимно обратные множители!</li>
+<li>б) <span class="math">9/5 · 200 = 9 · 40 = 360</span></li>
+<li>Прикидка: в пункте а) результат равен 1; в пункте б) — больше 200, ведь дробь неправильная ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 1; б) 360</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.321 (а, в)</span></div>
+<p>Что больше и на сколько: а) <span class="math">24 % от 46</span> или <span class="math">42 % от 25</span>; в) <span class="math">65 % от 52</span> или <span class="math">52 % от 65</span>?</p>
+<button class="toggle-btn" data-target="a13_4" onclick="toggleAnswer('a13_4')">🔍 Проверить</button>
+<div class="answer" id="a13_4">
+<ol>
+<li>а) <span class="math">46 · 0,24 = 11,04</span>; <span class="math">25 · 0,42 = 10,5</span> → первое больше на <span class="math">11,04 − 10,5 = 0,54</span></li>
+<li>в) <span class="math">52 · 0,65 = 33,8</span>; <span class="math">65 · 0,52 = 33,8</span> — равны!</li>
+<li>Наблюдение: <span class="math">a · b% = b · a%</span> — от перестановки сомножителей произведение не меняется ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 24 % от 46 больше на 0,54; в) значения равны</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.325</span></div>
+<p>На выставке детских рисунков 144 работы. Графические рисунки составляли <span class="math">5/18</span> всех работ, а рисунки акварелью — 75 % остальных работ. Сколько рисунков акварелью было на выставке?</p>
+<button class="toggle-btn" data-target="a13_5" onclick="toggleAnswer('a13_5')">🔍 Проверить</button>
+<div class="answer" id="a13_5">
+<ol>
+<li>Графика: <span class="math">144 · 5/18 = 40</span> работ</li>
+<li>Остальные: <span class="math">144 − 40 = 104</span> работы</li>
+<li>Акварель: <span class="math">104 · 0,75 = 78</span> рисунков. Проверка: <span class="math">104 : 4 · 3 = 78</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">78 рисунков</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.334</span></div>
+<p>Фермер привёз <span class="math">7 1/5 т</span> картофеля. В первую неделю он продал <span class="math">0,4</span> всего картофеля, а во вторую — <span class="math">4/5</span> того, что было продано в первую. Сколько тонн картофеля фермеру осталось продать?</p>
+<button class="toggle-btn" data-target="a13_6" onclick="toggleAnswer('a13_6')">🔍 Проверить</button>
+<div class="answer" id="a13_6">
+<ol>
+<li>Первая неделя: <span class="math">7,2 · 0,4 = 2,88 (т)</span></li>
+<li>Вторая неделя: <span class="math">2,88 · 4/5 = 2,88 · 0,8 = 2,304 (т)</span></li>
+<li>Осталось: <span class="math">7,2 − 2,88 − 2,304 = 2,016 (т)</span>. Проверка: <span class="math">7,2 · (1 − 0,4 − 0,32) = 7,2 · 0,28 = 2,016</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">2,016 т</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Дробь от числа находят умножением: A · p/q.</li>
+<li>Работает для обыкновенных дробей, десятичных и процентов.</li>
+<li>Неправильная дробь (и проценты &gt; 100 %) даёт результат больше числа.</li>
+<li>Сокращай при умножении — считать станет проще.</li>
+<li>В задачах «на остаток» сначала найди часть, потом остаток.</li>
+<li>«От того, что…» — дробь берётся от уже найденной части.</li>
+<li>Прикидка: правильная дробь уменьшает число, неправильная увеличивает.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-12.html">← Урок 12</a> <span class="here">Урок 13</span> <a href="lesson-14.html">Урок 14 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 2 «Действия со смешанными числами», п. 13 «Нахождение дроби от числа» • Страницы 87–92</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

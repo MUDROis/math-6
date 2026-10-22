@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 11. Действия сложения и вычитания смешанных чисел — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-10.html">← Урок 10</a> <span class="here">Урок 11</span> <a href="lesson-12.html">Урок 12 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 2, п. 11</span></div>
+<h1>П. 11. Действия сложения и вычитания смешанных чисел</h1>
+<p class="subtitle">Целое — с целым, дробное — с дробным: и не забудь занять единицу, если не хватает</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Смешанное число — это сумма целого числа и дроби, поэтому с ним работают свойства сложения и вычитания: <span class="highlight">целые части — отдельно, дробные — отдельно</span>. Но есть и «хитрый случай»: когда дробная часть уменьшаемого меньше дробной части вычитаемого. Разберём всё по шагам.</p>
+</section>
+
+<section class="card theory">
+<h2>Сложение смешанных чисел</h2>
+
+<div class="rule-box"><b>Чтобы найти сумму смешанных чисел:</b> 1) приведи дробные части к НОЗ; 2) отдельно сложи целые и отдельно дробные части; 3) сократи дробь, если нужно, и выдели целую часть.</div><p>Пример из учебника: <span class="math">6 4/9 + 2 5/6 = 6 8/18 + 2 15/18 = 8 23/18 = 9 5/18</span> — из дробной части <span class="math">23/18</span> выделили целую часть и прибавили к целой.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим сумму 14 5/12 + 17 1/6 (пример из учебника).</p>
+<ol class="steps">
+<li>НОЗ (12, 6) = 12; <span class="math">1/6 = 2/12</span></li>
+<li>Целые: <span class="math">14 + 17 = 31</span>; дробные: <span class="math">5/12 + 2/12 = 7/12</span></li>
+<li>Ответ: <span class="math">31 7/12</span> — дробь несократима, целая часть не выделается</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">31 7/12</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Вычитание смешанных чисел</h2>
+
+<div class="rule-box"><b>Чтобы найти разность смешанных чисел:</b> 1) приведи дробные части к НОЗ; 2) если дробная часть уменьшаемого БОЛЬШЕ — вычитай целые и дробные части отдельно; 3) если дробная часть уменьшаемого МЕНЬШЕ — займите единицу из целой части: <span class="math">1 = знаменатель/знаменатель</span>, и вычитай.</div><p>Пример из учебника: <span class="math">5 7/12 − 1 5/8</span>. НОЗ = 24: <span class="math">5 14/24 − 1 15/24</span>. Дробь <span class="math">14/24 &lt; 15/24</span>, поэтому <span class="math">5 14/24 = 4 38/24</span>; далее <span class="math">4 38/24 − 1 15/24 = 3 23/24</span>.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим разность 4 5/6 − 2 1/4 (пример из учебника).</p>
+<ol class="steps">
+<li>НОЗ (6, 4) = 12: <span class="math">4 10/12 − 2 3/12</span></li>
+<li>Дробная часть уменьшаемого больше (10/12 &gt; 3/12) — занимать не нужно</li>
+<li>Целые: <span class="math">4 − 2 = 2</span>; дробные: <span class="math">10/12 − 3/12 = 7/12</span> → <span class="math">2 7/12</span></li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">2 7/12</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Вычитание из натурального числа</h2>
+
+<p>Особый случай: <span class="math">1 − 4/5 = 5/5 − 4/5 = 1/5</span>; <span class="math">2 − 3/7 = 1 7/7 − 3/7 = 1 4/7</span>. Занимаем единицу и представляем её неправильной дробью со знаменателем вычитаемого.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 11: Не хватает дробной части? Займи единицу</p>
+<p><b>Устройство.</b> В смешанном числе целая часть — «запас монет по рублю», дробная — «мелочь». Не хватает мелочи — разменяй рубль.</p><p><b>Правило-шаги.</b> 1) Сравни дробные части после приведения к НОЗ. 2) Не хватает — отними 1 у целой части и прибавь её к дробной как <span class="math">знаменатель/знаменатель</span>. 3) Дальше вычитай обычным порядком.</p><p><b>Проверь на контрасте:</b> <span class="math">3 1/4 − 1 3/4 = 2 5/4 − 1 3/4 = 1 2/4 = 1 1/2</span> ✅. А вычесть дробные части «наоборот» (<span class="math">3/4 − 1/4</span>) 🚫 — знаки разности перепутаны.</p><p><b>Мостик:</b> в заданиях 2, 4 и 5 именно размен единицы выручает.</p>
+</section>
+
+<section class="card visual">
+<h2>Размен единицы на схеме</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;font-size:15px"><span class="math" style="background:#eaf6fd;padding:8px 12px">5 7/12</span><span>−</span><span class="math" style="background:#fdf3f2;padding:8px 12px">1 15/24</span><span>→</span><span class="math" style="background:#fffaf0;padding:8px 12px">4 38/24 − 1 15/24</span><span>=</span><span class="math" style="background:#f0fbf9;padding:8px 12px;font-weight:700">3 23/24</span></div></div>
+<figcaption>Схема к примеру из учебника: 5 14/24 − 1 15/24 — дробной части не хватает, занимаем единицу</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.205 (а)</span></div>
+<p>Найдите сумму <span class="math">4 2/9 + 3 5/18</span>.</p>
+<button class="toggle-btn" data-target="a11_1" onclick="toggleAnswer('a11_1')">🔍 Проверить</button>
+<div class="answer" id="a11_1">
+<ol>
+<li>НОЗ (9, 18) = 18: <span class="math">4 2/9 = 4 4/18</span></li>
+<li>Целые: <span class="math">4 + 3 = 7</span>; дробные: <span class="math">4/18 + 5/18 = 9/18</span></li>
+<li><span class="math">7 9/18 = 7 1/2</span> — дробь сократили на 9 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">7 1/2</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.206 (б)</span></div>
+<p>Найдите разность <span class="math">2 − 3/7</span>.</p>
+<button class="toggle-btn" data-target="a11_2" onclick="toggleAnswer('a11_2')">🔍 Проверить</button>
+<div class="answer" id="a11_2">
+<ol>
+<li>Занимаем единицу: <span class="math">2 = 1 7/7</span></li>
+<li><span class="math">1 7/7 − 3/7 = 1 4/7</span></li>
+<li>Проверка: <span class="math">1 4/7 + 3/7 = 1 7/7 = 2</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">1 4/7</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.205 (в)</span></div>
+<p>Найдите сумму <span class="math">7 11/12 + 1 3/8</span>.</p>
+<button class="toggle-btn" data-target="a11_3" onclick="toggleAnswer('a11_3')">🔍 Проверить</button>
+<div class="answer" id="a11_3">
+<ol>
+<li>НОЗ (12, 8) = 24: <span class="math">7 22/24 + 1 9/24</span></li>
+<li>Целые: <span class="math">7 + 1 = 8</span>; дробные: <span class="math">22/24 + 9/24 = 31/24</span></li>
+<li>Выделяем целую часть: <span class="math">31/24 = 1 7/24</span> → <span class="math">8 + 1 7/24 = 9 7/24</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">9 7/24</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.207 (е)</span></div>
+<p>Выполните вычитание <span class="math">7 5/12 − 3 2/9</span>.</p>
+<button class="toggle-btn" data-target="a11_4" onclick="toggleAnswer('a11_4')">🔍 Проверить</button>
+<div class="answer" id="a11_4">
+<ol>
+<li>НОЗ (12, 9) = 36: <span class="math">7 15/36 − 3 8/36</span></li>
+<li>Дробная часть уменьшаемого больше (15/36 &gt; 8/36) — занимать не нужно</li>
+<li>Целые: <span class="math">7 − 3 = 4</span>; дробные: <span class="math">15/36 − 8/36 = 7/36</span> → <span class="math">4 7/36</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">4 7/36</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.217</span></div>
+<p>От рулона полиэтиленовой плёнки длиной 40 м отрезали кусок длиной <span class="math">4 4/5 м</span>. Сколько метров плёнки осталось в рулоне?</p>
+<button class="toggle-btn" data-target="a11_5" onclick="toggleAnswer('a11_5')">🔍 Проверить</button>
+<div class="answer" id="a11_5">
+<ol>
+<li><span class="math">40 − 4 4/5 = 39 5/5 − 4 4/5</span></li>
+<li>Целые: <span class="math">39 − 4 = 35</span>; дробные: <span class="math">5/5 − 4/5 = 1/5</span></li>
+<li>Ответ: <span class="math">35 1/5 м</span>. Проверка: <span class="math">35 1/5 + 4 4/5 = 39 5/5 = 40</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">35 1/5 м</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.224</span></div>
+<p>Ребёнок за первый месяц прибавил <span class="math">1 3/25 кг</span>, что на <span class="math">7/20 кг</span> больше, чем за второй. Сколько килограммов набрал ребёнок за два месяца?</p>
+<button class="toggle-btn" data-target="a11_6" onclick="toggleAnswer('a11_6')">🔍 Проверить</button>
+<div class="answer" id="a11_6">
+<ol>
+<li>Второй месяц: <span class="math">1 3/25 − 7/20</span>; НОЗ (25, 20) = 100: <span class="math">1 12/100 − 35/100 = 77/100 (кг)</span> — здесь заняли единицу</li>
+<li>За два месяца: <span class="math">1 12/100 + 77/100 = 1 89/100 (кг)</span></li>
+<li>Проверка в десятичных: <span class="math">1,12 − 0,35 = 0,77</span>; <span class="math">1,12 + 0,77 = 1,89</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">1 89/100 кг = 1,89 кг</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Смешанное число = целая часть + дробная часть; действия ведут раздельно.</li>
+<li>Сначала приведи дробные части к НОЗ.</li>
+<li>При сложении дробная часть может стать неправильной — выдели целую часть.</li>
+<li>При вычитании не хватает дробной части — займите единицу из целой.</li>
+<li>1 = знаменатель/знаменатель — ключ к размену единицы.</li>
+<li>Из натурального числа дробь вычитают после размена единицы.</li>
+<li>Проверяй ответ обратным действием: разность + вычитаемое = уменьшаемое.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-10.html">← Урок 10</a> <span class="here">Урок 11</span> <a href="lesson-12.html">Урок 12 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 2 «Действия со смешанными числами», п. 11 «Действия сложения и вычитания смешанных чисел» • Страницы 71–79</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

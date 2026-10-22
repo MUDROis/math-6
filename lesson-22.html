@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 22. Симметрии — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-21.html">← Урок 21</a> <span class="here">Урок 22</span> <a href="lesson-23.html">Урок 23 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 3, п. 22</span></div>
+<h1>П. 22. Симметрии</h1>
+<p class="subtitle">Зеркало, бабочка и снежинка: красота по правилам</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Ворота Летнего сада, крылья бабочки, снежинка — почему они так приятны глазу? Потому что их половинки <span class="highlight">симметричны</span>: перегни рисунок по оси — и части совпадут. Сегодня научимся строить фигуры, симметричные относительно прямой и относительно точки, и находить оси симметрии.</p>
+</section>
+
+<section class="card theory">
+<h2>Симметрия относительно прямой</h2>
+
+<div class="def-box">Точки A и B называют <b class="term">симметричными относительно прямой m</b>, если прямая m проходит через середину отрезка AB и перпендикулярна к нему. Прямую m называют <b class="term">осью симметрии</b>.</div><p>Чтобы построить точку, симметричную данной: 1) проведи через точку прямую, перпендикулярную оси; 2) отложи на ней по другую сторону оси отрезок, равный расстоянию до оси. Если перегнуть лист по оси, симметричные фигуры совпадут — значит, они равны.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Построим отрезок EF, симметричный отрезку CD относительно прямой n (задача из учебника).</p>
+<ol class="steps">
+<li>Через точку C проводим прямую, перпендикулярную оси n; она пересекает ось в точке P</li>
+<li>На этой прямой откладываем <span class="math">PE = CP</span> по другую сторону оси — получили точку E</li>
+<li>Так же строим точку F для точки D; соединяем E и F — отрезок EF симметричен CD ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">EF — искомый отрезок</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Симметрия относительно точки</h2>
+
+<div class="def-box">Точки A и B симметричны относительно точки O, если O — середина отрезка AB. Точку O называют <b class="term">центром симметрии</b>.</div><p>Центрально-симметричные фигуры совмещаются поворотом на 180° вокруг центра — они равны. У квадрата четыре оси симметрии, а их точка пересечения — центр симметрии. Окружность симметрична относительно центра и любого диаметра.</p>
+</section>
+
+<section class="card theory">
+<h2>Где живёт симметрия</h2>
+
+<p>Осевая симметрия: бабочка, листья, фасады зданий. Центральная: зонт, шестерёнка, снежинка. Зеркальная — симметрия относительно плоскости: наше отражение. Слово «симметрия» — от греческого «соразмерность».</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 22: Перпендикуляр + равные расстояния</p>
+<p><b>Устройство.</b> Ось — «зеркало»: образ точки лежит напротив, на том же расстоянии.</p><p><b>Правило-шаги.</b> 1) Через точку — перпендикуляр к оси. 2) Измерь расстояние до оси. 3) Отложи столько же по другую сторону. 4) Для центральной симметрии: точка, центр, образ — на одной прямой, расстояния равны.</p><p><b>Проверь на контрасте:</b> точка в 3 клетках от оси → образ в 3 клетках по другую сторону ✅. А отложить образ по ТУ ЖЕ сторону 🚫 — точки совпадут с оригиналом.</p><p><b>Мостик:</b> в заданиях 5 и 6 сначала найди середину/центр — дальше только равные расстояния.</p>
+</section>
+
+<section class="card visual">
+<h2>Осевая симметрия на чертеже</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><svg width="440" height="190" viewBox="0 0 440 190" role="img" aria-label="Точки A и B симметричны относительно оси m"><line x1="220" y1="15" x2="220" y2="175" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="8 5"/><text x="228" y="28" font-size="15" fill="#c0392b">m — ось</text><circle cx="110" cy="90" r="7" fill="#3498db"/><text x="92" y="86" font-size="16" fill="#21618c">A</text><circle cx="330" cy="90" r="7" fill="#1abc9c"/><text x="342" y="86" font-size="16" fill="#148f77">B</text><line x1="110" y1="90" x2="330" y2="90" stroke="#2d3436" stroke-width="1.5"/><rect x="212" y="82" width="16" height="16" fill="none" stroke="#f39c12" stroke-width="2"/><text x="157" y="80" font-size="14" text-anchor="middle" fill="#2d3436">3 клетки</text><text x="285" y="80" font-size="14" text-anchor="middle" fill="#2d3436">3 клетки</text><text x="110" y="170" font-size="13" text-anchor="middle" fill="#636e72">перпендикуляр к m</text></svg></div>
+<figcaption>Схема: отрезок AB перпендикулярен оси m и делится ею пополам (по 3 клетки) — A и B симметричны. Прямой угол отмечен квадратиком</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.151</span></div>
+<p>Начертите прямоугольник ABCD и постройте его оси симметрии. Сколько осей у прямоугольника?</p>
+<button class="toggle-btn" data-target="a22_1" onclick="toggleAnswer('a22_1')">🔍 Проверить</button>
+<div class="answer" id="a22_1">
+<ol>
+<li>Ось 1 — прямая через середины двух противоположных сторон (длинных)</li>
+<li>Ось 2 — прямая через середины двух других (коротких)</li>
+<li>Диагонали осями НЕ являются: перегиб по диагонали не совмещает половины прямоугольника ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">две оси симметрии</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 3.130 (б)</span></div>
+<p>Сколько осей симметрии у изображения морской звезды? Есть ли у неё центр симметрии?</p>
+<button class="toggle-btn" data-target="a22_2" onclick="toggleAnswer('a22_2')">🔍 Проверить</button>
+<div class="answer" id="a22_2">
+<ol>
+<li>Морская звезда имеет пять лучей</li>
+<li>Ось можно провести через каждый луч и середину противоположной дуги — всего <span class="math">5</span> осей</li>
+<li>Число лучей нечётное, поэтому точка, противоположная лучу, — пустота: центра симметрии нет ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">5 осей; центра симметрии нет</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.129</span></div>
+<p>Как проверить, что фигуры P и R симметричны относительно точки O?</p>
+<button class="toggle-btn" data-target="a22_3" onclick="toggleAnswer('a22_3')">🔍 Проверить</button>
+<div class="answer" id="a22_3">
+<ol>
+<li>Проверь: точки P, O и соответствующая точка фигуры R лежат на одной прямой</li>
+<li>Проверь равенство расстояний: <span class="math">PO = OR</span> (линейкой)</li>
+<li>Альтернатива: поверни кальку с фигурой P на 180° вокруг O — фигура должна совпасть с R ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">PO = OR и P, O, R на одной прямой (поворот на 180°)</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 3.136</span></div>
+<p>Могут ли пересекаться: а) два отрезка, симметричные относительно прямой; б) два центрально-симметричных отрезка? Проиллюстрируй.</p>
+<button class="toggle-btn" data-target="a22_4" onclick="toggleAnswer('a22_4')">🔍 Проверить</button>
+<div class="answer" id="a22_4">
+<ol>
+<li>а) Да: если отрезок пересекает ось, его образ пересекает его в точке на оси (например, отрезок под углом к оси)</li>
+<li>б) Да, если прямая отрезка проходит через центр: образ совпадает с самим отрезком</li>
+<li>Если же прямая отрезка не проходит через центр, образ параллелен ему — пересечения нет ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) да — в точке на оси; б) да, если отрезок проходит через центр</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 3.157</span></div>
+<p>Начертите треугольник MNT. Опишите построение треугольника, симметричного ему: а) относительно прямой MN; б) относительно вершины N.</p>
+<button class="toggle-btn" data-target="a22_5" onclick="toggleAnswer('a22_5')">🔍 Проверить</button>
+<div class="answer" id="a22_5">
+<ol>
+<li>а) Через вершину T проводим перпендикуляр к прямой MN, откладываем на нём отрезок, равный расстоянию от T до MN, по другую сторону — точка T'. Треугольник MNT' — искомый (точки M и N лежат на оси, симметричны сами себе)</li>
+<li>б) Центральная симметрия с центром N: на луче NT за точку N откладываем <span class="math">NK = NT</span>; на луче NM за N — <span class="math">NL = NM</span></li>
+<li>Треугольник NKL — центрально-симметричный образ MNT ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) MNT'; б) NKL</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">авторская (по координатной прямой)</span></div>
+<p>Точки A(3) и B(9) симметричны относительно точки O на координатной прямой. Найдите координату точки O и координату точки D, симметричной точке C(−4) относительно той же точки.</p>
+<button class="toggle-btn" data-target="a22_6" onclick="toggleAnswer('a22_6')">🔍 Проверить</button>
+<div class="answer" id="a22_6">
+<ol>
+<li>O — середина AB: <span class="math">(3 + 9) : 2 = 6</span></li>
+<li>Симметричная точка: <span class="math">D = 2 · 6 − (−4) = 12 + 4 = 16</span></li>
+<li>Проверка расстояний: от C(−4) до O(6) — 10 единиц, от O(6) до D(16) — 10 единиц ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">O(6); D(16)</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Симметричные относительно прямой точки лежат на перпендикуляре к оси на равных расстояниях.</li>
+<li>Ось симметрии делит фигуру на две совпадающие при перегибании части.</li>
+<li>Центральная симметрия: центр — середина отрезка между точкой и её образом.</li>
+<li>Центрально-симметричные фигуры совмещаются поворотом на 180°.</li>
+<li>Симметричные фигуры равны.</li>
+<li>У прямоугольника 2 оси симметрии, у квадрата — 4, у окружности — бесконечно много.</li>
+<li>Фигура с нечётным числом «лучей» (звезда) центра симметрии не имеет.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-21.html">← Урок 21</a> <span class="here">Урок 22</span> <a href="lesson-23.html">Урок 23 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 3 «Отношения и пропорции», п. 22 «Симметрии» • Страницы 142–148</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

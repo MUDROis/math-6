@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 28. Изменение величин — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-27.html">← Урок 27</a> <span class="here">Урок 28</span> <a href="lesson-29.html">Урок 29 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 4, п. 28</span></div>
+<h1>П. 28. Изменение величин</h1>
+<p class="subtitle">Повысилось — плюс, понизилось — минус: язык изменений</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Цена моркови за зиму выросла с 20 до 25 р., а за лето упала до 22 р. Рост записывают <span class="math">+5 р.</span>, падение — <span class="math">−3 р.</span> Сегодня научимся читать и находить <span class="highlight">изменения величин</span> — это мостик к сложению рациональных чисел.</p>
+</section>
+
+<section class="card theory">
+<h2>Изменение величины</h2>
+
+<div class="def-box">Увеличение величины выражают <b class="term">положительным</b> числом, а уменьшение — <b class="term">отрицательным</b>.</div><p>Если цена повысилась на 5 р. — изменение <span class="math">+5 р.</span>; понизилась на 3 р. — изменение <span class="math">−3 р.</span> Так же говорят об изменении температуры, массы, высоты. Например, «изменение высоты дерева равно −70 см» значит, что дерево стало ниже на 70 см.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Изменение цены товара равно c р. Чему равно c, если цена понизилась на 7 р.; повысилась на 20 р.? (упр. 4.125)</p>
+<ol class="steps">
+<li>Понизилась → изменение отрицательное: <span class="math">c = −7</span></li>
+<li>Повысилась → положительное: <span class="math">c = +20</span></li>
+<li>Проверка чтения: «изменение равно минус семи рублям» = цена упала на 7 р. ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">c = −7; c = 20</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Перемещение точки по прямой</h2>
+
+<div class="def-box">Перемещение точки <b class="term">вправо</b> обозначают положительными числами, <b class="term">влево</b> — отрицательными.</div><p>Точка K(3) при перемещении на 5 перейдёт в M(8), а при перемещении на −5 — в N(−2). Переместить точку — значит прибавить к её координате число перемещения: это и есть сложение, которому посвящён следующий урок.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Точка K(−7) после перемещения попала в точку с координатой 5. На сколько переместили точку? (упр. 4.141)</p>
+<ol class="steps">
+<li>Из −7 в 5 — это движение вправо на <span class="math">5 − (−7)</span></li>
+<li>Считаем шаги: от −7 до 0 — 7 единиц, от 0 до 5 — ещё 5</li>
+<li><span class="math">7 + 5 = 12</span> — перемещение равно <span class="math">+12</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">на 12 единиц вправо</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Читаем таблицы и графики изменений</h2>
+
+<p>В таблицах погоды положительные значения — тепло, отрицательные — мороз. Сравнение температур в разных городах — это сравнение чисел: <span class="math">0,5° в Краснодаре теплее, чем −3° в Иванове</span>. Умение читать такие данные — практическое применение темы.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 28: Изменение = конечное − начальное</p>
+<p><b>Устройство.</b> Изменение — это «стрелка» от старого значения к новому: вправо — плюс, влево — минус.</p><p><b>Правило-шаги.</b> 1) Стало больше — изменение со «+», меньше — с «−». 2) Величину изменения считай по числу шагов между значениями. 3) Обратно: новое = старое + изменение.</p><p><b>Проверь на контрасте:</b> было −7, стало 5 → изменение +12 ✅. А записать «−12» 🚫 — направление стрелки перепутано.</p><p><b>Мостик:</b> в заданиях 3–5 рисуй координатную прямую и считай шаги между точками.</p>
+</section>
+
+<section class="card visual">
+<h2>Перемещение точки</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><svg width="560" height="120" viewBox="0 0 560 120" role="img"><line x1="20" y1="82" x2="540" y2="82" stroke="#2d3436" stroke-width="2"/><polygon points="540,82 528,77 528,87" fill="#2d3436"/><line x1="8" y1="77" x2="8" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="8" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-8</text><line x1="76" y1="77" x2="76" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="76" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-6</text><line x1="144" y1="77" x2="144" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="144" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-4</text><line x1="212" y1="77" x2="212" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="212" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-2</text><line x1="280" y1="77" x2="280" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="280" y="104" font-size="12" text-anchor="middle" fill="#2d3436">0</text><line x1="348" y1="77" x2="348" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="348" y="104" font-size="12" text-anchor="middle" fill="#2d3436">2</text><line x1="416" y1="77" x2="416" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="416" y="104" font-size="12" text-anchor="middle" fill="#2d3436">4</text><line x1="484" y1="77" x2="484" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="484" y="104" font-size="12" text-anchor="middle" fill="#2d3436">6</text><circle cx="42" cy="82" r="7" fill="#c0392b" stroke="#2d3436" stroke-width="1.5"/><text x="42" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#c0392b">K(−7)</text><circle cx="450" cy="82" r="7" fill="#1abc9c" stroke="#2d3436" stroke-width="1.5"/><text x="450" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#1abc9c">новая точка 5</text><line x1="160" y1="62" x2="372" y2="62" stroke="#f39c12" stroke-width="2.5" marker-end=""/><text x="266" y="52" font-size="14" text-anchor="middle" fill="#b9770e">перемещение +12</text></svg></div>
+<figcaption>Схема к упр. 4.141: стрелка от −7 до 5 идёт вправо — перемещение положительное, 7 + 5 = 12 единиц</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.124 (а, б)</span></div>
+<p>Объясните смысл предложения: а) «изменение длины равно t км», если <span class="math">t = −15</span>; <span class="math">t = 13,2</span>; б) «изменение высоты дерева равно a см», если <span class="math">a = 32</span>; <span class="math">a = −70</span>; <span class="math">a = 0</span>.</p>
+<button class="toggle-btn" data-target="a28_1" onclick="toggleAnswer('a28_1')">🔍 Проверить</button>
+<div class="answer" id="a28_1">
+<ol>
+<li>а) t = −15 — длина уменьшилась на 15 км; t = 13,2 — увеличилась на 13,2 км</li>
+<li>б) a = 32 — дерево выросло на 32 см; a = −70 — стало ниже на 70 см; a = 0 — высота не изменилась</li>
+<li>Знак изменения показывает направление: «+» рост, «−» падение ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">уменьшилась на 15 км; увеличилась на 13,2 км; выросло на 32 см; ниже на 70 см; не изменилось</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.126</span></div>
+<p>Изменение массы тела равно a г. Чему равно a, если масса тела: а) увеличилась на 10 г; б) уменьшилась на 325 г?</p>
+<button class="toggle-btn" data-target="a28_2" onclick="toggleAnswer('a28_2')">🔍 Проверить</button>
+<div class="answer" id="a28_2">
+<ol>
+<li>а) Увеличение — положительное число: <span class="math">a = +10</span></li>
+<li>б) Уменьшение — отрицательное: <span class="math">a = −325</span></li>
+<li>Проверка чтения: «изменение равно минус трёмстам двадцати пяти граммам» ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) +10 г; б) −325 г</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.128</span></div>
+<p>На координатной прямой отмечена точка K(3). Запишите координаты точек, в которые K перейдёт при перемещении: на 5; на −5; на −3,5; на 4,5.</p>
+<button class="toggle-btn" data-target="a28_3" onclick="toggleAnswer('a28_3')">🔍 Проверить</button>
+<div class="answer" id="a28_3">
+<ol>
+<li>На 5: <span class="math">3 + 5 = 8</span> → точка M(8)</li>
+<li>На −5: <span class="math">3 + (−5) = −2</span> → точка N(−2)</li>
+<li>На −3,5: <span class="math">3 − 3,5 = −0,5</span> → Q(−0,5); на 4,5: <span class="math">3 + 4,5 = 7,5</span> → P(7,5) ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">M(8); N(−2); Q(−0,5); P(7,5)</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.139</span></div>
+<p>Утром температура у больного была 37,2 °С. Какой стала температура вечером, если она изменилась: а) на 2 °С; б) на −1 °С; в) на 1,1 °С; г) на −0,8 °С?</p>
+<button class="toggle-btn" data-target="a28_4" onclick="toggleAnswer('a28_4')">🔍 Проверить</button>
+<div class="answer" id="a28_4">
+<ol>
+<li>а) <span class="math">37,2 + 2 = 39,2 °С</span></li>
+<li>б) <span class="math">37,2 + (−1) = 36,2 °С</span></li>
+<li>в) <span class="math">37,2 + 1,1 = 38,3 °С</span>; г) <span class="math">37,2 + (−0,8) = 36,4 °С</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">39,2 °С; 36,2 °С; 38,3 °С; 36,4 °С</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.141</span></div>
+<p>Точка K(−7) после перемещения по координатной прямой попала в точку с координатой 5. На сколько единиц переместили точку K?</p>
+<button class="toggle-btn" data-target="a28_5" onclick="toggleAnswer('a28_5')">🔍 Проверить</button>
+<div class="answer" id="a28_5">
+<ol>
+<li>Считаем шаги: от −7 до 0 — 7 единиц, от 0 до 5 — 5 единиц</li>
+<li><span class="math">7 + 5 = 12</span></li>
+<li>Перемещение вправо — положительное: <span class="math">+12</span>. Проверка: <span class="math">−7 + 12 = 5</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">на 12 единиц</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.129</span></div>
+<p>На сколько единиц должна переместиться точка M(8) по координатной прямой, чтобы попасть: а) в точку N(1); б) в точку A(−3)?</p>
+<button class="toggle-btn" data-target="a28_6" onclick="toggleAnswer('a28_6')">🔍 Проверить</button>
+<div class="answer" id="a28_6">
+<ol>
+<li>а) От 8 до 1 — движение влево на 7 единиц: <span class="math">−7</span></li>
+<li>б) От 8 до −3: 8 единиц до нуля и ещё 3 — <span class="math">−11</span></li>
+<li>Проверка: <span class="math">8 + (−7) = 1</span>; <span class="math">8 + (−11) = −3</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) на −7; б) на −11</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Увеличение величины — положительное число, уменьшение — отрицательное.</li>
+<li>Перемещение точки вправо — «+», влево — «−».</li>
+<li>Новое значение = старое + изменение.</li>
+<li>Изменение считают по числу единиц между значениями.</li>
+<li>Температура, масса, цена, высота — всё описывается изменениями.</li>
+<li>Движение из минуса в плюс считают двумя частями: до нуля и после.</li>
+<li>Проверка: старое значение + изменение = новое значение.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-27.html">← Урок 27</a> <span class="here">Урок 28</span> <a href="lesson-29.html">Урок 29 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 4 «Действия с рациональными числами», п. 28 «Изменение величин» • Страницы 28–32</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

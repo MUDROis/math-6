@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 34. Действие деления — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-33.html">← Урок 33</a> <span class="here">Урок 34</span> <a href="lesson-35.html">Урок 35 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 4, п. 34</span></div>
+<h1>П. 34. Действие деления</h1>
+<p class="subtitle">Знаки делятся по тем же правилам: минус на минус — плюс</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Разделить −18 на −9 — значит найти число a, что <span class="math">−9 · a = −18</span>. Значит a = 2: минус на минус дал плюс. Правила знаков в делении — <span class="highlight">те же, что в умножении</span>. Сегодня тренируем частные и учимся ловить чужие ошибки.</p>
+</section>
+
+<section class="card theory">
+<h2>Правила знаков при делении</h2>
+
+<div class="rule-box">При делении чисел с <b>разными знаками</b> частное отрицательно: раздели модуль делимого на модуль делителя и поставь «−». При делении <b>отрицательных чисел</b> частное положительно: раздели модули.</div><p>Например: <span class="math">−24 : 2 = −12</span>; <span class="math">−8,4 : (−4) = 2,1</span>; <span class="math">3,8 : (−1) = −3,8</span> (а не 3,8 — вот типичная ошибка!).</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Выполним деление −34 : 17 и −48 : (−16) (упр. 4.306).</p>
+<ol class="steps">
+<li><span class="math">−34 : 17 = −(34 : 17) = −2</span></li>
+<li><span class="math">−48 : (−16) = +(48 : 16) = 3</span></li>
+<li>Проверка умножением: <span class="math">−2 · 17 = −34</span>; <span class="math">3 · (−16) = −48</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−2 и 3</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Частное с дробями</h2>
+
+<p>Делим на дробь — умножаем на перевёрнутую (правило урока 15), а знаки определяем как всегда: <span class="math">−7/9 : 2/3 = −7/9 · 3/2 = −7/6 = −1 1/6</span>; <span class="math">−3/13 : (−9/26) = 3/13 · 26/9 = 2/3</span>.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Найдём частное −4/9 : 2/3 (по образцу упр. 4.309).</p>
+<ol class="steps">
+<li>Переворачиваем делитель: <span class="math">−4/9 · 3/2</span></li>
+<li>Сокращаем: <span class="math">−(4 · 3)/(9 · 2) = −2/3</span></li>
+<li>Знак: минус (разные знаки). Проверка: <span class="math">−2/3 · 2/3 = −4/9</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−2/3</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Порядок действий</h2>
+
+<p>В выражениях порядок прежний: сначала умножение и деление, потом сложение и вычитание. Например: <span class="math">−6·(−5) − (−40):8 = 30 + 5 = 35</span>.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 34: Проверяй частное умножением</p>
+<p><b>Устройство.</b> Деление — «обратное умножение»: частное · делитель = делимое. Это встроенная проверка.</p><p><b>Правило-шаги.</b> 1) Раздели модули. 2) Определи знак по числу минусов. 3) Проверь: частное × делитель = делимое.</p><p><b>Проверь на контрасте:</b> <span class="math">100 : (−2,5) = −40</span> ✅. А написать −4 🚫 — модуль поделили «на глаз». Проверка умножением мгновенно ловит ошибку: −4·(−2,5) = 10 ≠ 100.</p><p><b>Мостик:</b> в задании 1 именно проверка умножением выявит неверные равенства.</p>
+</section>
+
+<section class="card visual">
+<h2>Ловим ошибку проверкой</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-direction:column;gap:8px;align-items:center;font-size:15px"><div><span class="math" style="background:#fdf3f2;padding:6px 12px">100 : (−2,5) = −4 🚫</span> <span style="color:#636e72">проверка: −4 · (−2,5) = 10 ≠ 100</span></div><div><span class="math" style="background:#f0fbf9;padding:6px 12px">100 : (−2,5) = −40 ✅</span> <span style="color:#636e72">проверка: −40 · (−2,5) = 100</span></div></div></div>
+<figcaption>Схема к упр. 4.305 (б): проверка умножением мгновенно показывает неверное частное</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.305</span></div>
+<p>Верно ли выполнено деление: а) <span class="math">−24 : 2 = −12</span>; б) <span class="math">100 : (−2,5) = −4</span>; в) <span class="math">3,8 : (−1) = 3,8</span>; г) <span class="math">−8,4 : (−4) = 2,1</span>?</p>
+<button class="toggle-btn" data-target="a34_1" onclick="toggleAnswer('a34_1')">🔍 Проверить</button>
+<div class="answer" id="a34_1">
+<ol>
+<li>а) <span class="math">−24 : 2 = −12</span> — верно ✓</li>
+<li>б) <span class="math">100 : (−2,5) = −40</span>, а не −4 — неверно</li>
+<li>в) <span class="math">3,8 : (−1) = −3,8</span>, а не 3,8 — неверно (потерян минус)</li>
+<li>г) <span class="math">−8,4 : (−4) = 2,1</span> — верно ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">верно: а), г); неверно: б), в)</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.306 (а, г)</span></div>
+<p>Выполните деление: а) <span class="math">−34 : 17</span>; г) <span class="math">−25 : (−5)</span>.</p>
+<button class="toggle-btn" data-target="a34_2" onclick="toggleAnswer('a34_2')">🔍 Проверить</button>
+<div class="answer" id="a34_2">
+<ol>
+<li>а) <span class="math">−34 : 17 = −2</span></li>
+<li>г) <span class="math">−25 : (−5) = 5</span></li>
+<li>Проверка: <span class="math">−2 · 17 = −34</span>; <span class="math">5 · (−5) = −25</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) −2; г) 5</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.307 (а, з)</span></div>
+<p>Вычислите: а) <span class="math">−6,6 : 6</span>; з) <span class="math">11,55 : (−1,5)</span>.</p>
+<button class="toggle-btn" data-target="a34_3" onclick="toggleAnswer('a34_3')">🔍 Проверить</button>
+<div class="answer" id="a34_3">
+<ol>
+<li>а) <span class="math">−(6,6 : 6) = −1,1</span></li>
+<li>з) <span class="math">−(11,55 : 1,5) = −7,7</span></li>
+<li>Проверка: <span class="math">−1,1 · 6 = −6,6</span>; <span class="math">−7,7 · (−1,5) = 11,55</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) −1,1; з) −7,7</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.309 (а, б)</span></div>
+<p>Найдите частное: а) <span class="math">−7/9 : 2/3</span>; б) <span class="math">−3/13 : (−9/26)</span>.</p>
+<button class="toggle-btn" data-target="a34_4" onclick="toggleAnswer('a34_4')">🔍 Проверить</button>
+<div class="answer" id="a34_4">
+<ol>
+<li>а) <span class="math">−7/9 · 3/2 = −(7 · 3)/(9 · 2) = −7/6 = −1 1/6</span></li>
+<li>б) <span class="math">3/13 · 26/9 = (3 · 26)/(13 · 9) = 2/3</span></li>
+<li>Проверка: <span class="math">−1 1/6 · 2/3 = −7/6 · 2/3 = −14/18 = −7/9</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) −1 1/6; б) 2/3</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.312 (а, б)</span></div>
+<p>Выполните действия: а) <span class="math">−6 · (−5) − (−40) : 8</span>; б) <span class="math">27 : (−27) − (−35) : 7</span>.</p>
+<button class="toggle-btn" data-target="a34_5" onclick="toggleAnswer('a34_5')">🔍 Проверить</button>
+<div class="answer" id="a34_5">
+<ol>
+<li>а) Сначала умножение и деление: <span class="math">30 + 5 = 35</span></li>
+<li>б) <span class="math">−1 + 5 = 4</span></li>
+<li>Проверка порядка действий: деление и умножение всегда раньше сложения ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 35; б) 4</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.308 (г, д)</span></div>
+<p>Выполните деление: г) <span class="math">−7 : (−2)</span>; д) <span class="math">−9 : 10</span>.</p>
+<button class="toggle-btn" data-target="a34_6" onclick="toggleAnswer('a34_6')">🔍 Проверить</button>
+<div class="answer" id="a34_6">
+<ol>
+<li>г) <span class="math">−7 : (−2) = 3,5</span> — оба минуса, результат положительный</li>
+<li>д) <span class="math">−9 : 10 = −0,9</span></li>
+<li>Проверка: <span class="math">3,5 · (−2) = −7</span>; <span class="math">−0,9 · 10 = −9</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">г) 3,5; д) −0,9</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Знаки при делении — те же, что при умножении.</li>
+<li>Разные знаки → частное отрицательное; одинаковые → положительное.</li>
+<li>Делим модули, потом ставим знак.</li>
+<li>Деление на дробь — умножение на перевёрнутую.</li>
+<li>Частное проверяется умножением: частное · делитель = делимое.</li>
+<li>На нуль делить нельзя.</li>
+<li>Порядок действий: деление и умножение раньше сложения и вычитания.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-33.html">← Урок 33</a> <span class="here">Урок 34</span> <a href="lesson-35.html">Урок 35 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 4 «Действия с рациональными числами», п. 34 «Действие деления» • Страницы 56–61</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

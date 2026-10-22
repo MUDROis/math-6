@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Математика 6 класс — содержание курса</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="card">
+<span class="badge">Учебный курс • Математика, 6 класс</span>
+<h1>Математика 6 класс</h1>
+<p class="subtitle">Смешанные числа, пропорции, рациональные числа, уравнения и координаты — вся программа года на одной странице</p>
+<p>👇 Нажми на заголовок главы, чтобы раскрыть её состав. Значок ✅ означает, что интерактивный урок готов: теория, подсказка, тренажёр «Проверь себя» и главное из урока.</p>
+</header>
+
+<details class="chapter" open>
+<summary><span class='ch-num'>I</span><span class='ch-title'>Смешанные числа</span><span class='ch-count'>23 пунктов</span><span class='arrow'>▾</span></summary>
+<div class="ch-body"><p class="ch-desc">Первая часть года: проценты и диаграммы, делимость чисел, все действия с обыкновенными дробями и смешанными числами, отношения, пропорции, масштаб и окружность.</p>
+<div class="sect"><h3>§ 1. Вычисления и построения</h3></div>
+<div class="lesson-row">
+<div class="num">1</div>
+<div class="info"><h4>Среднее арифметическое <span class="pg">стр. 14–18</span></h4><p>Среднее арифметическое как «честное деление»: сумма ÷ количество; средняя скорость и обратные задачи.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-01.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">2</div>
+<div class="info"><h4>Проценты <span class="pg">стр. 19–26</span></h4><p>Что такое процент; перевод числа в проценты и обратно; три типа задач: проценты от числа, число по процентам, сравнение долей.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-02.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">3</div>
+<div class="info"><h4>Представление числовой информации в круговых диаграммах <span class="pg">стр. 27–31</span></h4><p>Круговая диаграмма: 360° = 100 %; перевод долей и процентов в углы секторов; чтение и построение диаграмм.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-03.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">4</div>
+<div class="info"><h4>Виды треугольников <span class="pg">стр. 32–36</span></h4><p>Классификация треугольников по углам и по сторонам; сумма углов треугольника; построение по двум сторонам и углу.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-04.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">5</div>
+<div class="info"><h4>Понятие множества <span class="pg">стр. 37–42</span></h4><p>Множество и его элементы; запись в фигурных скобках; пустое множество, подмножество; пересечение и объединение; круги Эйлера.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-05.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="sect"><h3>§ 2. Действия со смешанными числами</h3></div>
+<div class="lesson-row">
+<div class="num">6</div>
+<div class="info"><h4>Разложение числа на простые множители <span class="pg">стр. 43–49</span></h4><p>Простые и составные числа; разложение столбиком с вертикальной чертой; проверка разложения умножением.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-06.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">7</div>
+<div class="info"><h4>Наибольший общий делитель. Взаимно простые числа <span class="pg">стр. 50–54</span></h4><p>НОД и его поиск через разложение; взаимно простые числа; задачи на наибольшее число одинаковых групп и упаковок.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-07.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">8</div>
+<div class="info"><h4>Наименьшее общее кратное натуральных чисел <span class="pg">стр. 55–59</span></h4><p>НОК и его поиск через разложение; когда НОК равен произведению; задачи про совпадающие события.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-08.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">9</div>
+<div class="info"><h4>Приведение дробей к наименьшему общему знаменателю <span class="pg">стр. 60–63</span></h4><p>Общий знаменатель и НОЗ; дополнительные множители; приведение нескольких дробей к НОЗ.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-09.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">10</div>
+<div class="info"><h4>Сравнение, сложение и вычитание обыкновенных дробей <span class="pg">стр. 64–70</span></h4><p>Сравнение дробей с разными знаменателями и с одинаковыми числителями; сложение и вычитание дробей.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-10.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">11</div>
+<div class="info"><h4>Действия сложения и вычитания смешанных чисел <span class="pg">стр. 71–79</span></h4><p>Алгоритмы сложения и вычитания смешанных чисел; занятие единицы при вычитании; текстовые задачи.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-11.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">12</div>
+<div class="info"><h4>Действие умножения смешанных чисел <span class="pg">стр. 80–86</span></h4><p>Умножение смешанных чисел через неправильные дроби; предварительное сокращение; умножение обыкновенных и десятичных дробей.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-12.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">13</div>
+<div class="info"><h4>Нахождение дроби от числа <span class="pg">стр. 87–92</span></h4><p>Дробь от числа умножением; части, выраженные обыкновенной и десятичной дробью, процентами; задачи на части.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-13.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">14</div>
+<div class="info"><h4>Применение распределительного свойства умножения <span class="pg">стр. 93–98</span></h4><p>Распределительное свойство относительно сложения и вычитания; умножение смешанного числа на натуральное; упрощение выражений.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-14.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">15</div>
+<div class="info"><h4>Действие деления смешанных чисел <span class="pg">стр. 99–105</span></h4><p>Взаимно обратные числа; деление дробей и смешанных чисел; деление на натуральное число и на правильную дробь.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-15.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">16</div>
+<div class="info"><h4>Нахождение числа по его дроби <span class="pg">стр. 106–109</span></h4><p>Число по значению его дроби делением; часть от целого в процентах и десятичных дробях; задачи «найди целое».</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-16.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">17</div>
+<div class="info"><h4>Дробные выражения <span class="pg">стр. 110–118</span></h4><p>Дробные выражения; числитель и знаменатель дробного выражения; вычисление «многоэтажных» дробей.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-17.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="sect"><h3>§ 3. Отношения и пропорции</h3></div>
+<div class="lesson-row">
+<div class="num">18</div>
+<div class="info"><h4>Отношения <span class="pg">стр. 119–124</span></h4><p>Отношение двух чисел и величин; взаимно обратные отношения; сравнение долей через отношения (прыжки, стрельба).</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-18.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">19</div>
+<div class="info"><h4>Пропорция <span class="pg">стр. 125–129</span></h4><p>Пропорция, крайние и средние члены; основное свойство пропорции; нахождение неизвестного члена.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-19.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">20</div>
+<div class="info"><h4>Прямая и обратная пропорциональные зависимости <span class="pg">стр. 130–135</span></h4><p>Прямо и обратно пропорциональные величины; решение задач с помощью пропорции и стрелок.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-20.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">21</div>
+<div class="info"><h4>Масштаб <span class="pg">стр. 136–141</span></h4><p>Масштаб карты и чертежа; переход от карты к местности и обратно; выбор удобного масштаба.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-21.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">22</div>
+<div class="info"><h4>Симметрии <span class="pg">стр. 142–148</span></h4><p>Осевая и центральная симметрии; построение симметричных точек и фигур; оси и центр симметрии фигур.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-22.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">23</div>
+<div class="info"><h4>Длина окружности и площадь круга. Шар <span class="pg">стр. 149–154</span></h4><p>Формулы C = πd и S = πr²; число π ≈ 3,14; шар и сфера; задачи про колёса, куранты и беседки.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-23.html" class="go-btn">Перейти →</a></div>
+</div>
+</div></details>
+<details class="chapter" open>
+<summary><span class='ch-num'>II</span><span class='ch-title'>Рациональные числа</span><span class='ch-count'>21 пунктов</span><span class='arrow'>▾</span></summary>
+<div class="ch-body"><p class="ch-desc">Вторая часть года: положительные и отрицательные числа, все действия с рациональными числами, уравнения, перпендикулярные и параллельные прямые, координатная плоскость, графики.</p>
+<div class="sect"><h3>§ 4. Действия с рациональными числами</h3></div>
+<div class="lesson-row">
+<div class="num">24</div>
+<div class="info"><h4>Положительные и отрицательные числа <span class="pg">стр. 6–14</span></h4><p>Положительные и отрицательные числа; координатная прямая; координата точки; неотрицательные и неположительные числа.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-24.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">25</div>
+<div class="info"><h4>Противоположные числа <span class="pg">стр. 15–18</span></h4><p>Противоположные числа; запись −n; −(−n) = n; целые числа и ряд целых чисел.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-25.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">26</div>
+<div class="info"><h4>Модуль числа <span class="pg">стр. 19–22</span></h4><p>Модуль числа как расстояние от начала отсчёта; свойства модуля; уравнения вида |x| = a.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-26.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">27</div>
+<div class="info"><h4>Сравнение положительных и отрицательных чисел <span class="pg">стр. 23–27</span></h4><p>Правила сравнения чисел с разными знаками и двух отрицательных; двойные неравенства.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-27.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">28</div>
+<div class="info"><h4>Изменение величин <span class="pg">стр. 28–32</span></h4><p>Изменение величины положительным и отрицательным числом; перемещение точки по координатной прямой.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-28.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">29</div>
+<div class="info"><h4>Сложение чисел с помощью координатной прямой <span class="pg">стр. 33–36</span></h4><p>Сложение чисел перемещением по координатной прямой; сумма противоположных чисел; прибавление нуля.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-29.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">30</div>
+<div class="info"><h4>Сложение отрицательных чисел <span class="pg">стр. 37–40</span></h4><p>Правило сложения отрицательных чисел через модули; суммы с дробями и удобные группировки.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-30.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">31</div>
+<div class="info"><h4>Сложение чисел с разными знаками <span class="pg">стр. 41–45</span></h4><p>Правило сложения чисел с разными знаками; суммы с дробями; проверка кандидатов в корни уравнения.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-31.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">32</div>
+<div class="info"><h4>Действие вычитания <span class="pg">стр. 46–50</span></h4><p>Правило вычитания рациональных чисел; алгебраическая сумма; длина отрезка по координатам концов.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-32.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">33</div>
+<div class="info"><h4>Действие умножения <span class="pg">стр. 51–55</span></h4><p>Умножение чисел с разными знаками и двух отрицательных; степени отрицательных чисел; выражения со знаком произведения.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-33.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">34</div>
+<div class="info"><h4>Действие деления <span class="pg">стр. 56–61</span></h4><p>Деление отрицательных чисел и чисел с разными знаками; частное с дробями; нахождение ошибки в делении.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-34.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">35</div>
+<div class="info"><h4>Рациональные числа <span class="pg">стр. 62–66</span></h4><p>Определение рационального числа; запись в виде p/q; конечные и периодические десятичные дроби.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-35.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">36</div>
+<div class="info"><h4>Свойства действий с рациональными числами <span class="pg">стр. 67–75</span></h4><p>Переместительное, сочетательное и распределительное свойства для рациональных чисел; удобные группировки.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-36.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="sect"><h3>§ 5. Решение уравнений</h3></div>
+<div class="lesson-row">
+<div class="num">37</div>
+<div class="info"><h4>Раскрытие скобок <span class="pg">стр. 76–80</span></h4><p>Раскрытие скобок со знаком «+» и «−» перед ними; вычисление удобным способом; алгебраические суммы с буквами.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-37.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">38</div>
+<div class="info"><h4>Коэффициент <span class="pg">стр. 81–84</span></h4><p>Коэффициент выражения; упрощение произведений с числами и буквами; знак коэффициента.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-38.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">39</div>
+<div class="info"><h4>Подобные слагаемые <span class="pg">стр. 85–89</span></h4><p>Подобные слагаемые; приведение подобных через распределительное свойство; упрощение выражений со скобками.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-39.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">40</div>
+<div class="info"><h4>Решение уравнений <span class="pg">стр. 90–97</span></h4><p>Свойства уравнений; перенос слагаемых; линейные уравнения; задачи, решаемые уравнением.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-40.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="sect"><h3>§ 6. Координаты на плоскости</h3></div>
+<div class="lesson-row">
+<div class="num">41</div>
+<div class="info"><h4>Перпендикулярные прямые <span class="pg">стр. 98–100</span></h4><p>Перпендикулярные прямые, отрезки и лучи; построение перпендикуляров чертёжным треугольником и транспортиром.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-41.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">42</div>
+<div class="info"><h4>Параллельные прямые <span class="pg">стр. 101–104</span></h4><p>Параллельные прямые и отрезки; единственность параллельной через точку; связь с перпендикулярами.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-42.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">43</div>
+<div class="info"><h4>Координатная плоскость <span class="pg">стр. 105–109</span></h4><p>Система координат; оси абсцисс и ординат; построение точек по координатам (x; y); географические координаты.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-43.html" class="go-btn">Перейти →</a></div>
+</div>
+<div class="lesson-row">
+<div class="num">44</div>
+<div class="info"><h4>Представление числовой информации на графиках <span class="pg">стр. 110–120</span></h4><p>График зависимости величин; чтение графиков; график движения и скорость по графику.</p></div>
+<div class="act"><span class="ok">✅ урок готов</span><a href="lesson-44.html" class="go-btn">Перейти →</a></div>
+</div>
+</div></details>
+<footer class="card">
+<p>📚 <b>Материалы в конце учебника:</b> Вопросы и задачи на повторение (ч. 2, с. 124) • Ответы (ч. 1 — с. 157, ч. 2 — с. 140) • Предметный указатель</p>
+<p>📖 <b>Учебник:</b> Математика 6 класс, базовый уровень (Виленкин Н. Я., Жохов В. И., Чесноков А. С. и др.), в 2 частях • Полный курс: 2 главы, 6 параграфов, 44 пункта</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

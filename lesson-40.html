@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 40. Решение уравнений — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-39.html">← Урок 39</a> <span class="here">Урок 40</span> <a href="lesson-41.html">Урок 41 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 5, п. 40</span></div>
+<h1>П. 40. Решение уравнений</h1>
+<p class="subtitle">Переносим слагаемые через «равно» — и знак меняется</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Уравнение <span class="math">7x = 3x + 4</span> похоже на весы: с обеих чашек можно снять по три пакета — равновесие сохранится. Так рождается главное правило урока: <span class="highlight">слагаемое можно перенести из одной части уравнения в другую, изменив его знак</span>. Сегодня научимся решать любые линейные уравнения и задачи с их помощью.</p>
+</section>
+
+<section class="card theory">
+<h2>Свойства уравнений</h2>
+
+<div class="rule-box"><b>1.</b> Если обе части уравнения умножить или разделить на одно и то же число, не равное нулю, корни не изменятся. <b>2.</b> Слагаемое можно перенести из одной части уравнения в другую, изменив его знак на противоположный.</div><p>Пример: <span class="math">3x + 4 = 22</span> → переносим 4: <span class="math">3x = 22 − 4 = 18</span> → <span class="math">x = 6</span>. Проверка: <span class="math">3 · 6 + 4 = 22</span> ✓.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Решим уравнение 7x = 3x + 4 (пример из учебника).</p>
+<ol class="steps">
+<li>Переносим 3x влево со сменой знака: <span class="math">7x − 3x = 4</span></li>
+<li>Приводим подобные: <span class="math">4x = 4</span></li>
+<li><span class="math">x = 1</span>. Проверка: <span class="math">7 · 1 = 3 · 1 + 4</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">x = 1</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Алгоритм решения линейного уравнения</h2>
+
+<div class="rule-box"><b>Шаги:</b> 1) раскрой скобки (если есть); 2) перенеси слагаемые с x влево, числа вправо (со сменой знаков); 3) приведи подобные слагаемые; 4) раздели обе части на коэффициент при x.</div><p>Если при x остался ненулевой коэффициент — корень один. Если получилось <span class="math">0x = b</span> при b ≠ 0 — корней нет; при b = 0 — любое число является корнем.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Решим уравнение −50 · (−9x + 3) = −15000 (упр. 5.99).</p>
+<ol class="steps">
+<li>Разделим обе части на −50: <span class="math">−9x + 3 = 300</span></li>
+<li>Переносим 3: <span class="math">−9x = 297</span></li>
+<li><span class="math">x = 297 : (−9) = −33</span>. Проверка: <span class="math">−50 · (297 + 3) = −50 · 300 = −15000</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">x = −33</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Задачи решаются уравнением</h2>
+
+<p>Схема: обозначь неизвестное буквой → составь уравнение по условию → реши → истолкуй ответ и проверь. Например, про книги на полках: пусть на второй полке x книг, тогда на первой 2x, на третьей 2x − 5; уравнение <span class="math">x + 2x + 2x − 5 = 75</span>.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 40: Перенёс слагаемое — поменяй знак</p>
+<p><b>Устройство.</b> Уравнение — весы: любые одинаковые действия с обеими чашами сохраняют равенство; «перенос» — это вычитание слагаемого из обеих частей.</p><p><b>Правило-шаги.</b> 1) Скобки — раскрыть. 2) x — налево, числа — направо, каждый переход — со сменой знака. 3) Подобные — привести. 4) Разделить на коэффициент. 5) Проверка подстановкой — обязательна.</p><p><b>Проверь на контрасте:</b> из <span class="math">7x − 21 = 6x + 3</span> перенос даёт <span class="math">7x − 6x = 3 + 21</span> ✅. А оставить <span class="math">= 3 − 21</span> 🚫 — знак при переносе не сменился.</p><p><b>Мостик:</b> в заданиях 5 и 6 сначала составь уравнение по условию — дальше алгоритм из четырёх шагов.</p>
+</section>
+
+<section class="card visual">
+<h2>Уравнение на весах</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-direction:column;gap:8px;align-items:center;font-size:15px"><div><span class="math" style="background:#eaf6fd;padding:6px 12px">7x</span> = <span class="math" style="background:#f0fbf9;padding:6px 12px">3x + 4</span></div><div style="color:#636e72;font-size:13px">↓ сняли с обеих чаш по 3x</div><div><span class="math" style="background:#eaf6fd;padding:6px 12px">4x</span> = <span class="math" style="background:#f0fbf9;padding:6px 12px">4</span> <span>→</span><span class="math" style="background:#fffaf0;padding:6px 12px;font-weight:700">x = 1</span></div></div></div>
+<figcaption>Схема из учебника (рис. 5.3): равенство сохраняется, если из обеих частей вычесть одно и то же слагаемое</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 5.97 (а, д)</span></div>
+<p>Решите уравнение: а) <span class="math">7x − 21 = 6x + 3</span>; д) <span class="math">8 + 27a = 10 + 26a</span>.</p>
+<button class="toggle-btn" data-target="a40_1" onclick="toggleAnswer('a40_1')">🔍 Проверить</button>
+<div class="answer" id="a40_1">
+<ol>
+<li>а) <span class="math">7x − 6x = 3 + 21</span> → <span class="math">x = 24</span></li>
+<li>д) <span class="math">27a − 26a = 10 − 8</span> → <span class="math">a = 2</span></li>
+<li>Проверка: <span class="math">7·24 − 21 = 147 = 6·24 + 3</span> ✓; <span class="math">8 + 54 = 62 = 10 + 52</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) x = 24; д) a = 2</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 5.97 (е, з)</span></div>
+<p>Решите уравнение: е) <span class="math">13 − 7x = 14 − 8x</span>; з) <span class="math">2 − 5x = 4 − 6x</span>.</p>
+<button class="toggle-btn" data-target="a40_2" onclick="toggleAnswer('a40_2')">🔍 Проверить</button>
+<div class="answer" id="a40_2">
+<ol>
+<li>е) <span class="math">−7x + 8x = 14 − 13</span> → <span class="math">x = 1</span></li>
+<li>з) <span class="math">−5x + 6x = 4 − 2</span> → <span class="math">x = 2</span></li>
+<li>Проверка: <span class="math">13 − 7 = 6 = 14 − 8</span> ✓; <span class="math">2 − 10 = −8 = 4 − 12</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">е) x = 1; з) x = 2</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 5.100 (а, и)</span></div>
+<p>Решите уравнение: а) <span class="math">0,7x + 4 = 0,3x</span>; и) <span class="math">17x + 34 = 0</span>.</p>
+<button class="toggle-btn" data-target="a40_3" onclick="toggleAnswer('a40_3')">🔍 Проверить</button>
+<div class="answer" id="a40_3">
+<ol>
+<li>а) <span class="math">0,7x − 0,3x = −4</span> → <span class="math">0,4x = −4</span> → <span class="math">x = −10</span></li>
+<li>и) <span class="math">17x = −34</span> → <span class="math">x = −2</span></li>
+<li>Проверка: <span class="math">0,7·(−10) + 4 = −3 = 0,3·(−10)</span> ✓; <span class="math">17·(−2) + 34 = 0</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) x = −10; и) x = −2</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 5.99 (б, в)</span></div>
+<p>Найдите корень уравнения и выполните проверку: б) <span class="math">(−30x − 60) · 2 = 120</span>; в) <span class="math">−4 · (3 − 21x) = −12</span>.</p>
+<button class="toggle-btn" data-target="a40_4" onclick="toggleAnswer('a40_4')">🔍 Проверить</button>
+<div class="answer" id="a40_4">
+<ol>
+<li>б) Делим на 2: <span class="math">−30x − 60 = 60</span> → <span class="math">−30x = 120</span> → <span class="math">x = −4</span></li>
+<li>в) Делим на −4: <span class="math">3 − 21x = 3</span> → <span class="math">−21x = 0</span> → <span class="math">x = 0</span></li>
+<li>Проверка: <span class="math">(120 − 60)·2 = 120</span> ✓; <span class="math">−4 · 3 = −12</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">б) x = −4; в) x = 0</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 5.91</span></div>
+<p>На трёх полках 75 книг. На первой полке книг в 2 раза больше, чем на второй, а на третьей на 5 книг меньше, чем на первой. Сколько книг на каждой полке?</p>
+<button class="toggle-btn" data-target="a40_5" onclick="toggleAnswer('a40_5')">🔍 Проверить</button>
+<div class="answer" id="a40_5">
+<ol>
+<li>Пусть на второй полке x книг; тогда первая — 2x, третья — 2x − 5</li>
+<li><span class="math">x + 2x + 2x − 5 = 75</span> → <span class="math">5x = 80</span> → <span class="math">x = 16</span></li>
+<li>Полки: 32, 16 и 27 книг. Проверка: <span class="math">32 + 16 + 27 = 75</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">32, 16 и 27 книг</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 5.90</span></div>
+<p>Цена килограмма яблок на 20 р. ниже цены килограмма груш. Купили 3 кг груш и 5 кг яблок, заплатив 660 р. По какой цене покупали фрукты?</p>
+<button class="toggle-btn" data-target="a40_6" onclick="toggleAnswer('a40_6')">🔍 Проверить</button>
+<div class="answer" id="a40_6">
+<ol>
+<li>Пусть груши стоят x р./кг, тогда яблоки — x − 20 р./кг</li>
+<li><span class="math">3x + 5(x − 20) = 660</span> → <span class="math">3x + 5x − 100 = 660</span></li>
+<li><span class="math">8x = 760</span> → <span class="math">x = 95</span>: груши — 95 р., яблоки — 75 р.</li>
+<li>Проверка: <span class="math">3·95 + 5·75 = 285 + 375 = 660</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">груши — 95 р./кг, яблоки — 75 р./кг</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Корень уравнения не меняется при умножении/делении обеих частей на число ≠ 0.</li>
+<li>Слагаемое переносится через «равно» со сменой знака.</li>
+<li>Алгоритм: скобки → перенос → подобные → деление на коэффициент.</li>
+<li>Проверка корня подстановкой обязательна.</li>
+<li>0x = b: при b ≠ 0 корней нет, при b = 0 — любой x.</li>
+<li>Задачи решают уравнением: обозначь неизвестное, составь уравнение, реши, истолкуй.</li>
+<li>Ответ задачи проверяют по условию, а не только подстановкой в уравнение.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-39.html">← Урок 39</a> <span class="here">Урок 40</span> <a href="lesson-41.html">Урок 41 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 5 «Решение уравнений», п. 40 «Решение уравнений» • Страницы 90–97</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 6. Разложение числа на простые множители — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-05.html">← Урок 5</a> <span class="here">Урок 6</span> <a href="lesson-07.html">Урок 7 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 2, п. 6</span></div>
+<h1>П. 6. Разложение числа на простые множители</h1>
+<p class="subtitle">Каждое составное число — «конструктор» из простых: собери и разбери</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Число 770 можно собрать из «кирпичиков»-простых чисел: <span class="math">770 = 2 · 5 · 7 · 11</span>. А можно ли собрать так любое составное число? Сегодня научимся <span class="highlight">раскладывать числа на простые множители</span> столбиком — этот навык понадобится нам буквально на следующем уроке для НОД и НОК.</p>
+</section>
+
+<section class="card theory">
+<h2>Простые и составные числа</h2>
+
+<div class="def-box"><b class="term">Простое число</b> — натуральное число, которое имеет только два делителя: единицу и само это число. <b class="term">Составное</b> — имеет больше двух делителей.</div><p>Например, 7 — простое (делится только на 1 и 7), а 12 — составное (делится ещё на 2, 3, 4, 6). Число 1 не является ни простым, ни составным: у него один делитель. Наименьшее простое число — 2, и это единственное чётное простое число.</p>
+</section>
+
+<section class="card theory">
+<h2>Как раскладывать число на простые множители</h2>
+
+<div class="def-box"><b class="term">Разложение числа на простые множители</b> — представление числа в виде произведения его простых делителей. Любое составное число можно разложить на простые множители.</div><p>Разложение удобно записывать <span class="highlight">вертикальной чертой</span>: слева пишем число, справа — простой делитель, под числом — частное. Помогают признаки делимости: сначала делим на 2, пока делится, потом на 3, 5, 7…</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Разложим на простые множители число 660 (пример из учебника).</p>
+<ol class="steps">
+<li>660 оканчивается чётной цифрой → делится на 2: <span class="math">660 : 2 = 330</span></li>
+<li><span class="math">330 : 2 = 165</span>; 165 делится на 3 (сумма цифр 12): <span class="math">165 : 3 = 55</span></li>
+<li>55 оканчивается на 5: <span class="math">55 : 5 = 11</span>; 11 — простое: <span class="math">11 : 11 = 1</span></li>
+<li>Проверка: <span class="math">2 · 2 · 3 · 5 · 11 = 4 · 3 · 55 = 12 · 55 = 660</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">660 = 2 · 2 · 3 · 5 · 11</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Разложение можно вести по-разному</h2>
+
+<p>Разложить 770 можно и так: <span class="math">770 = 70 · 11 = 7 · 10 · 11 = 7 · 2 · 5 · 11</span>. Множители те же, отличается только порядок. Обычно их записывают в порядке возрастания: <span class="math">770 = 2 · 5 · 7 · 11</span>.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 6: Вертикальная черта: дели на 2, пока делится</p>
+<p><b>Устройство.</b> Простые множители — «кирпичики», из которых собрано число; их нельзя разбить дальше.</p><p><b>Правило-шаги.</b> 1) Пробуй делить на 2, пока делится. 2) Затем на 3, 5, 7, 11… по возрастанию. 3) Закончил, когда слева осталась 1. 4) Проверка: перемножь правый столбик.</p><p><b>Проверь на контрасте:</b> <span class="math">60 = 2 · 2 · 3 · 5</span> ✅ (2·2·3·5 = 60). А запись <span class="math">60 = 4 · 15</span> 🚫 — множители не простые, это лишь разложение на множители.</p><p><b>Мостик:</b> в заданиях 1 и 3 именно столбиком и именно с проверкой умножением.</p>
+</section>
+
+<section class="card visual">
+<h2>Разложение 660 столбиком</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><table class="plain" style="font-family:'Courier New',monospace;font-size:1.05em"><tr><td>660</td><td>2</td></tr><tr><td>330</td><td>2</td></tr><tr><td>165</td><td>3</td></tr><tr><td>55</td><td>5</td></tr><tr><td>11</td><td>11</td></tr><tr><td>1</td><td></td></tr></table></div>
+<figcaption>Схема из учебника: справа от черты — простые делители, снизу — частные. Итог: 660 = 2 · 2 · 3 · 5 · 11</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.14 (а)</span></div>
+<p>Разложите на простые множители числа: <span class="math">108, 225, 270, 512, 945, 1024</span>.</p>
+<button class="toggle-btn" data-target="a06_1" onclick="toggleAnswer('a06_1')">🔍 Проверить</button>
+<div class="answer" id="a06_1">
+<ol>
+<li><span class="math">108 = 2 · 54 = 2 · 2 · 27 = 2 · 2 · 3 · 3 · 3</span>; <span class="math">225 = 3 · 75 = 3 · 3 · 25 = 3 · 3 · 5 · 5</span></li>
+<li><span class="math">270 = 2 · 135 = 2 · 3 · 45 = 2 · 3 · 3 · 3 · 5</span>; <span class="math">512 = 2 · 256 = … = 2 · 2 · 2 · 2 · 2 · 2 · 2 · 2 · 2</span></li>
+<li><span class="math">945 = 3 · 315 = 3 · 3 · 105 = 3 · 3 · 3 · 5 · 7</span>; <span class="math">1024 = 2 · 512 = … = 2 · 2 · 2 · 2 · 2 · 2 · 2 · 2 · 2 · 2</span></li>
+<li>Проверка: <span class="math">4 · 27 = 108</span>; <span class="math">9 · 25 = 225</span>; <span class="math">512 = 2⁹</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">108 = 2·2·3·3·3; 225 = 3·3·5·5; 270 = 2·3·3·3·5; 512 = 2⁹; 945 = 3³·5·7; 1024 = 2¹⁰</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.12</span></div>
+<p>Найдите произведение простых чисел: а) 37 и 3; б) 7, 11 и 13; в) 11 и 101.</p>
+<button class="toggle-btn" data-target="a06_2" onclick="toggleAnswer('a06_2')">🔍 Проверить</button>
+<div class="answer" id="a06_2">
+<ol>
+<li>а) <span class="math">37 · 3 = 111</span></li>
+<li>б) <span class="math">7 · 11 = 77</span>; <span class="math">77 · 13 = 1001</span></li>
+<li>в) <span class="math">11 · 101 = 1111</span>. Проверка б): <span class="math">1001 : 7 = 143 = 11 · 13</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 111; б) 1001; в) 1111</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.16 (б)</span></div>
+<p>Напишите все двузначные числа, в разложении которых два различных простых множителя и один из них равен 19.</p>
+<button class="toggle-btn" data-target="a06_3" onclick="toggleAnswer('a06_3')">🔍 Проверить</button>
+<div class="answer" id="a06_3">
+<ol>
+<li>Число имеет вид <span class="math">19 · p</span>, где <span class="math">p</span> — простое, <span class="math">p ≠ 19</span></li>
+<li>Подбираем: <span class="math">19 · 2 = 38</span>; <span class="math">19 · 3 = 57</span>; <span class="math">19 · 5 = 95</span></li>
+<li><span class="math">19 · 7 = 133</span> — уже трёхзначное. Проверка: все три числа двузначные и делятся на 19 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">38, 57, 95</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.52 (б)</span></div>
+<p>Разложите на простые множители числа: <span class="math">1600, 8000, 2248, 5148</span>.</p>
+<button class="toggle-btn" data-target="a06_4" onclick="toggleAnswer('a06_4')">🔍 Проверить</button>
+<div class="answer" id="a06_4">
+<ol>
+<li><span class="math">1600 = 2 · 800 = 2 · 2 · 400 = … = 2 · 2 · 2 · 2 · 2 · 2 · 5 · 5</span></li>
+<li><span class="math">8000 = 2 · 4000 = … = 2 · 2 · 2 · 2 · 2 · 2 · 5 · 5 · 5</span></li>
+<li><span class="math">2248 = 2 · 1124 = 2 · 2 · 562 = 2 · 2 · 2 · 281</span> (281 — простое)</li>
+<li><span class="math">5148 = 2 · 2574 = 2 · 2 · 1287 = 2 · 2 · 3 · 429 = 2 · 2 · 3 · 3 · 143 = 2 · 2 · 3 · 3 · 11 · 13</span></li>
+</ol>
+<p><b>Ответ:</b> <span class="math">1600 = 2⁶·5²; 8000 = 2⁶·5³; 2248 = 2³·281; 5148 = 2²·3²·11·13</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.15</span></div>
+<p>Напишите все двузначные числа, разложение которых на простые множители состоит из двух или трёх одинаковых множителей. Как называют эти числа?</p>
+<button class="toggle-btn" data-target="a06_5" onclick="toggleAnswer('a06_5')">🔍 Проверить</button>
+<div class="answer" id="a06_5">
+<ol>
+<li>Два одинаковых множителя: <span class="math">5 · 5 = 25</span>, <span class="math">7 · 7 = 49</span> (<span class="math">2 · 2 = 4</span> и <span class="math">3 · 3 = 9</span> — однозначные, <span class="math">11 · 11 = 121</span> — трёхзначное)</li>
+<li>Три одинаковых: <span class="math">3 · 3 · 3 = 27</span> (<span class="math">2 · 2 · 2 = 8</span> — однозначное, <span class="math">5 · 5 · 5 = 125</span> — трёхзначное)</li>
+<li>Это степени: <span class="math">25 = 5²</span>, <span class="math">49 = 7²</span>, <span class="math">27 = 3³</span></li>
+</ol>
+<p><b>Ответ:</b> <span class="math">25, 27, 49 — степени чисел 5, 3, 7</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.29 (частично)</span></div>
+<p>Найдите множество всех простых делителей числа: <span class="math">221; 7777; 7007</span>.</p>
+<button class="toggle-btn" data-target="a06_6" onclick="toggleAnswer('a06_6')">🔍 Проверить</button>
+<div class="answer" id="a06_6">
+<ol>
+<li><span class="math">221</span>: не делится на 2, 3, 5, 7, 11; <span class="math">221 = 13 · 17</span> → <span class="math">{13, 17}</span></li>
+<li><span class="math">7777 = 7 · 1111 = 7 · 11 · 101</span> → <span class="math">{7, 11, 101}</span></li>
+<li><span class="math">7007 = 7 · 1001 = 7 · 7 · 11 · 13</span> → <span class="math">{7, 11, 13}</span>. Проверка: <span class="math">13 · 17 = 221</span>, <span class="math">49 · 143 = 7007</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">{13, 17}; {7, 11, 101}; {7, 11, 13}</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Простое число имеет ровно два делителя: 1 и само число.</li>
+<li>Составное число имеет больше двух делителей; 1 — ни простое, ни составное.</li>
+<li>Разложение на простые множители — запись числа в виде произведения простых.</li>
+<li>Любое составное число раскладывается на простые множители.</li>
+<li>Столбик с вертикальной чертой: дели на 2, потом на 3, 5, 7… до 1.</li>
+<li>Порядок множителей не важен; обычно пишут по возрастанию.</li>
+<li>Проверка разложения — перемножить все множители.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-05.html">← Урок 5</a> <span class="here">Урок 6</span> <a href="lesson-07.html">Урок 7 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 2 «Действия со смешанными числами», п. 6 «Разложение числа на простые множители» • Страницы 43–49</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

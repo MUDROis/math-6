@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 30. Сложение отрицательных чисел — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-29.html">← Урок 29</a> <span class="here">Урок 30</span> <a href="lesson-31.html">Урок 31 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 4, п. 30</span></div>
+<h1>П. 30. Сложение отрицательных чисел</h1>
+<p class="subtitle">Долг плюс долг — долг побольше: правило суммы отрицательных</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Утром было −2°, за день похолодало ещё на 4°. К вечеру <span class="math">−2 + (−4) = −6°</span>. Заметь: 6 — это сумма модулей 2 и 4, а знак — минус. Сегодня сформулируем <span class="highlight">правило сложения отрицательных чисел</span> и научимся считать такие суммы быстро.</p>
+</section>
+
+<section class="card theory">
+<h2>Правило сложения отрицательных чисел</h2>
+
+<div class="rule-box"><b>Чтобы сложить два отрицательных числа, надо:</b> 1) сложить их модули; 2) поставить перед результатом знак «−».</div><p>Например: <span class="math">−9,3 + (−4,8) = −(9,3 + 4,8) = −14,1</span>. Смысл прост: два долга складываются в один большой долг.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим −46 + (−8) и −4 + (−127) (упр. 4.172).</p>
+<ol class="steps">
+<li><span class="math">−46 + (−8) = −(46 + 8) = −54</span></li>
+<li><span class="math">−4 + (−127) = −(4 + 127) = −131</span></li>
+<li>Проверка на прямой: из −46 двигаемся ещё на 8 влево → −54 ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−54 и −131</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Дроби и десятичные</h2>
+
+<p>С дробями — то же правило: <span class="math">−7/8 + (−1/4) = −(7/8 + 2/8) = −9/8 = −1 1/8</span>. С десятичными: <span class="math">−2,35 + (−9,65) = −12</span>. Главное — аккуратно привести дроби к общему знаменателю или выровнять запятые.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Вычислим −4/5 + (−2/3).</p>
+<ol class="steps">
+<li>НОЗ (5, 3) = 15: <span class="math">−4/5 = −12/15</span>, <span class="math">−2/3 = −10/15</span></li>
+<li>Складываем модули: <span class="math">12/15 + 10/15 = 22/15</span></li>
+<li>Ставим минус: <span class="math">−22/15 = −1 7/15</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">−1 7/15</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Удобные группировки</h2>
+
+<p>Свойства сложения позволяют складывать отрицательные числа «парами», дающими круглые суммы: <span class="math">−2,5 + (−0,87) + (−7,5) = (−2,5 + (−7,5)) + (−0,87) = −10 − 0,87 = −10,87</span>.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 30: Складывай модули, ставь минус</p>
+<p><b>Устройство.</b> Оба слагаемых «тянут влево» — итог ещё левее; сколько шагов — сумма модулей.</p><p><b>Правило-шаги.</b> 1) Убери минусы — сложи числа. 2) Верни общий минус. 3) С дробями — сначала НОЗ, с десятичными — запятая под запятой.</p><p><b>Проверь на контрасте:</b> <span class="math">−2,5 + (−7,5) = −10</span> ✅. А сложить и забыть минус (<span class="math">10</span>) 🚫 — самая частая ошибка.</p><p><b>Мостик:</b> в заданиях 3 и 4 ищи пары, дающие круглую сумму, — группируй.</p>
+</section>
+
+<section class="card visual">
+<h2>Два долга складываются</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><svg width="560" height="120" viewBox="0 0 560 120" role="img"><line x1="20" y1="82" x2="540" y2="82" stroke="#2d3436" stroke-width="2"/><polygon points="540,82 528,77 528,87" fill="#2d3436"/><line x1="-168" y1="77" x2="-168" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="-168" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-8</text><line x1="-112" y1="77" x2="-112" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="-112" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-7</text><line x1="-56" y1="77" x2="-56" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="-56" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-6</text><line x1="0" y1="77" x2="0" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="0" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-5</text><line x1="56" y1="77" x2="56" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="56" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-4</text><line x1="112" y1="77" x2="112" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="112" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-3</text><line x1="168" y1="77" x2="168" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="168" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-2</text><line x1="224" y1="77" x2="224" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="224" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-1</text><line x1="280" y1="77" x2="280" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="280" y="104" font-size="12" text-anchor="middle" fill="#2d3436">0</text><line x1="336" y1="77" x2="336" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="336" y="104" font-size="12" text-anchor="middle" fill="#2d3436">1</text><line x1="392" y1="77" x2="392" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="392" y="104" font-size="12" text-anchor="middle" fill="#2d3436">2</text><circle cx="168" cy="82" r="7" fill="#3498db" stroke="#2d3436" stroke-width="1.5"/><text x="168" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#3498db">−2</text><circle cx="-56" cy="82" r="7" fill="#c0392b" stroke="#2d3436" stroke-width="1.5"/><text x="-56" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#c0392b">−6</text><line x1="392" y1="62" x2="168" y2="62" stroke="#f39c12" stroke-width="3"/><polygon points="168,62 180,56 180,68" fill="#f39c12"/><text x="280" y="50" font-size="14" text-anchor="middle" fill="#b9770e">+ (−4): влево на 4</text></svg></div>
+<figcaption>Схема из учебника: из точки −2 прибавление −4 сдвигает точку влево в −6; модули 2 и 4 складываются</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.172 (а, е)</span></div>
+<p>Найдите сумму: а) <span class="math">−46 + (−8)</span>; е) <span class="math">−8 + (−37)</span>.</p>
+<button class="toggle-btn" data-target="a30_1" onclick="toggleAnswer('a30_1')">🔍 Проверить</button>
+<div class="answer" id="a30_1">
+<ol>
+<li><span class="math">−46 + (−8) = −(46 + 8) = −54</span></li>
+<li><span class="math">−8 + (−37) = −(8 + 37) = −45</span></li>
+<li>Проверка: модули сложены, минус на месте ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">−54; −45</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.176 (г, д)</span></div>
+<p>Выполните сложение: г) <span class="math">−2,35 + (−9,65)</span>; д) <span class="math">−2,27 + (−0,73)</span>.</p>
+<button class="toggle-btn" data-target="a30_2" onclick="toggleAnswer('a30_2')">🔍 Проверить</button>
+<div class="answer" id="a30_2">
+<ol>
+<li><span class="math">−(2,35 + 9,65) = −12</span></li>
+<li><span class="math">−(2,27 + 0,73) = −3</span></li>
+<li>Обе пары дают круглые суммы ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">−12; −3</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.179 (б, в)</span></div>
+<p>Найдите сумму: б) <span class="math">−7/8 + (−1/4)</span>; в) <span class="math">−4/5 + (−2/3)</span>.</p>
+<button class="toggle-btn" data-target="a30_3" onclick="toggleAnswer('a30_3')">🔍 Проверить</button>
+<div class="answer" id="a30_3">
+<ol>
+<li>б) <span class="math">−(7/8 + 2/8) = −9/8 = −1 1/8</span></li>
+<li>в) НОЗ 15: <span class="math">−(12/15 + 10/15) = −22/15 = −1 7/15</span></li>
+<li>Проверка: обе суммы меньше −1 — верно, ведь слагаемые велики ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">б) −1 1/8; в) −1 7/15</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.178 (а, б)</span></div>
+<p>Вычислите удобным способом: а) <span class="math">−2,5 + (−0,87) + (−7,5)</span>; б) <span class="math">−4,7 + (−3,9) + (−1,1)</span>.</p>
+<button class="toggle-btn" data-target="a30_4" onclick="toggleAnswer('a30_4')">🔍 Проверить</button>
+<div class="answer" id="a30_4">
+<ol>
+<li>а) Группируем: <span class="math">(−2,5 + (−7,5)) + (−0,87) = −10 − 0,87 = −10,87</span></li>
+<li>б) <span class="math">(−3,9 + (−1,1)) + (−4,7) = −5 − 4,7 = −9,7</span></li>
+<li>Проверка прямым счётом: а) 2,5 + 0,87 + 7,5 = 10,87 ✓; б) 4,7 + 3,9 + 1,1 = 9,7 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) −10,87; б) −9,7</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.173</span></div>
+<p>Какой знак, &lt; или &gt;, надо поставить: а) <span class="math">−21 + (−15) ? −21</span>; б) <span class="math">−27 + (−41) ? −41</span>; в) <span class="math">−45 ? −5 + (−45)</span>; г) <span class="math">−1 ? −1 + (−13)</span>?</p>
+<button class="toggle-btn" data-target="a30_5" onclick="toggleAnswer('a30_5')">🔍 Проверить</button>
+<div class="answer" id="a30_5">
+<ol>
+<li>а) <span class="math">−21 + (−15) = −36 &lt; −21</span> → знак «&lt;»</li>
+<li>б) <span class="math">−27 + (−41) = −68 &lt; −41</span> → «&lt;»</li>
+<li>в) <span class="math">−5 + (−45) = −50</span>, а <span class="math">−45 &gt; −50</span> → «&gt;»</li>
+<li>г) <span class="math">−1 + (−13) = −14</span>, а <span class="math">−1 &gt; −14</span> → «&gt;» ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) &lt;; б) &lt;; в) &gt;; г) &gt;</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.178 (г)</span></div>
+<p>Вычислите удобным способом: <span class="math">−15,31 + (−25,48) + (−40,76) + (−14,69) + (−26,24) + (−27,52)</span>.</p>
+<button class="toggle-btn" data-target="a30_6" onclick="toggleAnswer('a30_6')">🔍 Проверить</button>
+<div class="answer" id="a30_6">
+<ol>
+<li>Ищем «хвосты до круглого»: <span class="math">−15,31 + (−14,69) = −30</span></li>
+<li><span class="math">−25,48 + (−26,24) = −51,72</span>; <span class="math">−40,76 + (−27,52) = −68,28</span></li>
+<li><span class="math">−30 + (−51,72) + (−68,28) = −150</span>. Проверка: 51,72 + 68,28 = 120 ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">−150</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Сумма отрицательных чисел отрицательна.</li>
+<li>Правило: сложить модули и поставить знак «−».</li>
+<li>С дробями — сначала общий знаменатель, с десятичными — запятая под запятой.</li>
+<li>Удобные группировки: пары, дающие круглые суммы.</li>
+<li>Прибавление отрицательного числа уменьшает число.</li>
+<li>Сравнение: сумма отрицательных меньше каждого слагаемого.</li>
+<li>Проверка: забытый минус — первая ошибка в теме.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-29.html">← Урок 29</a> <span class="here">Урок 30</span> <a href="lesson-31.html">Урок 31 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 4 «Действия с рациональными числами», п. 30 «Сложение отрицательных чисел» • Страницы 37–40</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

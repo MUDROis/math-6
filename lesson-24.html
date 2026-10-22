@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 24. Положительные и отрицательные числа — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-23.html">← Урок 23</a> <span class="here">Урок 24</span> <a href="lesson-25.html">Урок 25 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава II • § 4, п. 24</span></div>
+<h1>П. 24. Положительные и отрицательные числа</h1>
+<p class="subtitle">Термометр подсказывает: выше нуля — плюс, ниже нуля — минус</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Если термометр показал 2° тепла, пишут <span class="math">+2</span> или просто 2. А 3° мороза записывают как <span class="math">−3</span>. Так появились <span class="highlight">положительные и отрицательные числа</span> — сегодня мы поселим их на координатной прямой и научимся находить координаты точек.</p>
+</section>
+
+<section class="card theory">
+<h2>Положительные и отрицательные числа</h2>
+
+<div class="def-box">Числа со знаком «+» называют <b class="term">положительными</b> и пишут <span class="math">+3, +5</span>. Числа со знаком «−» называют <b class="term">отрицательными</b> и пишут <span class="math">−3, −5</span>. Число 0 не является ни положительным, ни отрицательным.</div><p>Все положительные числа и нуль — <span class="highlight">неотрицательные</span> числа; все отрицательные числа и нуль — <span class="highlight">неположительные</span>.</p>
+</section>
+
+<section class="card theory">
+<h2>Координатная прямая</h2>
+
+<div class="def-box">Прямую, на которой выбраны <b class="term">начало отсчёта</b>, <b class="term">единичный отрезок</b> и <b class="term">направление</b>, называют <b class="term">координатной прямой</b>. Число, показывающее положение точки на прямой, называют <b class="term">координатой</b> этой точки.</div><p>Точка с координатой <span class="math">−2 2/5</span> записывается как <span class="math">D(−2 2/5)</span>. На горизонтальной прямой положительные числа — справа от нуля, отрицательные — слева; на вертикальной — положительные выше нуля, отрицательные ниже. Примеры координатных прямых: лента времени, шкала высот гор, шкала глубин морей.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Запишем сообщениями о погоде с помощью знаков: 35° тепла и 10° мороза (упр. 4.8).</p>
+<ol class="steps">
+<li>35 градусов тепла → <span class="math">+35</span> (или просто 35)</li>
+<li>10 градусов мороза → <span class="math">−10</span></li>
+<li>Знак «+» обычно не пишут, а знак «−» обязателен ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">+35 и −10</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Читаем правильно</h2>
+
+<p>Числа <span class="math">+5; −4,2; −8 1/4</span> читают: «плюс пять», «минус четыре целых две десятых», «минус восемь целых одна четвёртая». Названия знаков не склоняют: «минус три правее минус двадцати пяти».</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 24: Справа — плюс, слева — минус</p>
+<p><b>Устройство.</b> Координатная прямая — «улица» чисел: домик 0 в центре, положительные — правее, отрицательные — левее.</p><p><b>Правило-шаги.</b> 1) Отметь 0 и единичный отрезок. 2) Положительное число — столько шагов вправо, отрицательное — влево. 3) Запись A(−3) читай «точка A с координатой минус три».</p><p><b>Проверь на контрасте:</b> точка на 4 шага левее нуля — это <span class="math">−4</span> ✅. А записать её как 4 🚫 — потерян знак, и точка «переехала» направо.</p><p><b>Мостик:</b> в заданиях 3 и 4 расставляй точки именно шагами от нуля.</p>
+</section>
+
+<section class="card visual">
+<h2>Координатная прямая</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><svg width="560" height="120" viewBox="0 0 560 120" role="img"><line x1="20" y1="82" x2="540" y2="82" stroke="#2d3436" stroke-width="2"/><polygon points="540,82 528,77 528,87" fill="#2d3436"/><line x1="28" y1="77" x2="28" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="28" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-6</text><line x1="70" y1="77" x2="70" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="70" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-5</text><line x1="112" y1="77" x2="112" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="112" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-4</text><line x1="154" y1="77" x2="154" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="154" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-3</text><line x1="196" y1="77" x2="196" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="196" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-2</text><line x1="238" y1="77" x2="238" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="238" y="104" font-size="12" text-anchor="middle" fill="#2d3436">-1</text><line x1="280" y1="77" x2="280" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="280" y="104" font-size="12" text-anchor="middle" fill="#2d3436">0</text><line x1="322" y1="77" x2="322" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="322" y="104" font-size="12" text-anchor="middle" fill="#2d3436">1</text><line x1="364" y1="77" x2="364" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="364" y="104" font-size="12" text-anchor="middle" fill="#2d3436">2</text><line x1="406" y1="77" x2="406" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="406" y="104" font-size="12" text-anchor="middle" fill="#2d3436">3</text><line x1="448" y1="77" x2="448" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="448" y="104" font-size="12" text-anchor="middle" fill="#2d3436">4</text><line x1="490" y1="77" x2="490" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="490" y="104" font-size="12" text-anchor="middle" fill="#2d3436">5</text><line x1="532" y1="77" x2="532" y2="87" stroke="#2d3436" stroke-width="1.5"/><text x="532" y="104" font-size="12" text-anchor="middle" fill="#2d3436">6</text><circle cx="112" cy="82" r="7" fill="#c0392b" stroke="#2d3436" stroke-width="1.5"/><text x="112" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#c0392b">D(−4)</text><circle cx="364" cy="82" r="7" fill="#1abc9c" stroke="#2d3436" stroke-width="1.5"/><text x="364" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#1abc9c">K(2)</text><circle cx="490" cy="82" r="7" fill="#3498db" stroke="#2d3436" stroke-width="1.5"/><text x="490" y="68" font-size="14" font-weight="bold" text-anchor="middle" fill="#3498db">M(5)</text></svg></div>
+<figcaption>Схема: от нуля D отстоит на 4 отрезка влево (отрицательная координата), K и M — вправо</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.18 (а, б)</span></div>
+<p>Из чисел <span class="math">−3,1; 7/8; −2 3/5; 0; 9; −10 3/11; 8,4; −50; 4</span> выпишите: а) отрицательные; б) положительные.</p>
+<button class="toggle-btn" data-target="a24_1" onclick="toggleAnswer('a24_1')">🔍 Проверить</button>
+<div class="answer" id="a24_1">
+<ol>
+<li>Отрицательные — со знаком «−»: <span class="math">−3,1; −2 3/5; −10 3/11; −50</span></li>
+<li>Положительные: <span class="math">7/8; 9; 8,4; 4</span></li>
+<li>Число 0 не вошло ни в один список — оно не положительное и не отрицательное ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) −3,1; −2 3/5; −10 3/11; −50; б) 7/8; 9; 8,4; 4</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 4.8 (а)</span></div>
+<p>Запишите с помощью знаков «плюс» и «минус» сообщения о погоде: 35 градусов тепла; 10 градусов мороза.</p>
+<button class="toggle-btn" data-target="a24_2" onclick="toggleAnswer('a24_2')">🔍 Проверить</button>
+<div class="answer" id="a24_2">
+<ol>
+<li>«Тепло» — положительная температура: <span class="math">+35</span></li>
+<li>«Мороз» — отрицательная: <span class="math">−10</span></li>
+<li>Проверка чтения: «плюс тридцать пять», «минус десять» ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">+35; −10</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.15 (а, б, д)</span></div>
+<p>Запишите два числа, расположенных на координатной прямой: а) правее числа 7; б) левее числа −16; д) между числами −1 и 1.</p>
+<button class="toggle-btn" data-target="a24_3" onclick="toggleAnswer('a24_3')">🔍 Проверить</button>
+<div class="answer" id="a24_3">
+<ol>
+<li>а) Правее 7 — любые большие числа: например <span class="math">8</span> и <span class="math">10</span></li>
+<li>б) Левее −16: например <span class="math">−17</span> и <span class="math">−20</span></li>
+<li>д) Между −1 и 1: например <span class="math">0</span> и <span class="math">0,5</span> ✓ (ответы не единственные)</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 8 и 10; б) −17 и −20; д) 0 и 0,5</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 4.20 (а, б)</span></div>
+<p>Запишите множество натуральных чисел, расположенных на координатной прямой между числами: а) 0 и 11; б) 3,6 и 18.</p>
+<button class="toggle-btn" data-target="a24_4" onclick="toggleAnswer('a24_4')">🔍 Проверить</button>
+<div class="answer" id="a24_4">
+<ol>
+<li>а) Натуральные между 0 и 11: <span class="math">1, 2, 3, …, 10</span> — десять чисел</li>
+<li>б) Между 3,6 и 18: <span class="math">4, 5, …, 17</span> — от 4 до 17 включительно</li>
+<li>Проверка: <span class="math">17 − 4 + 1 = 14</span> чисел ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) {1, 2, …, 10}; б) {4, 5, …, 17}</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.14 (а, в, г)</span></div>
+<p>Найдите расстояние между точками A и B координатной прямой в единичных отрезках: а) A(−1) и B(−3); в) A(−3,7) и B(2); г) A(−5,5) и B(5,5).</p>
+<button class="toggle-btn" data-target="a24_5" onclick="toggleAnswer('a24_5')">🔍 Проверить</button>
+<div class="answer" id="a24_5">
+<ol>
+<li>а) От −1 до −3 — два шага влево: <span class="math">2</span></li>
+<li>в) От −3,7 до 2: <span class="math">3,7 + 2 = 5,7</span></li>
+<li>г) От −5,5 до 5,5: <span class="math">5,5 + 5,5 = 11</span> — расстояние не зависит от знака ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">а) 2; в) 5,7; г) 11</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 4.36</span></div>
+<p>Отдыхающих можно разместить в коттеджах по 12 человек и по 8 человек, при этом в коттеджах не останется свободных мест. Сколько было отдыхающих, если их больше 71, но меньше 80?</p>
+<button class="toggle-btn" data-target="a24_6" onclick="toggleAnswer('a24_6')">🔍 Проверить</button>
+<div class="answer" id="a24_6">
+<ol>
+<li>Число отдыхающих кратно и 12, и 8 → кратно <span class="math">НОК (12, 8) = 24</span></li>
+<li>Кратные 24: 24, 48, <b>72</b>, 96…</li>
+<li>Условию 71 &lt; n &lt; 80 удовлетворяет только 72. Проверка: <span class="math">72 = 12 · 6 = 8 · 9</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">72 отдыхающих</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Положительные числа — со знаком «+», отрицательные — со знаком «−».</li>
+<li>Нуль не является ни положительным, ни отрицательным числом.</li>
+<li>Положительные числа и нуль — неотрицательные; отрицательные и нуль — неположительные.</li>
+<li>Координатная прямая имеет начало отсчёта, единичный отрезок и направление.</li>
+<li>Положительные числа на горизонтальной прямой — справа от нуля, отрицательные — слева.</li>
+<li>Запись A(−3) — «точка A с координатой −3».</li>
+<li>Расстояние между точками считают по числу единичных отрезков.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-23.html">← Урок 23</a> <span class="here">Урок 24</span> <a href="lesson-25.html">Урок 25 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 2 • § 4 «Действия с рациональными числами», п. 24 «Положительные и отрицательные числа» • Страницы 6–14</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>П. 16. Нахождение числа по его дроби — Математика 6 класс</title>
+<style>
+:root{--blue:#3498db;--green:#1abc9c;--orange:#f39c12;--red:#c0392b;--ink:#2d3436;--paper:#fafafa;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;color:var(--ink);
+  font-family:'Segoe UI',Verdana,Georgia,sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--paper);
+  background-image:linear-gradient(#e9e9e9 1px,transparent 1px),linear-gradient(90deg,#e9e9e9 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 46px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:20px 26px;margin:18px 0;}
+h1{font-size:1.75em;margin:.3em 0 .2em;line-height:1.25;}
+h2{font-size:1.3em;margin:.2em 0 .6em;color:#1a1a2e;}
+h3{font-size:1.1em;margin:.1em 0 .4em;}
+.subtitle{color:#636e72;font-style:italic;margin:.2em 0 .4em;}
+.badge{display:inline-block;background:#eaf6fd;border:2px solid var(--blue);color:#21618c;
+  border-radius:999px;padding:3px 14px;font-size:.82em;font-weight:700;letter-spacing:.3px;}
+.badge.ok{background:#eafaf8;border-color:var(--green);color:#148f77;}
+.intro p{margin:.4em 0;}
+.highlight{background:#ffe86b;border-radius:3px;padding:0 4px;font-weight:600;}
+.math{font-family:'Courier New',Courier,monospace;background:#ecf0f1;border-radius:5px;padding:1px 7px;white-space:nowrap;}
+.math.big{display:inline-block;padding:4px 10px;font-size:1.05em;}
+.def-box{border-left:6px solid var(--blue);background:#f2f9fe;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.def-box b.term{color:#21618c;}
+.rule-box{border-left:6px solid var(--green);background:#f0fbf9;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.warn-box{border-left:6px solid var(--red);background:#fdf3f2;border-radius:0 10px 10px 0;
+  padding:10px 16px;margin:12px 0;}
+.hint-box{border:2px dashed var(--orange);background:#fffaf0;}
+.hint-box .hint-title{font-weight:800;color:#b9770e;}
+.hint-box ol li,.hint-box ul li{margin:.35em 0;}
+.example{background:#f7f9f9;border:1px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;}
+.example .ex-q{font-weight:700;margin:.2em 0 .5em;}
+.steps{margin:.3em 0;padding-left:1.4em;}
+.steps li{margin:.3em 0;}
+.answer-final{margin:.4em 0 0;}
+.visual{overflow-x:auto;}
+.visual .fig{display:flex;justify-content:center;margin:10px 0 4px;}
+.visual figcaption{font-size:.85em;color:#636e72;text-align:center;font-style:italic;}
+.check .task{border:1.5px solid #dfe6e9;border-radius:10px;padding:10px 16px;margin:12px 0;background:#fff;}
+.task-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.2em 0 .4em;}
+.lvl{display:inline-block;border-radius:999px;padding:1px 12px;font-size:.8em;font-weight:700;color:#fff;}
+.level-1{background:var(--green);}
+.level-2{background:var(--blue);}
+.level-3{background:#9b59b6;}
+.src{font-size:.85em;color:#636e72;background:#f4f4f4;border-radius:6px;padding:1px 8px;}
+.toggle-btn{margin-top:6px;font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:5px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .05s,box-shadow .05s;}
+.toggle-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.answer{display:none;background:#f7f9f9;border:1.5px dashed #95a5a6;border-radius:8px;
+  padding:10px 16px;margin-top:10px;}
+.answer.open{display:block;}
+.answer ol{margin:.2em 0 .2em 1.3em;padding:0;}
+.answer li{margin:.3em 0;}
+.summary-box{border:3px solid var(--green);background:#f4fcfa;}
+.summary-box ul{margin:.3em 0;padding-left:1.35em;}
+.summary-box li{margin:.4em 0;}
+.lesson-nav{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+  margin:16px 0;font-size:.92em;}
+.lesson-nav a{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;
+  padding:4px 12px;color:var(--ink);text-decoration:none;font-weight:600;
+  box-shadow:2px 2px 0 var(--ink);}
+.lesson-nav a:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+.lesson-nav a:hover{background:#eaf6fd;}
+.lesson-nav .here{color:#636e72;font-weight:700;padding:4px 6px;}
+footer{color:#57606f;font-size:.95em;margin-top:8px;padding:6px 4px;}
+footer .legal{font-size:.85em;color:#95a5a6;margin:.45em 0 0;}
+footer a{color:#7f8c8d;}
+table.plain{border-collapse:collapse;margin:8px auto;}
+table.plain td,table.plain th{border:1.5px solid #9aa5ab;padding:4px 12px;text-align:center;}
+table.plain th{background:#ecf0f1;}
+.go-btn{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 14px;
+  color:var(--ink);text-decoration:none;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;}
+.go-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.go-btn.soon{color:#95a5a6;border-color:#b2bec3;box-shadow:3px 3px 0 #b2bec3;cursor:default;}
+details.chapter{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);
+  margin:16px 0;padding:0;overflow:hidden;}
+details.chapter>summary{cursor:pointer;list-style:none;padding:18px 24px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:10px;}
+details.chapter>summary::-webkit-details-marker{display:none;}
+details.chapter>summary .ch-num{background:var(--blue);color:#fff;border-radius:10px;padding:2px 14px;font-weight:800;}
+details.chapter>summary .ch-title{font-size:1.35em;font-weight:800;}
+details.chapter>summary .ch-count{color:#636e72;font-size:.9em;}
+details.chapter>summary .arrow{margin-left:auto;color:#636e72;font-size:1.2em;transition:transform .15s;}
+details.chapter[open]>summary .arrow{transform:rotate(180deg);}
+details.chapter .ch-body{padding:0 24px 20px;}
+details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
+.sect{margin:18px 0 6px;padding-bottom:4px;border-bottom:2px solid #ecf0f1;}
+.sect h3{display:inline-block;background:#f4f4f4;border-radius:8px;padding:4px 14px;margin:0;}
+.lesson-row{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed #ecf0f1;}
+.lesson-row:last-child{border-bottom:none;}
+.lesson-row .num{flex:0 0 44px;height:44px;border-radius:50%;background:#eaf6fd;border:2px solid var(--blue);
+  color:#21618c;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.lesson-row .info{flex:1 1 260px;min-width:200px;}
+.lesson-row .info h4{margin:0;font-size:1.05em;}
+.lesson-row .info .pg{color:#95a5a6;font-size:.82em;font-weight:600;}
+.lesson-row .info p{margin:.25em 0 0;color:#57606f;font-size:.9em;}
+.lesson-row .act{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.lesson-row .act .ok{font-size:.78em;color:#148f77;font-weight:700;}
+.head-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.head-row h1{margin-right:auto;}
+@media (max-width:640px){
+  body{font-size:16px;}
+  .card{padding:14px 14px;border-radius:10px;}
+  h1{font-size:1.4em;}
+  .lesson-row{flex-wrap:wrap;}
+  .lesson-row .act{flex-direction:row;width:100%;justify-content:flex-start;}
+  .math{white-space:normal;overflow-wrap:anywhere;}
+  details.chapter>summary{padding:14px;}
+  details.chapter .ch-body{padding:0 14px 16px;}
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-15.html">← Урок 15</a> <span class="here">Урок 16</span> <a href="lesson-17.html">Урок 17 →</a></nav>
+<header class="card head">
+<div class="head-row"><span class="badge">Глава I • § 2, п. 16</span></div>
+<h1>П. 16. Нахождение числа по его дроби</h1>
+<p class="subtitle">Знаем часть — узнаём целое: деление вместо умножения</p>
+</header>
+
+<section class="card intro">
+<p>Привет! Никита прошёл на лыжах 400 м, и это <span class="math">4/15</span> всей дистанции. Какова длина дистанции? Здесь известна ЧАСТЬ, а ищем ЦЕЛОЕ — значит, действует <span class="highlight">деление</span>. Урок-«зеркало» к предыдущему: там дробь от числа, здесь — число по его дроби.</p>
+</section>
+
+<section class="card theory">
+<h2>Главное правило</h2>
+
+<div class="rule-box"><span class="highlight">Чтобы найти число по значению его дроби, надо это значение разделить на дробь.</span></div><p>Если <span class="math">4/15</span> дистанции — это 400 м, то вся дистанция <span class="math">400 : 4/15</span>. Дробь может быть обыкновенной, десятичной или процентами: «36 т — это 90 %», значит целое <span class="math">36 : 0,9</span>.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Убрано 3600 га подсолнечника, что составляет 0,6 всех засеянных полей. Чему равна площадь всех полей? (пример из учебника)</p>
+<ol class="steps">
+<li><span class="math">3600 : 0,6</span></li>
+<li>Сдвигаем запятую: <span class="math">36 000 : 6</span></li>
+<li><span class="math">= 6000 (га)</span>. Проверка: <span class="math">6000 · 0,6 = 3600</span> ✓</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">6000 га</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Как отличить задачу «от числа» и «по дроби»</h2>
+
+<table class="plain"><tr><th>Вопрос в задаче</th><th>Что делать</th><th>Пример</th></tr><tr><td>«Найди <span class="math">p/q</span> ОТ числа»</td><td>умножать</td><td><span class="math">80 · 3/4 = 60</span></td></tr><tr><td>«Часть РАВНА <span class="math">p/q</span> числа — найди число»</td><td>делить</td><td><span class="math">60 : 3/4 = 80</span></td></tr></table><p>Опорные слова: «от» → умножение; «составляет», «что соответствует» → деление.</p>
+<div class="example">
+<p class="ex-q">📌 Задача. Андрей решил 36 задач, что составило <span class="math">1 1/5</span> запланированных. Сколько задач он планировал? (пример из учебника)</p>
+<ol class="steps">
+<li><span class="math">36 : 1 1/5 = 36 : 6/5</span></li>
+<li><span class="math">= 36 · 5/6 = 30</span></li>
+<li>Проверка: <span class="math">30 · 1 1/5 = 36</span> ✓ — часть больше плана, потому что дробь неправильная</li>
+</ol>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">30 задач</span></p>
+</div>
+</section>
+
+<section class="card theory">
+<h2>Число по его процентам</h2>
+
+<p>Если известно, сколько процентов составляет часть, сначала переведи проценты в дробь: <span class="math">70 % = 0,7</span>, <span class="math">108 % = 1,08</span>. Затем дели значение части на эту дробь. Например: строители сдали 432 тыс. м², превысив план на 8 %, — значит, <span class="math">432</span> — это <span class="math">108 %</span> плана, и план равен <span class="math">432 : 1,08 = 400</span>.</p>
+</section>
+
+<section class="card hint-box">
+<p class="hint-title">💡 Методическая подсказка № 16: Часть : дробь = целое</p>
+<p><b>Устройство.</b> «Часть · целое = часть» — если известна часть и доля, целое восстанавливается делением.</p><p><b>Правило-шаги.</b> 1) Определи: известно ЦЕЛОЕ (умножай) или ЧАСТЬ (дели). 2) Переведи проценты в дробь. 3) Раздели значение части на дробь — неправильную тоже переворачивай.</p><p><b>Проверь на контрасте:</b> «3/5 от 90» → <span class="math">54</span> ✅ умножением. «54 — это 3/5 числа» → <span class="math">54 : 3/5 = 90</span> ✅ делением. Одним умножением решить обе задачи 🚫 нельзя.</p><p><b>Мостик:</b> в заданиях 3–6 после деления обязательно сделай обратную проверку умножением.</p>
+</section>
+
+<section class="card visual">
+<h2>От части — к целому</h2><figure class="fig-wrap" style="margin:0">
+<div class="fig"><div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;font-size:15px"><div style="text-align:center"><div style="width:120px;height:34px;border:2px solid #2d3436;border-radius:8px;background:linear-gradient(90deg,#3498db 0 26.7%,#f4f4f4 26.7%)"></div><div style="font-size:13px;color:#21618c;margin-top:4px">400 м = 4/15</div></div><span style="font-size:24px">➜</span><div style="text-align:center"><div style="width:120px;height:34px;border:2px solid #2d3436;border-radius:8px;background:#1abc9c"></div><div style="font-size:13px;color:#148f77;margin-top:4px">1500 м = целое</div></div><span class="math" style="background:#fffaf0;padding:8px 12px">400 : 4/15 = 1500</span></div></div>
+<figcaption>Схема к упр. 2.496: синий кусок — пройденная часть (4/15 дистанции); целое восстанавливаем делением</figcaption></figure>
+</section>
+
+<section class="card check"><h2>✍️ Проверь себя</h2>
+<p>Шесть заданий по нарастающей: два на прямой счёт (Уровень 1), 
+два на комбинацию правил (Уровень 2) и два на смекалку (Уровень 3). 
+Сначала реши сам — потом нажми «Проверить» и сверь каждый шаг.</p>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.496</span></div>
+<p>Никита прошёл на лыжах 400 м, что составило <span class="math">4/15</span> всей дистанции. Чему равна длина дистанции?</p>
+<button class="toggle-btn" data-target="a16_1" onclick="toggleAnswer('a16_1')">🔍 Проверить</button>
+<div class="answer" id="a16_1">
+<ol>
+<li><span class="math">400 : 4/15 = 400 · 15/4</span></li>
+<li><span class="math">= 100 · 15 = 1500 (м)</span></li>
+<li>Проверка: <span class="math">1500 · 4/15 = 400</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">1500 м</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-1">🟢 Уровень 1</span><span class="src">№ 2.498</span></div>
+<p>Найдите высоту опоры для моста, если она возвышается над водой на 3,3 м, что составляет <span class="math">3/20</span> её длины.</p>
+<button class="toggle-btn" data-target="a16_2" onclick="toggleAnswer('a16_2')">🔍 Проверить</button>
+<div class="answer" id="a16_2">
+<ol>
+<li><span class="math">3,3 : 3/20 = 3,3 · 20/3</span></li>
+<li><span class="math">= 3,3 · 20 : 3 = 66 : 3 = 22 (м)</span></li>
+<li>Проверка: <span class="math">22 · 3/20 = 66/20 = 3,3</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">22 м</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.472</span></div>
+<p>Найдите длину столба, если его наземная часть равна <span class="math">5 1/2 м</span>, а в землю врыто <span class="math">3/11</span> его длины.</p>
+<button class="toggle-btn" data-target="a16_3" onclick="toggleAnswer('a16_3')">🔍 Проверить</button>
+<div class="answer" id="a16_3">
+<ol>
+<li>В земле — 3/11 длины, значит над землёй: <span class="math">1 − 3/11 = 8/11</span> длины</li>
+<li><span class="math">5 1/2 : 8/11 = 11/2 · 11/8 = 121/16</span></li>
+<li><span class="math">= 7 9/16 (м)</span>. Проверка: <span class="math">7 9/16 · 8/11 = 121/16 · 8/11 = 11/2 = 5 1/2</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">7 9/16 м</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-2">🔵 Уровень 2</span><span class="src">№ 2.497</span></div>
+<p>Комбайнёр на новом комбайне убрал зерно с поля за 56 ч и затратил времени на 30 % меньше, чем на старом комбайне. Сколько времени потребовалось бы на старом комбайне?</p>
+<button class="toggle-btn" data-target="a16_4" onclick="toggleAnswer('a16_4')">🔍 Проверить</button>
+<div class="answer" id="a16_4">
+<ol>
+<li>56 ч — это <span class="math">100 % − 30 % = 70 %</span> старого времени</li>
+<li><span class="math">56 : 0,7 = 80 (ч)</span></li>
+<li>Проверка: <span class="math">80 · 0,7 = 56</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">80 ч</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.499</span></div>
+<p>Строители в конце года сдали 432 тыс. м² жилья, что превысило запланированную площадь на 8 %. Сколько тысяч квадратных метров жилья должны были сдать строители?</p>
+<button class="toggle-btn" data-target="a16_5" onclick="toggleAnswer('a16_5')">🔍 Проверить</button>
+<div class="answer" id="a16_5">
+<ol>
+<li>Сдано <span class="math">100 % + 8 % = 108 %</span> плана, то есть <span class="math">1,08</span> плана</li>
+<li><span class="math">432 : 1,08 = 400 (тыс. м²)</span></li>
+<li>Проверка: <span class="math">400 · 1,08 = 432</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">400 тыс. м²</span></p>
+</div>
+</div>
+
+<div class="task">
+<div class="task-head"><span class="lvl level-3">🟣 Уровень 3</span><span class="src">№ 2.476</span></div>
+<p>После того как <span class="math">4/9</span> заготовленного на зиму сена было израсходовано, осталось 36 т. Сколько тонн сена было заготовлено на зиму?</p>
+<button class="toggle-btn" data-target="a16_6" onclick="toggleAnswer('a16_6')">🔍 Проверить</button>
+<div class="answer" id="a16_6">
+<ol>
+<li>Осталось <span class="math">1 − 4/9 = 5/9</span> всего сена — это 36 т</li>
+<li><span class="math">36 : 5/9 = 36 · 9/5 = 324/5 = 64,8 (т)</span></li>
+<li>Проверка: <span class="math">64,8 · 5/9 = 36</span>; израсходовано <span class="math">64,8 · 4/9 = 28,8</span>, <span class="math">28,8 + 36 = 64,8</span> ✓</li>
+</ol>
+<p><b>Ответ:</b> <span class="math">64,8 т</span></p>
+</div>
+</div>
+
+</section>
+
+<section class="card summary-box"><h2>🎓 Главное из урока</h2><ul>
+<li>Число по значению его дроби находят делением.</li>
+<li>Часть : дробь = целое — зеркально правилу «дробь от числа».</li>
+<li>Опорные слова: «от» → умножай; «составляет» → дели.</li>
+<li>Проценты перед делением переводят в десятичную дробь.</li>
+<li>Если часть больше целого (дробь неправильная), целое получится меньше части.</li>
+<li>В задачах «на 30 % меньше» ищи долю: 100 % − 30 % = 70 %.</li>
+<li>Обратная проверка умножением обязательна.</li>
+</ul></section>
+
+<nav class="lesson-nav"><a href="index.html">← Все уроки</a> <a href="lesson-15.html">← Урок 15</a> <span class="here">Урок 16</span> <a href="lesson-17.html">Урок 17 →</a></nav>
+<footer>
+<p>📖 Учебник «Математика, 6 класс» (Виленкин Н. Я. и др.), часть 1 • § 2 «Действия со смешанными числами», п. 16 «Нахождение числа по его дроби» • Страницы 106–109</p>
+<p class="legal">© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744</p>
+<p class="legal">Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a></p>
+</footer>
+</div>
+
+<script>function toggleAnswer(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var open=el.classList.toggle('open');
+  var btns=document.querySelectorAll('[data-target="'+id+'"]');
+  for(var i=0;i<btns.length;i++){btns[i].textContent=open?'🙈 Скрыть':'🔍 Проверить';}
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
