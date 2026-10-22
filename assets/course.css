@@ -40,7 +40,15 @@
   position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;
   margin:12px 0;padding:10px;background:#fff;border:1.5px solid #dfe6e9;border-radius:10px;
 }
-.widget svg{touch-action:manipulation;}
+.widget svg{touch-action:manipulation;max-width:100%;height:auto;}
+.widget .w-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.widget .w-actions button{
+  font-family:inherit;font-size:.9em;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;
+  padding:6px 14px;box-shadow:2px 2px 0 var(--ink);
+  transition:transform .05s,box-shadow .05s;
+}
+.widget .w-actions button:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink);}
 .widget .w-prompt{font-weight:700;text-align:center;}
 .widget .w-grid{cursor:crosshair;}
 .widget .w-point{pointer-events:none;}
