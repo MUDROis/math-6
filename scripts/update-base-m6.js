@@ -2,8 +2,8 @@
 const fs = require('fs');
 const path = require('path');
 const DIR = 'C:/Users/Lenovo/Downloads/matematika-6-klass-vilenkin-2024/matematika-6';
-const OLD = 'https://MUDROis.github.io/math-6';
-const NEW = 'https://интерактивнаяшкола.рф/matematika-6';
+const OLD = 'https://интерактивнаяшкола.рф/matematika-6';
+const NEW = 'https://интерактивнаяшкола.рф/math-6';
 const files = ['index.html'].concat(fs.readdirSync(DIR).filter(f=>/^lesson-\d+\.html$/.test(f)));
 let changed = 0;
 for (const f of files) {

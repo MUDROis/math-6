@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const DIR = 'C:/Users/Lenovo/Downloads/matematika-6-klass-vilenkin-2024/matematika-6';
-const BASE = 'https://интерактивнаяшкола.рф/matematika-6';
+const BASE = 'https://интерактивнаяшкола.рф/math-6';
 const IMG = BASE + '/assets/logo.png';
 
 const files = ['index.html']
