@@ -6,6 +6,9 @@
 /* KaTeX: не разрывать формулу в конце строки */
 .katex{white-space:nowrap;}
 
+/* Логотип в шапке */
+.course-logo{display:block;height:56px;width:auto;max-width:100%;margin:0 0 6px;border-radius:10px;}
+
 /* ===== Поиск (index.html) ===== */
 #course-search{
   width:100%;max-width:560px;display:block;margin:0 auto 4px;
