@@ -240,6 +240,52 @@
     render();
   }
 
+  function initSearch() {
+    var box = document.getElementById('course-search');
+    if (!box) return;
+    box.addEventListener('input', function () {
+      var q = box.value.trim().toLowerCase();
+      var rows = document.querySelectorAll('.lesson-row');
+      for (var i = 0; i < rows.length; i++) {
+        var txt = (rows[i].textContent || '').toLowerCase();
+        var hit = !q || txt.indexOf(q) !== -1;
+        rows[i].classList.toggle('hidden', !hit);
+      }
+    });
+  }
+
+  function initToc() {
+    var headings = Array.prototype.slice.call(document.querySelectorAll('.card h2'));
+    if (headings.length < 2) return;
+    var toc = document.createElement('div');
+    toc.className = 'toc-sidebar';
+    var h3 = document.createElement('h3');
+    h3.textContent = 'Содержание';
+    toc.appendChild(h3);
+    headings.forEach(function (h, idx) {
+      h.id = h.id || ('sec-' + (idx + 1));
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      a.dataset.target = h.id;
+      toc.appendChild(a);
+    });
+    document.body.appendChild(toc);
+
+    var links = Array.prototype.slice.call(toc.querySelectorAll('a'));
+    function setActive(id) {
+      links.forEach(function (a) { a.classList.toggle('active', a.dataset.target === id); });
+    }
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) setActive(en.target.id);
+        });
+      }, { rootMargin: '-40% 0px -50% 0px' });
+      headings.forEach(function (h) { obs.observe(h); });
+    }
+  }
+
   function initWidgets() {
     var nodes = document.querySelectorAll('.widget[data-widget]');
     for (var idx = 0; idx < nodes.length; idx++) {
@@ -256,6 +302,8 @@
       renderKatexIfPresent();
       initSelfCheck();
       initWidgets();
+      initSearch();
+      initToc();
     }
   };
 
