@@ -6,7 +6,7 @@ const SUPERSCRIPTS = {
   '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9', 'ⁿ': 'n'
 };
 
-const SUPERSCRIPT_RE = new RegExp('[' + Object.keys(SUPERSCRIPTS).join('') + ']', 'g');
+const SUPERSCRIPT_RE = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
 
 function convertMathText(src) {
   let s = src;
@@ -20,18 +20,22 @@ function convertMathText(src) {
   s = s.replace(/&times;/g, '\\times');
   s = s.replace(/&nbsp;/g, '~');
 
-  // Степени: юникод-надстрочные символы -> ^цифра
-  s = s.replace(SUPERSCRIPT_RE, function (ch) { return '^' + SUPERSCRIPTS[ch]; });
+  // Степени: группа юникод-надстрочных символов -> ^{цифры}
+  s = s.replace(SUPERSCRIPT_RE, function (run) {
+    var out = '';
+    for (var i = 0; i < run.length; i++) out += SUPERSCRIPTS[run[i]] || run[i];
+    return '^{' + out + '}';
+  });
 
-  // Умножение
-  s = s.replace(/·/g, '\\cdot');
-  s = s.replace(/×/g, '\\times');
+  // Умножение (\cdot{} — чтобы не слипалось со следующей буквой, напр. a·c)
+  s = s.replace(/·/g, '\\cdot{}');
+  s = s.replace(/×/g, '\\times{}');
 
   // Проценты
   s = s.replace(/%/g, '\\%');
 
-  // Градусы
-  s = s.replace(/°/g, '^\\circ');
+  // Градусы (^{\circ} — чтобы не слипалось со следующей буквой, напр. °C)
+  s = s.replace(/°/g, '^{\\circ}');
 
   // Смешанные числа: "Ц Д/З" -> "Ц\frac{Д}{З}"
   s = s.replace(/(\d+)\s+(\d+)\/(\d+)/g, '$1\\frac{$2}{$3}');
