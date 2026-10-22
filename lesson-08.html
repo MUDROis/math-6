@@ -134,39 +134,39 @@ details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
 </header>
 
 <section class="card intro">
-<p>Привет! Дима покупает пирожки с яблоками по <span class="math">45 р.</span>, а Витя — с мясом по <span class="math">60 р.</span> Какую наименьшую одинаковую сумму они могут потратить? Спутники Юпитера возвращаются в исходное положение каждые 42, 85, 172 и 400 часов — когда совпадут снова? Все такие вопросы решает <span class="highlight">наименьшее общее кратное</span>.</p>
+<p>Привет! Дима покупает пирожки с яблоками по <span class="math">\(45 р.\)</span>, а Витя — с мясом по <span class="math">\(60 р.\)</span> Какую наименьшую одинаковую сумму они могут потратить? Спутники Юпитера возвращаются в исходное положение каждые 42, 85, 172 и 400 часов — когда совпадут снова? Все такие вопросы решает <span class="highlight">наименьшее общее кратное</span>.</p>
 </section>
 
 <section class="card theory">
 <h2>Что такое НОК</h2>
 
-<div class="def-box"><b class="term">Наименьшим общим кратным (НОК)</b> нескольких натуральных чисел называют наименьшее натуральное число, которое делится на каждое из этих чисел. Пишут: <span class="math">НОК (45, 60) = 180</span>.</div><p>Кратные 45: 45, 90, 135, <b>180</b>, 225… Кратные 60: 60, 120, <b>180</b>, 240… Общие кратные — 180, 360, …; наименьшее — 180. На эти деньги Дима купит 4 пирожка, а Витя — 3.</p>
+<div class="def-box"><b class="term">Наименьшим общим кратным (НОК)</b> нескольких натуральных чисел называют наименьшее натуральное число, которое делится на каждое из этих чисел. Пишут: <span class="math">\(НОК (45, 60) = 180\)</span>.</div><p>Кратные 45: 45, 90, 135, <b>180</b>, 225… Кратные 60: 60, 120, <b>180</b>, 240… Общие кратные — 180, 360, …; наименьшее — 180. На эти деньги Дима купит 4 пирожка, а Витя — 3.</p>
 </section>
 
 <section class="card theory">
 <h2>Алгоритм нахождения НОК</h2>
 
-<div class="rule-box"><b>Чтобы найти НОК нескольких чисел:</b> 1) разложи числа на простые множители; 2) выпиши множители из разложения большего числа; 3) добавь недостающие множители из разложений остальных; 4) перемножь.</div><p><span class="math">45 = 3 · 3 · 5</span>, <span class="math">60 = 2 · 2 · 3 · 5</span>. Выписываем <span class="math">2 · 2 · 3 · 5</span> и добавляем недостающую тройку: <span class="math">2 · 2 · 3 · 5 · 3 = 180</span>.</p><p>Если одно из чисел делится на все остальные, НОК равно ему: <span class="math">НОК (8, 16, 40, 80) = 80</span>.</p>
+<div class="rule-box"><b>Чтобы найти НОК нескольких чисел:</b> 1) разложи числа на простые множители; 2) выпиши множители из разложения большего числа; 3) добавь недостающие множители из разложений остальных; 4) перемножь.</div><p><span class="math">\(45 = 3 \cdot 3 \cdot 5\)</span>, <span class="math">\(60 = 2 \cdot 2 \cdot 3 \cdot 5\)</span>. Выписываем <span class="math">\(2 \cdot 2 \cdot 3 \cdot 5\)</span> и добавляем недостающую тройку: <span class="math">\(2 \cdot 2 \cdot 3 \cdot 5 \cdot 3 = 180\)</span>.</p><p>Если одно из чисел делится на все остальные, НОК равно ему: <span class="math">\(НОК (8, 16, 40, 80) = 80\)</span>.</p>
 <div class="example">
 <p class="ex-q">📌 Задача. Найдём НОК чисел 12 и 8.</p>
 <ol class="steps">
-<li><span class="math">12 = 2 · 2 · 3</span>, <span class="math">8 = 2 · 2 · 2</span></li>
-<li>Берём разложение 12: <span class="math">2 · 2 · 3</span> и добавляем недостающую двойку из 8</li>
-<li><span class="math">НОК = 2 · 2 · 2 · 3 = 24</span>. Проверка: 24 делится на 12 и на 8 ✓</li>
+<li><span class="math">\(12 = 2 \cdot 2 \cdot 3\)</span>, <span class="math">\(8 = 2 \cdot 2 \cdot 2\)</span></li>
+<li>Берём разложение 12: <span class="math">\(2 \cdot 2 \cdot 3\)</span> и добавляем недостающую двойку из 8</li>
+<li><span class="math">\(НОК = 2 \cdot 2 \cdot 2 \cdot 3 = 24\)</span>. Проверка: 24 делится на 12 и на 8 ✓</li>
 </ol>
-<p class="answer-final">✅ <b>Ответ:</b> <span class="math">24</span></p>
+<p class="answer-final">✅ <b>Ответ:</b> <span class="math">\(24\)</span></p>
 </div>
 </section>
 
 <section class="card theory">
 <h2>Связь НОК и взаимной простоты</h2>
 
-<p>Если числа взаимно простые, то их НОК равно произведению: например, для 9 и 13 (взаимно простые) <span class="math">НОК = 9 · 13 = 117</span>. Это удобно проверять на парах вроде 24 и 35, 27 и 32.</p>
+<p>Если числа взаимно простые, то их НОК равно произведению: например, для 9 и 13 (взаимно простые) <span class="math">\(НОК = 9 \cdot 13 = 117\)</span>. Это удобно проверять на парах вроде 24 и 35, 27 и 32.</p>
 </section>
 
 <section class="card hint-box">
 <p class="hint-title">💡 Методическая подсказка № 8: НОК: все множители от большего + недостающие</p>
-<p><b>Устройство.</b> НОК — «сборка», в которую помещаются оба числа целиком; поэтому берём все кирпичики большего числа и добавляем те, что есть только у меньшего.</p><p><b>Правило-шаги.</b> 1) Разложи оба числа. 2) Возьми ВСЕ множители большего. 3) Допиши множители меньшего, которых не хватает. 4) Перемножь.</p><p><b>Проверь на контрасте:</b> <span class="math">8 = 2 · 2 · 2</span>, <span class="math">6 = 2 · 3</span>: НОК = <span class="math">2 · 2 · 2 · 3 = 24</span> ✅. А ограничиться произведением <span class="math">8 · 6 = 48</span> 🚫 — оно кратно обоим, но не наименьшее.</p><p><b>Мостик:</b> в заданиях 3 и 6 следи за числом «лишних» повторов каждого множителя.</p>
+<p><b>Устройство.</b> НОК — «сборка», в которую помещаются оба числа целиком; поэтому берём все кирпичики большего числа и добавляем те, что есть только у меньшего.</p><p><b>Правило-шаги.</b> 1) Разложи оба числа. 2) Возьми ВСЕ множители большего. 3) Допиши множители меньшего, которых не хватает. 4) Перемножь.</p><p><b>Проверь на контрасте:</b> <span class="math">\(8 = 2 \cdot 2 \cdot 2\)</span>, <span class="math">\(6 = 2 \cdot 3\)</span>: НОК = <span class="math">\(2 \cdot 2 \cdot 2 \cdot 3 = 24\)</span> ✅. А ограничиться произведением <span class="math">\(8 \cdot 6 = 48\)</span> 🚫 — оно кратно обоим, но не наименьшее.</p><p><b>Мостик:</b> в заданиях 3 и 6 следи за числом «лишних» повторов каждого множителя.</p>
 </section>
 
 <section class="card visual">
@@ -186,11 +186,11 @@ details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
 <button class="toggle-btn" data-target="a08_1" onclick="toggleAnswer('a08_1')">🔍 Проверить</button>
 <div class="answer" id="a08_1">
 <ol>
-<li><span class="math">12 = 2 · 2 · 3</span>, <span class="math">8 = 2 · 2 · 2</span> → <span class="math">НОК = 2 · 2 · 2 · 3 = 24</span></li>
-<li>Для 6, 8 и 12: <span class="math">6 = 2 · 3</span>, <span class="math">8 = 2 · 2 · 2</span>, <span class="math">12 = 2 · 2 · 3</span></li>
-<li>Берём <span class="math">2 · 2 · 2</span> из 8 и добавляем 3 → <span class="math">НОК = 24</span>. Проверка: 24 делится на 6, 8 и 12 ✓</li>
+<li><span class="math">\(12 = 2 \cdot 2 \cdot 3\)</span>, <span class="math">\(8 = 2 \cdot 2 \cdot 2\)</span> → <span class="math">\(НОК = 2 \cdot 2 \cdot 2 \cdot 3 = 24\)</span></li>
+<li>Для 6, 8 и 12: <span class="math">\(6 = 2 \cdot 3\)</span>, <span class="math">\(8 = 2 \cdot 2 \cdot 2\)</span>, <span class="math">\(12 = 2 \cdot 2 \cdot 3\)</span></li>
+<li>Берём <span class="math">\(2 \cdot 2 \cdot 2\)</span> из 8 и добавляем 3 → <span class="math">\(НОК = 24\)</span>. Проверка: 24 делится на 6, 8 и 12 ✓</li>
 </ol>
-<p><b>Ответ:</b> <span class="math">а) 24; е) 24</span></p>
+<p><b>Ответ:</b> <span class="math">\(а) 24; е) 24\)</span></p>
 </div>
 </div>
 
@@ -200,11 +200,11 @@ details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
 <button class="toggle-btn" data-target="a08_2" onclick="toggleAnswer('a08_2')">🔍 Проверить</button>
 <div class="answer" id="a08_2">
 <ol>
-<li>42 делится на 14 → <span class="math">НОК (14, 42) = 42</span></li>
-<li>30 делится на 10 и на 15 → <span class="math">НОК (10, 15, 30) = 30</span></li>
+<li>42 делится на 14 → <span class="math">\(НОК (14, 42) = 42\)</span></li>
+<li>30 делится на 10 и на 15 → <span class="math">\(НОК (10, 15, 30) = 30\)</span></li>
 <li>Правило: если большее число кратно остальным, оно и есть НОК ✓</li>
 </ol>
-<p><b>Ответ:</b> <span class="math">б) 42; д) 30</span></p>
+<p><b>Ответ:</b> <span class="math">\(б) 42; д) 30\)</span></p>
 </div>
 </div>
 
@@ -214,11 +214,11 @@ details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
 <button class="toggle-btn" data-target="a08_3" onclick="toggleAnswer('a08_3')">🔍 Проверить</button>
 <div class="answer" id="a08_3">
 <ol>
-<li><span class="math">108 = 2 · 2 · 3 · 3 · 3</span>, <span class="math">132 = 2 · 2 · 3 · 11</span> → <span class="math">НОК = 2 · 2 · 3 · 3 · 3 · 11 = 1188</span></li>
-<li><span class="math">90 = 2 · 3 · 3 · 5</span>, <span class="math">315 = 3 · 3 · 5 · 7</span> → <span class="math">НОК = 2 · 3 · 3 · 5 · 7 = 630</span></li>
-<li>Проверка: <span class="math">1188 : 108 = 11</span>, <span class="math">1188 : 132 = 9</span>; <span class="math">630 : 90 = 7</span>, <span class="math">630 : 315 = 2</span> ✓</li>
+<li><span class="math">\(108 = 2 \cdot 2 \cdot 3 \cdot 3 \cdot 3\)</span>, <span class="math">\(132 = 2 \cdot 2 \cdot 3 \cdot 11\)</span> → <span class="math">\(НОК = 2 \cdot 2 \cdot 3 \cdot 3 \cdot 3 \cdot 11 = 1188\)</span></li>
+<li><span class="math">\(90 = 2 \cdot 3 \cdot 3 \cdot 5\)</span>, <span class="math">\(315 = 3 \cdot 3 \cdot 5 \cdot 7\)</span> → <span class="math">\(НОК = 2 \cdot 3 \cdot 3 \cdot 5 \cdot 7 = 630\)</span></li>
+<li>Проверка: <span class="math">\(1188 : 108 = 11\)</span>, <span class="math">\(1188 : 132 = 9\)</span>; <span class="math">\(630 : 90 = 7\)</span>, <span class="math">\(630 : 315 = 2\)</span> ✓</li>
 </ol>
-<p><b>Ответ:</b> <span class="math">в) 1188; г) 630</span></p>
+<p><b>Ответ:</b> <span class="math">\(в) 1188; г) 630\)</span></p>
 </div>
 </div>
 
@@ -228,11 +228,11 @@ details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
 <button class="toggle-btn" data-target="a08_4" onclick="toggleAnswer('a08_4')">🔍 Проверить</button>
 <div class="answer" id="a08_4">
 <ol>
-<li><span class="math">77 = 7 · 11</span>, <span class="math">91 = 7 · 13</span>, <span class="math">143 = 11 · 13</span></li>
-<li>Каждый простой множитель должен входить хотя бы из одного числа: <span class="math">7</span>, <span class="math">11</span>, <span class="math">13</span></li>
-<li><span class="math">НОК = 7 · 11 · 13 = 1001</span>. Проверка: <span class="math">1001 : 77 = 13</span>, <span class="math">1001 : 91 = 11</span>, <span class="math">1001 : 143 = 7</span> ✓</li>
+<li><span class="math">\(77 = 7 \cdot 11\)</span>, <span class="math">\(91 = 7 \cdot 13\)</span>, <span class="math">\(143 = 11 \cdot 13\)</span></li>
+<li>Каждый простой множитель должен входить хотя бы из одного числа: <span class="math">\(7\)</span>, <span class="math">\(11\)</span>, <span class="math">\(13\)</span></li>
+<li><span class="math">\(НОК = 7 \cdot 11 \cdot 13 = 1001\)</span>. Проверка: <span class="math">\(1001 : 77 = 13\)</span>, <span class="math">\(1001 : 91 = 11\)</span>, <span class="math">\(1001 : 143 = 7\)</span> ✓</li>
 </ol>
-<p><b>Ответ:</b> <span class="math">1001</span></p>
+<p><b>Ответ:</b> <span class="math">\(1001\)</span></p>
 </div>
 </div>
 
@@ -243,10 +243,10 @@ details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
 <div class="answer" id="a08_5">
 <ol>
 <li>Общие делители, кроме 1, в каждой паре отсутствуют → все пары взаимно простые</li>
-<li><span class="math">НОК (9, 13) = 117</span>; <span class="math">НОК (15, 19) = 285</span>; <span class="math">НОК (24, 35) = 840</span>; <span class="math">НОК (27, 32) = 864</span></li>
+<li><span class="math">\(НОК (9, 13) = 117\)</span>; <span class="math">\(НОК (15, 19) = 285\)</span>; <span class="math">\(НОК (24, 35) = 840\)</span>; <span class="math">\(НОК (27, 32) = 864\)</span></li>
 <li>Каждый НОК равен произведению чисел пары</li>
 </ol>
-<p><b>Ответ:</b> <span class="math">117; 285; 840; 864 — у взаимно простых чисел НОК равен их произведению</span></p>
+<p><b>Ответ:</b> <span class="math">\(117; 285; 840; 864 — у взаимно простых чисел НОК равен их произведению\)</span></p>
 </div>
 </div>
 
@@ -256,11 +256,11 @@ details.chapter .ch-desc{color:#57606f;font-style:italic;margin:0 0 14px;}
 <button class="toggle-btn" data-target="a08_6" onclick="toggleAnswer('a08_6')">🔍 Проверить</button>
 <div class="answer" id="a08_6">
 <ol>
-<li>Совпадение случится через число дней, кратное 2, 3 и 10: <span class="math">НОК (2, 3, 10)</span></li>
-<li><span class="math">НОК (2, 3, 10) = 2 · 3 · 5 = 30</span></li>
-<li>Через 30 дней после 1 декабря — <span class="math">31 декабря</span> (в декабре 31 день). Проверка: 30 кратно 2, 3 и 10 ✓</li>
+<li>Совпадение случится через число дней, кратное 2, 3 и 10: <span class="math">\(НОК (2, 3, 10)\)</span></li>
+<li><span class="math">\(НОК (2, 3, 10) = 2 \cdot 3 \cdot 5 = 30\)</span></li>
+<li>Через 30 дней после 1 декабря — <span class="math">\(31 декабря\)</span> (в декабре 31 день). Проверка: 30 кратно 2, 3 и 10 ✓</li>
 </ol>
-<p><b>Ответ:</b> <span class="math">31 декабря</span></p>
+<p><b>Ответ:</b> <span class="math">\(31 декабря\)</span></p>
 </div>
 </div>
 
