@@ -80,9 +80,14 @@
   .toc-sidebar summary::-webkit-details-marker{display:none;}
 }
 
+/* ===== Видеоурок (embed) ===== */
+.video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
 /* ===== Печать ===== */
 @media print{
   .toggle-btn,.check-row,.widget,.lesson-nav,.toc-sidebar,.go-btn,#course-search{display:none !important;}
+  .video,.video-wrap{display:none !important;}
   .answer{display:block !important;}
   .card{box-shadow:none !important;border:1px solid #ccc !important;page-break-inside:avoid;}
   body{background:#fff !important;}
